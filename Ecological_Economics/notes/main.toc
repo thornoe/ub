@@ -16,3 +16,5 @@
 \contentsline {section}{\numberline {3}Price input-output model}{5}{section.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}International Databases for the economy and the environment}{5}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}...}{5}{section.5}
