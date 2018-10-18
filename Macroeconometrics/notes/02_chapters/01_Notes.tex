@@ -9,20 +9,108 @@
   \hat{\beta}_{OLS}         &\xrightarrow{d} \textrm{N}(\beta,V(\beta)) \\
   (\hat{\beta}_{OLS}-\beta) &\xrightarrow{d} \textrm{N}(0,V(\beta))
 \end{align*}
-
 \begin{align*}
   \hat{\beta}_{OLS} &= (x'x)^{-1}x'y \\
   &= \beta + (x'x)^{-1}x'u
-\end{align*}
-
-\textbf{Asymptotic independence}
-If independent the joint probability equals the product of probabilities, i.e.
+\end{align*}\noindent
+\textbf{Asymptotic independence}\par
+If independent, the joint probability equals the product of probabilities, i.e.
 \begin{align*}
   P(A\cap B) = P(A)*P(B)
 \end{align*}
+\end{multicols}
 
+
+\section{ARIMA modelling}
+\begin{multicols}{2}\noindent
+\textbf{Univariate TS strategy}\par
+Not based on Economic Theory\\
+(reduced form modelling $\rightarrow$ the past is informative about the present)
+\begin{align*}
+y_t = f(y_{t-1},y_{t-2},y_{t-3}\cdot)
+\end{align*}
+The performance in terms of \textbf{forecasting} is key!\par
+If you want to learn about main drivers, you need to use other models.\\
+\\
+\textbf{1. Stationary time series:}\par
+Sometimes \nth{1} difference is required to ensure stationarity.\\
+\\
+\textbf{2. Identification:}\par
+Specify the model that explains the behaviour the best
+\begin{itemize}
+  \item[AR:] Autoregressive model
+  \item[MA:] Moving Average model
+  \item[ARMA:] AutoRegressive Moving Average model
+\end{itemize}
+To initially decide between them, plot the
+\begin{itemize}
+  \item \textbf{ACF:} The Simple Autocorrelation Function.\\
+              Check if there is persistence/memory:
+              \begin{align*}
+                \frac{Cov(x_t,x_{t+k})}{\sqrt{V(x_t)}\sqrt{V(x_{t+k})}},\textrm{     for }k=0,\pm1,\pm2,\cdots
+              \end{align*}
+              Related to the asymptotic confidence interval
+              \begin{align*}
+                \left(\frac{-1.96}{\sqrt{(T)}}, \frac{1.96}{\sqrt{(T)}}  \right)
+              \end{align*}
+              or degrees of freedom corrected
+              \begin{align*}
+                \left(\frac{-1.96}{\sqrt{(T-k)}}, \frac{1.96}{\sqrt{(T-k)}}  \right)
+              \end{align*}
+  \item \textbf{PACF:} The Partial Autocorrelation Function\\
+              e.g. The The \nth{3} partial autocorrelation coeffcient of the PACF, $\phi_{33}$:
+              \begin{align*}
+                \tilde{x}_t=\phi{31}\tilde{x}_{t-1}+\phi{32}\tilde{x}_{t-2}+\phi{33}\tilde{x}_{t-3}+\varepsilon_t
+              \end{align*}
+  \item [$\rightarrow$] Using both functions helps us to make an initial specification.
+  \begin{itemize}
+    \item Helps us to decide on the number of lags.
+    \item Too many lags can cause multicolliniarity.
+  \end{itemize}
+\end{itemize}
+Better to choose an $f(t)\neq0$ to test it.\\
+\\
+\textbf{3. Estimation}\par
+..
+\\
+\textbf{4. Validation}\par
+How well is the model specified?
+\begin{itemize}
+  \item
+  \item Residuals
+\end{itemize}
+Re-specify if not correctly validated (repeat step 2-4)\\
+\\
+\textbf{5. Forecasting}\par
+When model is valid, use it to forecast.
+
+
+\subsection{AR(p) process}\noindent
+Stationarity conditions for the AR model:
+\begin{itemize}
+  \item[1.] The deterministic component $f$ does not depend on $t$ (rules out MA)
+  \item[2.] All roots of the autoregressive polynomial must, in module, be greater than one, e.g.\\
+\end{itemize}
+\begin{align*}
+  x_t&=\phi_1x_{t-1}+\varepsilon_t\\
+  \underbrace{(1-\phi_1 (L))}_\text{AR polynomial}x_{t-1}&=\varepsilon_t,\ \ \ L>1\textrm{ required!}\\
+  V(x_t)&=V(\phi_1x_{t-1})+V(\varepsilon_t)\\
+  \sigma^2_x&=\phi_1^2 \sigma_x^2 +\\
+  \sigma_x^2&=\frac{1}{1-\sigma_1^2}\sigma^2_\varepsilon\textrm{,   requires }\sigma^2_1<1
+\end{align*}
+
+
+\subsection{MA(q) model}\noindent
+If MA is invertible
+\begin{align*}
+  \Rightarrow MA(q)&\equiv AR(\infty)\\
+                  &\simeq AR(p),\ \ \ p\ \textrm{is large}
+\end{align*}
+Use the $\hat{\varepsilon}_t^0$ estimation algorithm.
 
 \end{multicols}
+
+
 
 \section{...}
 

@@ -1,25 +1,120 @@
 \epigraph{"..."}
 {\textit{.}}
 
-\section{Warming up}
 \begin{multicols}{2}
-
-
-\end{multicols}
-
+\section{Introduction}
+Example macro panel data:\par
+Maddison, 2007, and IFS
+\begin{itemize}
+  \item Formatting data
+  \item Describtive statistics
+  \item Graphs
+  \item Maps
+\end{itemize}
  % 2
-\section{...} % 2
-\begin{multicols}{2}
+\section{Fixed Effects estimators} % 2
+\subsection{Simultaneous equations models with exogenous explanatory variables}
+Four different models:
+\begin{itemize}
+  \item[M1:] $\alpha\neq,\ \beta\neq.$ Estimation individual by individual (GLS).
+  \item[M2:] $\alpha=,\ \beta=.$ Equal constant terms and slopes (presence of homogeneity).
+  \item[M3:] $\alpha\neq,\ \beta=.$ Equal slopes, different constant terms.
+  \item[M4:] $\alpha=,\ \beta\neq.$ Equal constant terms, different slopes.
+\end{itemize}
+Choosing between them using\par
+\textbf{Test for Homogeneity:}
+\begin{itemize}
+  \item[a.] Estimate the extended/unrestricted model.
+  \item[b.] Estimate the restricted model.
+  \item[c.] $H_0:$ Homogeneity (the unrestricted is not better than the restricted).\\
+  Reject $H_0$ if the F-value is higher than the critical value of the F-distribution.
+  \begin{align*}
+    F = \frac{(SSR_R-SSR_{UR})/r}{SSR_{UR}/df}
+  \end{align*}
+\end{itemize}
+In ML we maximize the probability.\\
+In OLS we don't care about the variance.
 
+\subsection{The fixed effects model}
+
+
+\subsection{Within and between estimators}
+
+
+\subsection{Effects of group and time}
 
 
 \end{multicols}
 
  % 3
-\section{...} % 3
+\section{Random effects estimator} % 3
 \begin{multicols}{2}
+\subsection{The random effects model}
 
 
+\subsection{The generalized least squares estimation}
+
+
+\subsection{Feasible Generalized Lest squares (unkown )}
+
+
+
+\end{multicols}
+
+
+% 4
+\section{Fixed effects vs. random estimator} % 4
+\begin{multicols}{2}
+\subsection{The Breush Pagan test}
+
+
+\subsection{The Hausman test}
+
+
+
+\end{multicols}
+
+
+% 5
+\section{Heteroskedasticity and autocorrelation in panel data} % 5
+\begin{multicols}{2}
+\subsection{Heteroskedasticity in fixed effect model}
+
+
+
+\subsection{Heteroskedasticity in random effects model}
+
+
+
+\subsection{Autocorrelation in the fixed effect model}
+
+
+
+\subsection{Autocorrelation in the random effects model}
+
+
+
+\end{multicols}
+
+
+
+% 6
+\section{Incomplete panels} % 6
+\begin{multicols}{2}
+\subsection{Fixed effects}
+
+
+\subsection{Random effects}
+
+
+
+\end{multicols}
+
+
+
+% 7
+\section{Dynamic panels} % 7
+\begin{multicols}{2}
 
 
 \end{multicols}

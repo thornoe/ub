@@ -11,10 +11,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4}Environmental Economics vs. Ecological Economics}{4}{subsection.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}The Economy as an Open System}{4}{section.2}
+\contentsline {section}{\numberline {2}The economy as an open system}{4}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Price input-output model}{5}{section.3}
+\contentsline {subsection}{\numberline {2.1}Growth, technology and the environment}{5}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}International Databases for the economy and the environment}{5}{section.4}
+\contentsline {subsection}{\numberline {2.2}Economic growth and the environment}{5}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}...}{5}{section.5}
+\contentsline {subsection}{\numberline {2.3}Inequality, consumption \& environment}{5}{subsection.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Fragmentation, trade \& encvironment}{6}{subsection.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Price input-output model}{7}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}International Databases for the economy and the environment}{7}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}...}{7}{section.5}

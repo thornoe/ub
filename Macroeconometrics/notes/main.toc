@@ -3,4 +3,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Theoretical issues}{3}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}...}{3}{section.2}
+\contentsline {section}{\numberline {2}ARIMA modelling}{3}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}AR(p) process}{4}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}MA(q) model}{4}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}...}{4}{section.3}
