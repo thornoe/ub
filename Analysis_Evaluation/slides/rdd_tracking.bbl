@@ -1,0 +1,256 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{duflo2011peer}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DE}{%
+         family={Duflo},
+         familyi={D\bibinitperiod},
+         given={Esther},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Dupas},
+         familyi={D\bibinitperiod},
+         given={Pascaline},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kremer},
+         familyi={K\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DE+1}
+    \strng{fullhash}{DEDPKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2011}
+    \field{labeldatesource}{year}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{5}
+    \field{pages}{1739\bibrangedash 74}
+    \field{title}{Peer effects, teacher incentives, and the impact of tracking:
+  Evidence from a randomized evaluation in Kenya}
+    \field{volume}{101}
+    \field{journaltitle}{American Economic Review}
+    \field{year}{2011}
+  \endentry
+
+  \entry{epple2002ability}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ED}{%
+         family={Epple},
+         familyi={E\bibinitperiod},
+         given={Dennis},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=NE}{%
+         family={Newlon},
+         familyi={N\bibinitperiod},
+         given={Elizabeth},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Romano},
+         familyi={R\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{ED+1}
+    \strng{fullhash}{EDNERR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2002}
+    \field{labeldatesource}{year}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 48}
+    \field{title}{Ability tracking, school competition, and the distribution of
+  educational benefits}
+    \field{volume}{83}
+    \field{journaltitle}{Journal of Public Economics}
+    \field{year}{2002}
+  \endentry
+
+  \entry{figlio2002school}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FDN}{%
+         family={Figlio},
+         familyi={F\bibinitperiod},
+         given={David\bibnamedelima N},
+         giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=PME}{%
+         family={Page},
+         familyi={P\bibinitperiod},
+         given={Marianne\bibnamedelima E},
+         giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{FDNPME1}
+    \strng{fullhash}{FDNPME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2002}
+    \field{labeldatesource}{year}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{3}
+    \field{pages}{497\bibrangedash 514}
+    \field{title}{School choice and the distributional effects of ability
+  tracking: does separation increase inequality?}
+    \field{volume}{51}
+    \field{journaltitle}{Journal of Urban Economics}
+    \field{year}{2002}
+  \endentry
+
+  \entry{glewwe2009many}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GP}{%
+         family={Glewwe},
+         familyi={G\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kremer},
+         familyi={K\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Moulin},
+         familyi={M\bibinitperiod},
+         given={Sylvie},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GP+1}
+    \strng{fullhash}{GPKMMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{year}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{1}
+    \field{pages}{112\bibrangedash 35}
+    \field{title}{Many children left behind? Textbooks and test scores in
+  Kenya}
+    \field{volume}{1}
+    \field{journaltitle}{American Economic Journal: Applied Economics}
+    \field{year}{2009}
+  \endentry
+
+  \entry{lefgren2004educational}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LL}{%
+         family={Lefgren},
+         familyi={L\bibinitperiod},
+         given={Lars},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LL1}
+    \strng{fullhash}{LL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{2}
+    \field{pages}{169\bibrangedash 191}
+    \field{title}{Educational peer effects and the Chicago public schools}
+    \field{volume}{56}
+    \field{journaltitle}{Journal of urban Economics}
+    \field{year}{2004}
+  \endentry
+
+  \entry{manning2006comprehensive}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MA}{%
+         family={Manning},
+         familyi={M\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PJS}{%
+         family={Pischke},
+         familyi={P\bibinitperiod},
+         given={J{\"o}rn-Steffen},
+         giveni={J\bibinitperiod-S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MAPJS1}
+    \strng{fullhash}{MAPJS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{year}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Comprehensive versus selective schooling in England in Wales:
+  What do we know?}
+    \field{year}{2006}
+  \endentry
+
+  \entry{zimmer2003new}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ZR}{%
+         family={Zimmer},
+         familyi={Z\bibinitperiod},
+         given={Ron},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{ZR1}
+    \strng{fullhash}{ZR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{labeldatesource}{year}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{number}{3}
+    \field{pages}{307\bibrangedash 315}
+    \field{title}{A new twist in the educational tracking debate}
+    \field{volume}{22}
+    \field{journaltitle}{Economics of Education Review}
+    \field{year}{2003}
+  \endentry
+\enddatalist
+\endinput

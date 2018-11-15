@@ -36,9 +36,23 @@ In ML we maximize the probability.\\
 In OLS we don't care about the variance.
 
 \subsection{The fixed effects model}
+$\alpha_i$ is a parameter capturing the individual effect (time-invariant!).
+\begin{align*}
+    y_{it}&=i\alpha_i+X_{it}\beta+\varepsilon_{it}\\
+    \Rightarrow y &= [\begin{array}{cc}i & X\end{array}] \left[\begin{array}{c}\alpha \\ \beta\end{array}\right] + \varepsilon
+\end{align*}
+Leasy Squares Dummy Variables (LSDV):
+\begin{itemize}
+  \item FE model: All variables are within-transformed e.g the deviations from the mean.
+\end{itemize}
+Test the homogeneity analysis:
+\begin{align*}
+  H_0:\ \alpha_1=\alpha_2=\cdots=\alpha_M
+\end{align*}
 
 
 \subsection{Within and between estimators}
+The overall variance: Weighted variation between the within-variance and between-variance.
 
 
 \subsection{Effects of group and time}
@@ -62,14 +76,83 @@ In OLS we don't care about the variance.
 \end{multicols}
 
 
-% 4
+4
 \section{Fixed effects vs. random estimator} % 4
+\begin{table}[h]
+  \centering
+  \footnotesize
+  \begin{tabular}{l|cc}
+    %\toprule
+    {}    & No endogeneity            & Endogeneity   \\
+    \midrule
+    R.E.  & Consist. \& Efficient     & Inconsistent  \\
+    F.E.  & Consist. but inefficient  & Consist. but ineff.
+  \end{tabular}
+\caption{Endogeneity problems}
+\label{tab:endogeneity}
+\end{table}
+
 \begin{multicols}{2}
+
+
+
 \subsection{The Breush Pagan test}
 
 
 \subsection{The Hausman test}
+\begin{itemize}
+  \item FE - $\beta^{FE}$
+  \item FE - $\beta^{RE}$
+  \item $()\beta^{FE}-\beta^{RE})$?
+\end{itemize}
+Problems:
+\begin{itemize}
+  \item Hausman assumptions
+  \item We cannot use "fixed" variables (no time variation).
+\end{itemize}
+\textbf{The Mundlak estimation:}
+\begin{itemize}
+  \item[$\rightarrow$] Allows joint estimation F.E. / BE
+  \item Diff(FE-BE) $\rightarrow$ estimate 'pseudo' Hausman test.
+  \item[$\rightarrow$] Allows for including 'fixed' variables (with no time-variation)
+\end{itemize}
+RE:
+\begin{align*}
+  y_{it}+x_{it}\beta+\psi_i+\varepsilon_{it}
+\end{align*}
+Mundlak regression:\par
+Including both RE and BE.
+\begin{align*}
+  y_{it}+(x_{it}-\bar{x_i})\beta^w+\bar{x_i}\beta^b +\psi_i+\varepsilon_{it}
+\end{align*}
+Is just an instrumental regression!\par
+Standard errors are unreliable and $R^2$ is lower.
+\begin{itemize}
+  \item FE: We capture anything permanent for any individual in $\alpha_i$
+  \begin{itemize}
+    \item[$\rightarrow$] Get rid of anything permanent.
+    \item[$\rightarrow$] Good for controlling.
+    \item We don't know what the individual effects mean though!
+  \end{itemize}
+  \item Mundlak: We 'only' capture anything permanent considered in $\bar{x_i}$
+\end{itemize}
+Increasing the data set (information)
+\begin{itemize}
+  \item Hausman test: Is likely to find endogeneity though the difference in coefficients is very small.
+\end{itemize}
 
+\subsection{Long run vs. short run effects} % 5
+Baltagi \& Griffin (1984) "Short and Long Run Effects in Pooled Models".
+\begin{itemize}
+  \item Betweeen est. $\rightarrow$ LR effect.
+  \item Within est. $\rightarrow$ SR effect.
+  \item OLS and RE $\rightarrow$ average of SR \& LR effect.
+\end{itemize}
+Inequality and growth
+\begin{itemize}
+  \item Positive in the SR
+  \item Negative in the LR
+\end{itemize}
 
 
 \end{multicols}
@@ -78,20 +161,41 @@ In OLS we don't care about the variance.
 % 5
 \section{Heteroskedasticity and autocorrelation in panel data} % 5
 \begin{multicols}{2}
-\subsection{Heteroskedasticity in fixed effect model}
+\subsection{Heteroskedasticity in FE model}
+\begin{align}
+  y_{it}= \alpha_i + x_{it}\beta+\varepsilon_{it}
+  \label{eq:FE}
+\end{align}
+Heteroscedasticity over time: $\sigma^2_\varepsilon$\\
 
 
 
-\subsection{Heteroskedasticity in random effects model}
+\subsection{Heteroskedasticity in RE model}
+\begin{align}
+  y_{it}=x_{it}\beta+\xi_i+\varepsilon_{it}
+  \label{eq:RE}
+\end{align}
+Heteroscedasticity over individuals: $\sigma^2_\xi$
+Heteroscedasticity over time: $\sigma^2_\varepsilon$\\
 
 
 
-\subsection{Autocorrelation in the fixed effect model}
+\subsection{Autocorrelation in the FE model}
+In eq. \ref{eq:FE} it can be that
+\begin{align*}
+  \varepsilon_{it}=V_{it}+\theta V_{it-1}\\
+  \rightarrow \textrm{AR(1)} \rightarrow \varepsilon_{it}=\rho_1\varepsilon_{it-1}+v_{it}
+\end{align*}
+Assumption: Everyone is homogenous in their autocorrelation parameter.\par
+Consistency can come from either a high number of N or T.
 
 
-
-\subsection{Autocorrelation in the random effects model}
-
+\subsection{Autocorrelation in the RE model}
+We need to start with the FE estimation
+\begin{itemize}
+  \item[$\rightarrow$] To get a consistent estimate of $\rho$.
+  \item Proceed to estimate either a FE or RE model.
+\end{itemize}
 
 
 \end{multicols}
@@ -99,12 +203,13 @@ In OLS we don't care about the variance.
 
 
 % 6
-\section{Incomplete panels} % 6
+\section{Incomplete/unbalanced panels} % 6
 \begin{multicols}{2}
-\subsection{Fixed effects}
-
-
-\subsection{Random effects}
+Incomplete panels are similar to heteroscedasticity issues.
+\begin{itemize}
+  \item Some issues can be fixed with weighting observations.
+  \item For some procedures we will need complete panels though.
+\end{itemize}
 
 
 
@@ -115,7 +220,12 @@ In OLS we don't care about the variance.
 % 7
 \section{Dynamic panels} % 7
 \begin{multicols}{2}
+Autocorrelation in $y_{it}$.
+\begin{align*}
+  y_{it} = \alpha y_{it-1}+\alpha_{it}\beta+\cdots
+\end{align*}
 
+GMM estimation.
 
 \end{multicols}
 

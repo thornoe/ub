@@ -15,32 +15,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Random effects estimator}{3}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}The random effects model}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}The random effects model}{4}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}The generalized least squares estimation}{3}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}The generalized least squares estimation}{4}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Feasible Generalized Lest squares (unkown )}{3}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}Feasible Generalized Lest squares (unkown )}{4}{subsection.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Fixed effects vs. random estimator}{3}{section.4}
+\contentsline {section}{\numberline {4}Fixed effects vs. random estimator}{4}{section.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}The Breush Pagan test}{4}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}The Hausman test}{4}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Heteroskedasticity and autocorrelation in panel data}{4}{section.5}
+\contentsline {subsection}{\numberline {4.3}Long run vs. short run effects}{5}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Heteroskedasticity in fixed effect model}{4}{subsection.5.1}
+\contentsline {section}{\numberline {5}Heteroskedasticity and autocorrelation in panel data}{5}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Heteroskedasticity in random effects model}{4}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.1}Heteroskedasticity in FE model}{5}{subsection.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Autocorrelation in the fixed effect model}{4}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.2}Heteroskedasticity in RE model}{5}{subsection.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Autocorrelation in the random effects model}{4}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.3}Autocorrelation in the FE model}{5}{subsection.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Incomplete panels}{4}{section.6}
+\contentsline {subsection}{\numberline {5.4}Autocorrelation in the RE model}{5}{subsection.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Fixed effects}{4}{subsection.6.1}
+\contentsline {section}{\numberline {6}Incomplete/unbalanced panels}{5}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Random effects}{4}{subsection.6.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Dynamic panels}{4}{section.7}
+\contentsline {section}{\numberline {7}Dynamic panels}{5}{section.7}

@@ -15,14 +15,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Growth, technology and the environment}{5}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Economic growth and the environment}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Inequality, consumption \& environment}{5}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Inequality, consumption \& environment}{5}{subsection.2.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Fragmentation, trade \& encvironment}{6}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.3}Fragmentation, trade \& encvironment}{6}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Price input-output model}{7}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}International Databases for the economy and the environment}{7}{section.4}
+\contentsline {subsection}{\numberline {3.1}Discussion}{7}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}...}{7}{section.5}
+\contentsline {subsection}{\numberline {3.2}Single Region IO Model: Autarky}{7}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Single Region IO Model: Open Economy}{7}{subsection.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}International Databases for the economy and the environment}{8}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Structure}{8}{subsection.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Combining Micro and Macro}{8}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Disaggregating the consumption vector}{8}{subsection.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}The price IO model}{8}{subsection.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Examples}{9}{subsection.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4}Possible extensions}{9}{subsection.5.4}

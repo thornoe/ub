@@ -3,117 +3,252 @@
 
 \section{Theoretical issues}
 \begin{multicols}{2}
-\noindent
-\textbf{Convergence in distribution}
-\begin{align*}
-  \hat{\beta}_{OLS}         &\xrightarrow{d} \textrm{N}(\beta,V(\beta)) \\
-  (\hat{\beta}_{OLS}-\beta) &\xrightarrow{d} \textrm{N}(0,V(\beta))
-\end{align*}
-\begin{align*}
-  \hat{\beta}_{OLS} &= (x'x)^{-1}x'y \\
-  &= \beta + (x'x)^{-1}x'u
-\end{align*}\noindent
-\textbf{Asymptotic independence}\par
-If independent, the joint probability equals the product of probabilities, i.e.
-\begin{align*}
+ \noindent
+ \textbf{Convergence in distribution}
+ \begin{align*}
+  \hat{\beta}_{OLS}         & \xrightarrow{d} \textrm{N}(\beta,V(\beta)) \\
+  (\hat{\beta}_{OLS}-\beta) & \xrightarrow{d} \textrm{N}(0,V(\beta))
+ \end{align*}
+ \begin{align*}
+  \hat{\beta}_{OLS} & = (x'x)^{-1}x'y         \\
+                    & = \beta + (x'x)^{-1}x'u
+ \end{align*}\noindent
+ \textbf{Asymptotic independence}\par
+ If independent, the joint probability equals the product of probabilities, i.e.
+ \begin{align*}
   P(A\cap B) = P(A)*P(B)
-\end{align*}
+ \end{align*}
 \end{multicols}
 
 
 \section{ARIMA modelling}
 \begin{multicols}{2}\noindent
-\textbf{Univariate TS strategy}\par
-Not based on Economic Theory\\
-(reduced form modelling $\rightarrow$ the past is informative about the present)
-\begin{align*}
-y_t = f(y_{t-1},y_{t-2},y_{t-3}\cdot)
-\end{align*}
-The performance in terms of \textbf{forecasting} is key!\par
-If you want to learn about main drivers, you need to use other models.\\
-\\
-\textbf{1. Stationary time series:}\par
-Sometimes \nth{1} difference is required to ensure stationarity.\\
-\\
-\textbf{2. Identification:}\par
-Specify the model that explains the behaviour the best
-\begin{itemize}
+ \textbf{Univariate TS strategy}\par
+ Not based on Economic Theory\\
+ (reduced form modelling $\rightarrow$ the past is informative about the present)
+ \begin{align*}
+  y_t = f(y_{t-1},y_{t-2},y_{t-3}\cdot)
+ \end{align*}
+ The performance in terms of \textbf{forecasting} is key!\par
+ If you want to learn about main drivers, you need to use other models.\\
+ \\
+ \textbf{1. Stationary time series:}\par
+ Sometimes \nth{1} difference is required to ensure stationarity.\\
+ \\
+ \textbf{2. Identification:}\par
+ Specify the model that explains the behaviour the best
+ \begin{itemize}
   \item[AR:] Autoregressive model
   \item[MA:] Moving Average model
   \item[ARMA:] AutoRegressive Moving Average model
-\end{itemize}
-To initially decide between them, plot the
-\begin{itemize}
+ \end{itemize}
+ To initially decide between them, plot the
+ \begin{itemize}
   \item \textbf{ACF:} The Simple Autocorrelation Function.\\
-              Check if there is persistence/memory:
-              \begin{align*}
-                \frac{Cov(x_t,x_{t+k})}{\sqrt{V(x_t)}\sqrt{V(x_{t+k})}},\textrm{     for }k=0,\pm1,\pm2,\cdots
-              \end{align*}
-              Related to the asymptotic confidence interval
-              \begin{align*}
-                \left(\frac{-1.96}{\sqrt{(T)}}, \frac{1.96}{\sqrt{(T)}}  \right)
-              \end{align*}
-              or degrees of freedom corrected
-              \begin{align*}
-                \left(\frac{-1.96}{\sqrt{(T-k)}}, \frac{1.96}{\sqrt{(T-k)}}  \right)
-              \end{align*}
+        Check if there is persistence/memory:
+        \begin{align*}
+         \frac{Cov(x_t,x_{t+k})}{\sqrt{V(x_t)}\sqrt{V(x_{t+k})}},\textrm{     for }k=0,\pm1,\pm2,\cdots
+        \end{align*}
+        Related to the asymptotic confidence interval
+        \begin{align*}
+         \left(\frac{-1.96}{\sqrt{(T)}}, \frac{1.96}{\sqrt{(T)}}  \right)
+        \end{align*}
+        or degrees of freedom corrected
+        \begin{align*}
+         \left(\frac{-1.96}{\sqrt{(T-k)}}, \frac{1.96}{\sqrt{(T-k)}}  \right)
+        \end{align*}
   \item \textbf{PACF:} The Partial Autocorrelation Function\\
-              e.g. The The \nth{3} partial autocorrelation coeffcient of the PACF, $\phi_{33}$:
-              \begin{align*}
-                \tilde{x}_t=\phi{31}\tilde{x}_{t-1}+\phi{32}\tilde{x}_{t-2}+\phi{33}\tilde{x}_{t-3}+\varepsilon_t
-              \end{align*}
+        e.g. The The \nth{3} partial autocorrelation coeffcient of the PACF, $\phi_{33}$:
+        \begin{align*}
+         \tilde{x}_t=\phi{31}\tilde{x}_{t-1}+\phi{32}\tilde{x}_{t-2}+\phi{33}\tilde{x}_{t-3}+\varepsilon_t
+        \end{align*}
   \item [$\rightarrow$] Using both functions helps us to make an initial specification.
-  \begin{itemize}
-    \item Helps us to decide on the number of lags.
-    \item Too many lags can cause multicolliniarity.
-  \end{itemize}
-\end{itemize}
-Better to choose an $f(t)\neq0$ to test it.\\
-\\
-\textbf{3. Estimation}\par
-..
-\\
-\textbf{4. Validation}\par
-How well is the model specified?
-\begin{itemize}
+        \begin{itemize}
+         \item Helps us to decide on the number of lags.
+         \item Too many lags can cause multicolliniarity.
+        \end{itemize}
+ \end{itemize}
+ Better to choose an $f(t)\neq0$ to test it.\\
+ \\
+ \textbf{3. Estimation}\par
+ ..
+ \\
+ \textbf{4. Validation}\par
+ How well is the model specified?
+ \begin{itemize}
   \item
   \item Residuals
-\end{itemize}
-Re-specify if not correctly validated (repeat step 2-4)\\
-\\
-\textbf{5. Forecasting}\par
-When model is valid, use it to forecast.
+ \end{itemize}
+ Re-specify if not correctly validated (repeat step 2-4)\\
+ \\
+ \textbf{5. Forecasting}\par
+ When model is valid, use it to forecast.
 
 
-\subsection{AR(p) process}\noindent
-Stationarity conditions for the AR model:
-\begin{itemize}
+ \subsection{AR(p) process}\noindent
+ Stationarity conditions for the AR model:
+ \begin{itemize}
   \item[1.] The deterministic component $f$ does not depend on $t$ (rules out MA)
   \item[2.] All roots of the autoregressive polynomial must, in module, be greater than one, e.g.\\
-\end{itemize}
-\begin{align*}
-  x_t&=\phi_1x_{t-1}+\varepsilon_t\\
-  \underbrace{(1-\phi_1 (L))}_\text{AR polynomial}x_{t-1}&=\varepsilon_t,\ \ \ L>1\textrm{ required!}\\
-  V(x_t)&=V(\phi_1x_{t-1})+V(\varepsilon_t)\\
-  \sigma^2_x&=\phi_1^2 \sigma_x^2 +\\
-  \sigma_x^2&=\frac{1}{1-\sigma_1^2}\sigma^2_\varepsilon\textrm{,   requires }\sigma^2_1<1
-\end{align*}
+ \end{itemize}
+ \begin{align*}
+  x_t                                                     & =\phi_1x_{t-1}+\varepsilon_t                                                  \\
+  \underbrace{(1-\phi_1 (L))}_\text{AR polynomial}x_{t-1} & =\varepsilon_t,\ \ \ L>1\textrm{ required!}                                   \\
+  V(x_t)                                                  & =V(\phi_1x_{t-1})+V(\varepsilon_t)                                            \\
+  \sigma^2_x                                              & =\phi_1^2 \sigma_x^2 +                                                        \\
+  \sigma_x^2                                              & =\frac{1}{1-\sigma_1^2}\sigma^2_\varepsilon\textrm{,   requires }\sigma^2_1<1
+ \end{align*}
 
 
-\subsection{MA(q) model}\noindent
-If MA is invertible
-\begin{align*}
-  \Rightarrow MA(q)&\equiv AR(\infty)\\
-                  &\simeq AR(p),\ \ \ p\ \textrm{is large}
-\end{align*}
-Use the $\hat{\varepsilon}_t^0$ estimation algorithm.
+ \subsection{MA(q) model}\noindent
+ If MA is invertible
+ \begin{align*}
+  \Rightarrow MA(q) & \equiv AR(\infty)                       \\
+                    & \simeq AR(p),\ \ \ p\ \textrm{is large}
+ \end{align*}
+ Use the $\hat{\varepsilon}_t^0$ estimation algorithm.
 
 \end{multicols}
 
 
 
-\section{...}
+\section{Order of Integration Analysis}
+\begin{multicols}{2}\noindent
+ \textbf{\#1. Iterative Strategy:} DIY.\\
+ \\
+ \textbf{\#2. Model Selection Strategy:}\\
+ Automated procedure using AIC or BIC.
+ \begin{itemize}
+  \item $p_max=3$
+  \item $q_max=3$
+ \end{itemize}
+ "Autometrics".\\
+ \\
+ Models that rely on $x_t$ being stationary and invertible (for consistent $\hat{\beta}$):
+ \begin{align*}
+  \begin{array}{lc|c}
+             & ACF                 & PACF                \\
+   AR(p)     &                     & x_{(p)}             \\
+   MA(q)     & x_q                 &                     \\
+   ARMA(p,q) & ?_{\hat{p},\hat{q}} & ?_{\hat{p},\hat{q}}
+  \end{array}
+ \end{align*}
+ Usually $x_t$ is non-stationary.
+ \begin{itemize}
+  \item[$\rightarrow$] $\Delta^d x_t, d=0,1,2,3,\cdots$ is stationary?
+        \begin{itemize}
+         \item[$\rightarrow$] $\hat{\beta}$ is consistent!
+        \end{itemize}
+  \item Integrated of order "d".
+        \begin{itemize}
+         \item $prices_t$
+         \item $\Delta prices_t \simeq$ Inflation.
+         \item $\Delta^2 prices_t \simeq$ Acceleration prices.
+        \end{itemize}
+ \end{itemize}
+ A non-stationary proces $\simeq$ Random walk process features (uniroot).
+ \begin{align*}
+  x_t & = \phi x_{t-1}+\varepsilon_t,\ \ \ \ \ \phi=1    \\
+      & = x_0 + \sum\limits_{j=0}^{t-1}\varepsilon_{t-j}
+ \end{align*}
+ With the variance
+ \begin{align*}
+  V(x_t) & = V(x_0) + V\left(\sum\limits_{j=0}^{t-1}\varepsilon_{t-j}\right) \\
+         & \vdots                                                            \\
+         & = \sigma^2_{\varepsilon}t
+ \end{align*}
 
+ \subsection{Unit root tests}
+ \textbf{t-Student distrubution}
+ \begin{itemize}
+  \item Zero mean.
+  \item Broad tails with a low degree of freedoms $k$.
+  \item[$\rightarrow$] Tends towards the normal distribution when $k\rightarrow\infty$.
+ \end{itemize}
+ \textbf{Dickey-Fuller (DF) test}
+ \begin{itemize}
+  \item Only valid for an AR(1) process!
+  \item Statistical inference: Objective:
+        \begin{itemize}
+         \item Test statistics:\\
+               $H_0:\ x_t \sim I(1)$\\
+               $H_1:\ x_t \sim I(0)$
+         \item "Confirmatory analysis":\\
+               $H_0:\ x_t \sim I(0)$\\
+               $H_1:\ x_t \sim I(1)$
+        \end{itemize}
+ \end{itemize}
+ DF:
+ \begin{align*}
+  \Delta x_t=f(t)+\alpha x_{t-1}+u_t
+ \end{align*}
+ \begin{itemize}
+   \item DF assumes $u_t\sim iid$
+ \end{itemize}
+ Corrections to DF:
+ \begin{itemize}
+  \item Philips-Perron (PP) test
+        \begin{itemize}
+         \item Non-parametric correction.
+         \item More general but difficult to estimate the $s^2$.
+         \begin{itemize}
+           \item Allowing a high number of covariates: test statistics looses power
+           \item Allowing a low number of covariates?
+         \end{itemize}
+        \end{itemize}
+  \item ADF test:
+  \begin{itemize}
+    \item Parametric correction.
+    \item More efficient for finite samples.
+  \end{itemize}
+  \item Ng-Perron M test statistics (2001)\\
+        3 legs:
+\  \begin{itemize}
+    \item[1.] Parametric longrun estimate of $S^2_{AR}$.
+    \item[2.] $\bar{\alpha}$ estimated numerically (Elliot, Rothenburg \& Stock, 1996) and Power Envelope Function (PEF) using GLS.
+    \item[3.] Number of lags $k$ to include: decided using the Midified Information Criteria (MIC) strategy:
+    \begin{itemize}
+      \item MAIC
+      \item MSIC
+    \end{itemize}
+  \end{itemize}
+ \end{itemize}
+\textbf{ADF-test}\\
+Capturing any information that might be hidden in the $u_t$ that creates and effect in the $\lambda$-term, $\lambda = \sigma^2-\sigma^2_{\varepsilon} / 2$
+  \begin{align*}
+  \Delta x_t=f(t)+\alpha x_{t-1}+ \sum\limits^{p-1}_{j-1} \gamma_j\Delta x_{t-j} + u_t \\
+  \Rightarrow \rightarrow \varepsilon_t\sim iid
+  \end{align*}
+\textbf{Philips-Perron (PP) test}\\
+  \begin{itemize}
+  \item Nice correction to the DF test.
+  \item In practice, it's difficult to calculate the short-run variance $s_u^2$ and the long-run  variance $s^2$.
+  \end{itemize}
+Complex hypothesis (less feasible):
+  \begin{align*}
+    \left\{ \begin{array}{cccc}
+      H_0: & \alpha=1     & = & x_t\sim I(1) \\
+      H_1: & |\alpha=1|   & = & x_t\sim I(0)
+  \end{array} \right.
+  \end{align*}
+Simple alternatives:
+\begin{align*}
+  \left\{ \begin{array}{cc}
+    H_0: & \alpha=1           \\
+    H_1: & \alpha=\bar{\alpha},\ \ \ \bar{\alpha}=1+\frac{\bar{c}}{T}
+\end{array} \right.
+\end{align*}
+i.e. 'local alternatives' in the neighborhood of $H_0$.\par
+Ng-Perron principle:
+\begin{align}
+  H_1:\ L(\bar{\alpha})-L(1)
+\end{align}
+Using the likelihood (LM test).
+\\ \\
+\textbf{Def. 'Power Envelope Function' (PEF):}\\
+Chooses $\bar{c}$ such that the $PEF=0.5$\\
+$\Rightarrow$ use \textbf{GLS}.
+\end{multicols}
 
 
 
