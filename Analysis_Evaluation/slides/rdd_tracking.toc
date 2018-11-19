@@ -4,6 +4,8 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Background}{5}{0}{2}
 \defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{1}{Experimental design}{7}{0}{2}
+\defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {3}{Theoretical model}{9}{0}{3}
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {3}{1}{Estimation strategy}{14}{0}{3}

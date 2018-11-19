@@ -1,6 +1,6 @@
 \input{01_preamble/documentclass}
 
-\input{01_preamble/commonpackages}
+\input{01_preamble/packages}
 
 \input{01_preamble/koma_packages}
 
@@ -26,7 +26,7 @@
 
 \input{01_preamble/ref_commands}
 
-\addbibresource{references}
+\addbibresource{bib_tax}
 
 \numberwithin{equation}{section}
 
@@ -42,17 +42,22 @@
 \pagestyle{scrheadings}
 
 \small {
-\tableofcontents
-% \clearpage
+% \tableofcontents
 % \listoffigures
 % \listoftables
+% \clearpage
 % \printacronyms[include-classes=abbrev,name=Abbreviations, heading=chapter*]
 }
 \clearpage
 \normalsize
 
-%\section{Introduction}
-\input{02_chapters/01_Notes}
+\section{Introduction}
+\input{02_chapters/01_introduction}
+
+\section{Introduction}
+\input{02_chapters/01_introduction}
+
+
 
 % \clearpage
 % \printbibliography
