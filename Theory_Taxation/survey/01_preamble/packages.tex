@@ -33,7 +33,7 @@
 
 %Create random text
 \usepackage{blindtext} % \Blindtext \blindtext \blindtext[10]
-\usepackage{lipsum} % \lipsum[10]
+\usepackage{lipsum} % \lipsum[1-1]
 
 %Create publication quality tables
 \usepackage{booktabs}
@@ -58,17 +58,18 @@
 \usepackage[hyperref=true]{acro}
 
 \usepackage{enumerate}
-
 \usepackage{xcolor}
 \usepackage{multirow}
+\usepackage{multicol}
+\usepackage{epigraph}
 \usepackage{tabularx}
 \usepackage[figuresright]{rotating}
-
 \usepackage{subcaption}
 \usepackage{caption}
 \usepackage{listings}
 \usepackage{kbordermatrix}% http://www.hss.caltech.edu/~kcb/TeX/kbordermatrix.sty
-\usepackage{bm}
+\usepackage{bm} % bold symbol in math mode
+
 \usepackage{threeparttable}
 
 \usepackage[osf, sc]{mathpazo} % Use the Palatino font
@@ -77,5 +78,12 @@
 
 \usepackage[super]{nth} % Write 1st, 2nd as \nth{1}, \nth{2} etc.
 
-\usepackage{multicol}
-\usepackage{epigraph}
+\usepackage{tikz}
+  \newcommand{\ditto}{
+      \tikz{
+          \draw [line width=0.12ex] (-0.2ex,0) -- +(0,0.8ex)
+              (0.2ex,0) -- +(0,0.8ex);
+          \draw [line width=0.08ex] (-0.6ex,0.4ex) -- +(-1.0em,0)
+              (0.6ex,0.4ex) -- +(1.0em,0);
+      }
+  }

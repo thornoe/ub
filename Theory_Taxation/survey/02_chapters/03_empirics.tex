@@ -1,0 +1,48 @@
+\label{sec:empirics}
+\subsection{Difference-in-differences}
+In the seminal paper of \citet{feldstein1995effect} three income groups (medium, high, and highest) are analyzed during the implementation of the TRA86. For the high-earners the tax rate was reduced from 50 pct. to 28 pct. Using the differences-in-differences (DD) estimation the ETI is estimated as the treatment effect. The evolution of income for the high-earners $z^H$ is evaluated against the income of the control group of medium-earners $z^M$ relative to the the evolution of MTR $\tau$ for each group from 1985 to 1988:
+\begin{align}
+  \hat{\varepsilon}=\frac{\Delta \log(z^H) - \Delta \log(z^M)}{\Delta \log(1-\tau^H) - \Delta \log(1-\tau^M)}
+  \label{eq:DD}
+\end{align}
+While the medium income group is constituted by 3.538 individuals, robustness of the results is weakened by the fact that the high income group only contains 197 individuals and the highest income group only has 57 due to the sample being a non-stratified random draw.
+\\
+\\
+Using Danish montly administrative data \citet{kreiner2016tax} is able to estimate the short-run ETI as $\hat{\beta_3}$ using panel regression:
+\begin{align}
+  \underbrace{w_{y,m,i}}_\text{wage income} = \beta_0 + \underbrace{\beta_1d_{y,i}^{2010}}_\text{2010 dummy} + \underbrace{\beta_2d_i^T}_\text{treatment dummy} + \underbrace{\beta_3\frac{1-\tau_{y,i}}{1-\tau_{2009,i}}}_\text{ETI} + u_{y,m,i}
+  \label{eq:wage}
+\end{align}
+The treatment group of 219,179 individuals is evaluated against a control group of 109,500 individuals with weak or no incentives to shift their income due to the tax reform.
+
+As the marginal tax rate reductions in the Danish 2010 Tax Reform was agreed upon as early as March 1 2009 it allowed for intertemporal tax shifting where self-employed were able to plan and employers to negotiate with there employees. \citet{kreiner2016tax} find a substantial shifting from november and december 2009 to january 2010 such that omitting theese three months from the estimation (\ref{eq:wage}) leads to a short-run ETI estimate of 0.00, showing that the ETI estimate was solely due to shifting and not real responses.
+
+\subsection{IV panel data regression}
+\citet{gruber2002elasticity} set out to use a panel with 60,000 individuals from 1979-1990 to estimate the ETI $\varepsilon$ as occuring in equation (\ref{eq:income}). As opposed to \citet{feldstein1995effect} they do not use simple DD to analyze the absolute change in income relative to the absolute change in MTR between a single set of two years. On the contrary, they take advantage of the different increases and decreases in the MTR durings the 11 year period to calculate the percentage change in deflated income $z_i$ relative to the percentage change in MTR $\tau_i$ for periods of varying length in years $k$ with the regression equation:
+\begin{align}
+  \log\left(\frac{z_{it+k}}{z_{it}}\right)=\alpha +\varepsilon\cdot \log\left(\frac{1-\tau_{it+k}}{1-\tau_{it}}\right) + u_{it},\ \ \ \ \ k=1,2,3
+  \label{eq:income_est}
+\end{align}
+This equation though gives rise to an endogeneity problem, as an income shock $u_{it}>0$ due to the progressiveness of the tax system would lead to a mechanical rise in the MTR, causing a downward biased OLS estimate as corr$(\tau_{it},u_{it})>0$. To solve the endogeneity issue \citet{gruber2002elasticity} use Instrumental Variable (IV) panel regression by introducing $\tau^h$ as an instrument for $\tau_{it+k}$, which is the MTR that individual $i$ would have paid in period $t+k$ due to changes in the tax system if her income would not have changed since period $t$. For this the NBER TAXSIM model is used.
+
+In general panel data is prone to potential mean reversion that would lead to a downward bias in the ETI if some individuals were only in the high-income group initially as a results of an income shock. On the other hand, divergence in the income distribution as observed in the U.S. \citep{gruber2002elasticity} would lead to an upward bias if the changes are non-tax-related such as impacts of skill-biased technological change and globalization. \citet{gruber2002elasticity} attempt to take care of these two issues by controlling for initial log-income of the individual as well as including a 10 piece spline in lagged income controlling for initial decile of the income distribution. The following \nth{2} stage IV equation is given by letting these controls be captured by $f(z_{it})$ and also adding a control for initial mariatal status $x_{it}$:
+\begin{align}
+  \log\left(\frac{z_{it+k}}{z_{it}}\right)=\alpha_0 +\varepsilon\cdot \log\left(\frac{1-\hat{\tau_{it+k}}}{1-\tau_{it}}\right) + \alpha_0 x_{it} + f(z_{it}) + u_{it},\ \ \ \ \ k=1,2,3
+  \label{eq:IV}
+\end{align}
+The estimation results show to be sensitive to controls for mean reversion and non-tax changes to inequality. Estimation using equation (\ref{eq:IV}) still relies on a several assumptions: 1) that the size of the response is constant over the time period and is identical in the short and the long run; 2) that all individuals have perfect knowledge and an identical elasticity. However, the results are also sensitive to exclusion of low-income earners.
+
+Equation (\ref{eq:IV}) is extended to not only allow for substitution effects but also include income effects of changes in tax rate. They are found to be negative but insignificant, though.
+
+\subsection{Full population data}
+\citet{kleven2014estimating} combine tax return information with administrative data containing rich information about labour market, education, and sociodemographics for the full Danish population. The availability of detailed controls in theory allows us to regard the average treatment effect of the treated as the average treatment effect according to the conditional independence assumption, though, even with rich controls it is impossible to be certain that potential bias is removed. Bias from non-tax related changes to inequality and mean reversion is though likely to be much less than in prior studies due to the Danish setting where income inequality has been more stable in the period covered by the data from 1984-2005 than even in other Nordic countries. Furthermore, identificaton is also strenghthened as the variation in taxes is not strongly correlated with income level, thus, the different tax reforms over the period provides nonlinear variation in taxes throughout the income distribution and introduces assymetric treatment of different components affecting individuals at the same income level differently due to different compositions of income.
+
+Similarly to equation (\ref{eq:IV}) panel regression is used to estimate EIT based on responses to changes in the MTR. Thanks to the administrative data, controls are included for time-invariant individual characteristics $x_i^c$ for which the effect $\gamma_t^c$ is allowed to change over time $t$ and the difference in time-variant individual characteristics $\Delta x_it^v$ for which the effect it constant over time. For different income types $j$ the log-difference is estimated with the \nth{2} stage 2SLS equation:
+\begin{align}
+  \Delta\log z_{it}^j = \varepsilon\cdot\Delta\log(1-\tau_{it}^j) + \eta\cdot\Delta\log y_{it} + \Delta\gamma_t^c \bm{x}_i^c + \gamma^v\cdot\Delta\bm{x}_{it}^v + \Delta v_{it}
+  \label{eq:IV2}
+\end{align}
+Where $\Delta \log y_{it}$ is the difference in log virtual income (the sum of non-labour incomes). The endogeneity problem is solved by replacing this and $\Delta \log (1-\tau_{it}^j)$ by the the difference in the mechanical tax rate due to changes in tax system only. These intstruments are based on a constructed tax simulator and allows for IV estimation of the panel regression. In the baseline specification differences at time $t$ are the differences between $t$ and $t+3$.
+\\
+\\
+By merging employer and employee data \citet{chetty2011adjustment} are able to extend equation (\ref{eq:IV2}) with controls for occupation fixed effects and region fixed effects while not having accesss to most other controls. Nonetheless, the biggest impact of the paper is to document the friction due to the Danish labour market being highly unionized.

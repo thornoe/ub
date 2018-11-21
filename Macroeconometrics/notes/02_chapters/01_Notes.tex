@@ -183,7 +183,7 @@
   \Delta x_t=f(t)+\alpha x_{t-1}+u_t
  \end{align*}
  \begin{itemize}
-   \item DF assumes $u_t\sim iid$
+  \item DF assumes $u_t\sim iid$
  \end{itemize}
  Corrections to DF:
  \begin{itemize}
@@ -191,65 +191,84 @@
         \begin{itemize}
          \item Non-parametric correction.
          \item More general but difficult to estimate the $s^2$.
-         \begin{itemize}
-           \item Allowing a high number of covariates: test statistics looses power
-           \item Allowing a low number of covariates?
-         \end{itemize}
+               \begin{itemize}
+                \item Allowing a high number of covariates: test statistics looses power
+                \item Allowing a low number of covariates?
+               \end{itemize}
         \end{itemize}
   \item ADF test:
-  \begin{itemize}
-    \item Parametric correction.
-    \item More efficient for finite samples.
-  \end{itemize}
+        \begin{itemize}
+         \item Parametric correction.
+         \item More efficient for finite samples.
+        \end{itemize}
   \item Ng-Perron M test statistics (2001)\\
         3 legs:
-\  \begin{itemize}
-    \item[1.] Parametric longrun estimate of $S^2_{AR}$.
-    \item[2.] $\bar{\alpha}$ estimated numerically (Elliot, Rothenburg \& Stock, 1996) and Power Envelope Function (PEF) using GLS.
-    \item[3.] Number of lags $k$ to include: decided using the Midified Information Criteria (MIC) strategy:
-    \begin{itemize}
-      \item MAIC
-      \item MSIC
-    \end{itemize}
-  \end{itemize}
+        \  \begin{itemize}
+         \item[1.] Parametric longrun estimate of $S^2_{AR}$.
+         \item[2.] $\bar{\alpha}$ estimated numerically (Elliot, Rothenburg \& Stock, 1996) and Power Envelope Function (PEF) using GLS.
+         \item[3.] Number of lags $k$ to include: decided using the Midified Information Criteria (MIC) strategy:
+               \begin{itemize}
+                \item MAIC
+                \item MSIC
+               \end{itemize}
+        \end{itemize}
  \end{itemize}
-\textbf{ADF-test}\\
-Capturing any information that might be hidden in the $u_t$ that creates and effect in the $\lambda$-term, $\lambda = \sigma^2-\sigma^2_{\varepsilon} / 2$
-  \begin{align*}
+ \textbf{ADF-test}\\
+ Capturing any information that might be hidden in the $u_t$ that creates and effect in the $\lambda$-term, $\lambda = \sigma^2-\sigma^2_{\varepsilon} / 2$
+ \begin{align*}
   \Delta x_t=f(t)+\alpha x_{t-1}+ \sum\limits^{p-1}_{j-1} \gamma_j\Delta x_{t-j} + u_t \\
   \Rightarrow \rightarrow \varepsilon_t\sim iid
-  \end{align*}
-\textbf{Philips-Perron (PP) test}\\
-  \begin{itemize}
+ \end{align*}
+ \textbf{Philips-Perron (PP) test}\\
+ \begin{itemize}
   \item Nice correction to the DF test.
   \item In practice, it's difficult to calculate the short-run variance $s_u^2$ and the long-run  variance $s^2$.
-  \end{itemize}
-Complex hypothesis (less feasible):
-  \begin{align*}
-    \left\{ \begin{array}{cccc}
-      H_0: & \alpha=1     & = & x_t\sim I(1) \\
-      H_1: & |\alpha=1|   & = & x_t\sim I(0)
+ \end{itemize}
+ Complex hypothesis (less feasible):
+ \begin{align*}
+  \left\{ \begin{array}{cccc}
+   H_0: & \alpha=1   & = & x_t\sim I(1) \\
+   H_1: & |\alpha=1| & = & x_t\sim I(0)
   \end{array} \right.
-  \end{align*}
-Simple alternatives:
-\begin{align*}
+ \end{align*}
+ Simple alternatives:
+ \begin{align*}
   \left\{ \begin{array}{cc}
-    H_0: & \alpha=1           \\
-    H_1: & \alpha=\bar{\alpha},\ \ \ \bar{\alpha}=1+\frac{\bar{c}}{T}
-\end{array} \right.
-\end{align*}
-i.e. 'local alternatives' in the neighborhood of $H_0$.\par
-Ng-Perron principle:
-\begin{align}
+   H_0: & \alpha=1                                                   \\
+   H_1: & \alpha=\bar{\alpha},\ \ \ \bar{\alpha}=1+\frac{\bar{c}}{T}
+  \end{array} \right.
+ \end{align*}
+ i.e. 'local alternatives' in the neighborhood of $H_0$.\par
+ Ng-Perron principle:
+ \begin{align}
   H_1:\ L(\bar{\alpha})-L(1)
-\end{align}
-Using the likelihood (LM test).
-\\ \\
-\textbf{Def. 'Power Envelope Function' (PEF):}\\
-Chooses $\bar{c}$ such that the $PEF=0.5$\\
-$\Rightarrow$ use \textbf{GLS}.
+ \end{align}
+ Using the likelihood (LM test).
+ \\ \\
+ \textbf{Def. 'Power Envelope Function' (PEF):}\\
+ Chooses $\bar{c}$ such that the $PEF=0.5$\\
+ $\Rightarrow$ use \textbf{GLS}.
 \end{multicols}
 
 
+\subsection{Cointegration Analysis}
+\begin{multicols}{2}\noindent
+ \textbf{Spurious regression}
+ \begin{itemize}
+  \item[$\hat{\mu},\hat{\gamma}$] inconsistent (random variables)
+  \item[$t_{\hat{\mu}},F^{*}$] inconsistent (diverge towards $\pm\infty$)
+  \item[$\bar{R}^2$] inconsistent (random variable)
+ \end{itemize}
+ \textbf{Best (incomplete) cure}\par
+ Model the relationship using differences
+ \begin{itemize}
+  \item[$\hat{\beta}_{OLS}$] consistent.
+  \item[$t_{\hat{\mu}}$] $\sim N(0,1)$
+  \item[$F^{*}$] $\sim$ F-snedecor
+  \item[$\bar{R}^2$] ok.
+ \end{itemize}
+
+
+\end{multicols}
 
 %\includegraphics[width = 1.0\textwidth]{CO2.PNG}
