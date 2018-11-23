@@ -78,6 +78,14 @@
 
 \usepackage[super]{nth} % Write 1st, 2nd as \nth{1}, \nth{2} etc.
 
+% Select what to do with command \comment:
+   \newcommand{\comment}[1]{}  %comment not showed
+  % \newcommand{\comment}[1]{\par {\bfseries \color{blue} #1 \par}} %comment showed
+
+% Select what to do with todonotes: i.e. \todo{}, \todo[inline]{}
+  % \usepackage[disable]{todonotes} % notes not showed
+  \usepackage[draft]{todonotes}   % notes showed
+
 \usepackage{tikz}
   \newcommand{\ditto}{
       \tikz{

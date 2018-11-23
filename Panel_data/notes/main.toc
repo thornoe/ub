@@ -39,6 +39,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.4}Autocorrelation in the RE model}{5}{subsection.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Incomplete/unbalanced panels}{5}{section.6}
+\contentsline {section}{\numberline {6}Incomplete/unbalanced panels}{6}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Dynamic panels}{5}{section.7}
+\contentsline {section}{\numberline {7}Dynamic panels}{6}{section.7}

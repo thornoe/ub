@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.8.12)  19 NOV 2018 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.8.12)  23 NOV 2018 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1193,23 +1193,45 @@ File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 \@quotelevel=\count370
 \@quotereset=\count371
 
-(./rdd_tracking.aux)
+(./rdd_tracking.aux
+
+./rdd_tracking.aux:162: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.162 n
+       ew}{nyt/global//global/global}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./rdd_tracking.aux:162: Extra }, or forgotten \endgroup.
+l.162 new}
+          {nyt/global//global/global}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+)
 \openout1 = `rdd_tracking.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1277,7 +1299,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring OFF on input line 94.
+Package hyperref Info: Link coloring OFF on input line 82.
 
 (c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1287,66 +1309,66 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count378
 )
-LaTeX Info: Redefining \ref on input line 94.
-LaTeX Info: Redefining \pageref on input line 94.
-LaTeX Info: Redefining \nameref on input line 94.
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
 
 (./rdd_tracking.out) (./rdd_tracking.out)
 \@outlinefile=\write7
 \openout7 = `rdd_tracking.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 94.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 82.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 94.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 82.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 94.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 94.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 94.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 94.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 82.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 94.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 94.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 94.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 82.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 94.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 94.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 94.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 82.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 94.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 94.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 82.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 94.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 82.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 94.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 94.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 94.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 94.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 94.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 94.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 94.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 82.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 82.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 9
-4.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 8
+2.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-94.
+82.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 94.
+ut line 82.
 
 (c:/texlive/2018/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
 glish.dict
@@ -1383,8 +1405,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'rdd_tracking.bbl' found.
  (./rdd_tracking.bbl)
-Package biblatex Info: Reference section=0 on input line 94.
-Package biblatex Info: Reference segment=0 on input line 94.
+Package biblatex Info: Reference section=0 on input line 82.
+Package biblatex Info: Reference segment=0 on input line 82.
 
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.16} (current compat level: 1.9).
@@ -1393,78 +1415,80 @@ enefit from \pgfplotsset{compat=1.16} (current compat level: 1.9).
 Package todonotes Warning: The length marginparwidth is less than 2cm and will 
 most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 94.
+loading the todonotes package. on input line 82.
 
 (./rdd_tracking.nav)
 <logo.png, id=57, 1082.8455pt x 133.6995pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 96.
+Package pdftex.def Info: logo.png  used on input line 84.
 (pdftex.def)             Requested size: 307.28987pt x 37.94153pt.
 
-Overfull \vbox (56.4414pt too high) detected at line 96
+Overfull \vbox (56.4414pt too high) detected at line 84
  []
 
 
-Overfull \vbox (12.59242pt too high) detected at line 96
+Overfull \vbox (12.59242pt too high) detected at line 84
  []
 
-[1
 
-{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo.png>]
-(./rdd_tracking.toc) [2
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./logo.png>
+]
+(./rdd_tracking.toc) [3
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 108.
+LaTeX Font Info:    Try loading font information for U+msa on input line 96.
  (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 108.
+LaTeX Font Info:    Try loading font information for U+msb on input line 96.
  (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 108.
+line 96.
 
 (c:/texlive/2018/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-[3
+[4
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 136
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 124
 .
-LaTeX Font Info:    No file OMScmss.fd. on input line 136.
+LaTeX Font Info:    No file OMScmss.fd. on input line 124.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 136.
+(Font)              for symbol `textbullet' on input line 124.
 
 
-Overfull \vbox (1.96307pt too high) detected at line 136
+Overfull \vbox (1.96307pt too high) detected at line 124
  []
 
-[4
-
-] [5
+[5
 
 ] [6
 
 ] [7
 
+] [8
+
 ]
-<variation.png, id=134, 618.51076pt x 434.22224pt>
+<variation.png, id=140, 618.51076pt x 434.22224pt>
 File: variation.png Graphic file (type png)
 <use variation.png>
-Package pdftex.def Info: variation.png  used on input line 200.
+Package pdftex.def Info: variation.png  used on input line 188.
 (pdftex.def)             Requested size: 307.28987pt x 215.73244pt.
- [8
+ [9
 
- <./variation.png>] [9
-
-] [10
+ <./variation.png>] [10
 
 ] [11
 
@@ -1476,38 +1500,40 @@ Package pdftex.def Info: variation.png  used on input line 200.
 
 ] [15
 
-]
-[16
+] [16
 
 ]
-<results.png, id=189, 712.46175pt x 512.51476pt>
+[17
+
+]
+<results.png, id=196, 712.46175pt x 512.51476pt>
 File: results.png Graphic file (type png)
 <use results.png>
-Package pdftex.def Info: results.png  used on input line 337.
+Package pdftex.def Info: results.png  used on input line 325.
 (pdftex.def)             Requested size: 307.28987pt x 221.0574pt.
- [17
-
- <./results.png>]
-<polynomial.png, id=196, 622.12425pt x 488.42474pt>
-File: polynomial.png Graphic file (type png)
-<use polynomial.png>
-Package pdftex.def Info: polynomial.png  used on input line 342.
-(pdftex.def)             Requested size: 307.28987pt x 241.26047pt.
  [18
 
- <./polynomial.png>] [19
+ <./results.png>]
+<polynomial.png, id=203, 622.12425pt x 488.42474pt>
+File: polynomial.png Graphic file (type png)
+<use polynomial.png>
+Package pdftex.def Info: polynomial.png  used on input line 330.
+(pdftex.def)             Requested size: 307.28987pt x 241.26047pt.
+ [19
 
-] [20
+ <./polynomial.png>] [20
 
 ] [21
 
 ] [22
 
+] [23
+
 ]
-Overfull \vbox (24.794pt too high) detected at line 400
+Overfull \vbox (24.794pt too high) detected at line 388
  []
 
-[23
+[24
 
  <c:/texlive/2018/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write8
@@ -1519,44 +1545,69 @@ Overfull \vbox (24.794pt too high) detected at line 400
 \tf@snm=\write10
 \openout10 = `rdd_tracking.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 409.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 409.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
 
 (./rdd_tracking.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 409.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 409.
-Package rerunfilecheck Info: File `rdd_tracking.out' has not changed.
-(rerunfilecheck)             Checksum: 3270E4EA32D67AF0BA160AC60ECA466E;598.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
 
+
+Package rerunfilecheck Warning: File `rdd_tracking.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `rdd_tracking.out':
+(rerunfilecheck)             Before: 3270E4EA32D67AF0BA160AC60ECA466E;598
+(rerunfilecheck)             After:  CD3DC3705CA8D3A0AAF0E1CEBB1F4308;598.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'rdd_tracking.run.xml'.
 \openout1 = `rdd_tracking.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37562 strings out of 492642
- 879489 string characters out of 6133162
+ 37568 strings out of 492642
+ 879567 string characters out of 6133162
  1397348 words of memory out of 5000000
  40662 multiletter control sequences out of 15000+600000
  13728 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,98p,1835b,1675s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2
-018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2018/texmf
--dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2018/texmf-dist/font
-s/type1/public/amsfonts/cm/cmss9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmssbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmssi8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmssi9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
-b><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on rdd_tracking.pdf (23 pages, 612230 bytes).
+pdfTeX warning (dest): name{Outline0.5.2.21} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.5.1.20} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.3.1.14} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.2.1.7} has been referenced but does not ex
+ist, replaced by a fixed one
+
+<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2018/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2018/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmss9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmssbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmssi8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mssi9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on rdd_tracking.pdf (24 pages, 612793 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
+ 303 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
  151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

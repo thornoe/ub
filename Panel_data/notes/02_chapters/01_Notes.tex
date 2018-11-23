@@ -36,7 +36,7 @@ In ML we maximize the probability.\\
 In OLS we don't care about the variance.
 
 \subsection{The fixed effects model}
-$\alpha_i$ is a parameter capturing the individual effect (time-invariant!).
+$\alpha_i$ is a parameter capturing the individual effect (time-invariant!)
 \begin{align*}
     y_{it}&=i\alpha_i+X_{it}\beta+\varepsilon_{it}\\
     \Rightarrow y &= [\begin{array}{cc}i & X\end{array}] \left[\begin{array}{c}\alpha \\ \beta\end{array}\right] + \varepsilon
@@ -78,6 +78,15 @@ The overall variance: Weighted variation between the within-variance and between
 
 4
 \section{Fixed effects vs. random estimator} % 4
+\begin{itemize}
+  \item \textbf{FE allows for correlation} with $y_{it}$ - and has explanatory power.
+  \item \textbf{RE doesn't allow for correlation} with $y_{it}$ - the effect is random. Nor does is allow for correlation with $\varepsilon_{it}$.
+\end{itemize}
+Check if there are individual effects;
+\begin{itemize}
+  \item $H_0:\alpha=0?$ poolability test / homogeneity test.
+  \item $H_0:\sigma_\xi^2=0?$ Breush-Pagan test.
+\end{itemize}
 \begin{table}[h]
   \centering
   \footnotesize
@@ -91,6 +100,7 @@ The overall variance: Weighted variation between the within-variance and between
 \caption{Endogeneity problems}
 \label{tab:endogeneity}
 \end{table}
+
 
 \begin{multicols}{2}
 
@@ -161,7 +171,17 @@ Inequality and growth
 % 5
 \section{Heteroskedasticity and autocorrelation in panel data} % 5
 \begin{multicols}{2}
+\begin{itemize}
+  \item Hausman test
+  \item Non-spherical disturbances.
+    \begin{itemize}
+      \item Heteroscedasticity
+      \item Correlation
+      \item Autocorrelation
+    \end{itemize}
+\end{itemize}
 \subsection{Heteroskedasticity in FE model}
+
 \begin{align}
   y_{it}= \alpha_i + x_{it}\beta+\varepsilon_{it}
   \label{eq:FE}
@@ -211,21 +231,37 @@ Incomplete panels are similar to heteroscedasticity issues.
   \item For some procedures we will need complete panels though.
 \end{itemize}
 
-
-
 \end{multicols}
-
 
 
 % 7
 \section{Dynamic panels} % 7
 \begin{multicols}{2}
+Became the standard in the 90s for economic growth. Has some issues, so they're not the state of the art anymore. (Can be a column in the regression table).
+
 Autocorrelation in $y_{it}$.
 \begin{align*}
   y_{it} = \alpha y_{it-1}+\alpha_{it}\beta+\cdots
 \end{align*}
 
-GMM estimation.
+\subsection{GMM estimation}
+(some have started using ML, but requires the use of strongly nonlinear algorithms)
+\\ \\
+Allows us to impose restrictions\par
+e.g. for $y=x\beta+\varepsilon$:
+\begin{align*}
+  cov(x,\varepsilon)&=0  \\
+  cov(y,\varepsilon)&=0
+\end{align*}
+This is possible as $u$ and thus $\beta$ is restricted to follow a normal distribution.
+
+We can use past realizations of y as instruments for y_{it-1}
+\\ \\
+\textbf{Limitations:}
+\begin{itemize}
+  \item Need at least 150-200 observations (per time period).
+\end{itemize}
+
 
 \end{multicols}
 
