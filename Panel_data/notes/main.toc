@@ -42,3 +42,11 @@
 \contentsline {section}{\numberline {6}Incomplete/unbalanced panels}{6}{section.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7}Dynamic panels}{6}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}GMM estimation}{6}{subsection.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}Validation of instruments}{6}{subsection.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3}GMM vs. within estimator}{6}{subsection.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4}Testing overidentifying restrictions}{6}{subsection.7.4}

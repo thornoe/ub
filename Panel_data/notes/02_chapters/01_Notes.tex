@@ -2,74 +2,74 @@
 {\textit{.}}
 
 \begin{multicols}{2}
-\section{Introduction}
-Example macro panel data:\par
-Maddison, 2007, and IFS
-\begin{itemize}
+ \section{Introduction}
+ Example macro panel data:\par
+ Maddison, 2007, and IFS
+ \begin{itemize}
   \item Formatting data
   \item Describtive statistics
   \item Graphs
   \item Maps
-\end{itemize}
+ \end{itemize}
  % 2
-\section{Fixed Effects estimators} % 2
-\subsection{Simultaneous equations models with exogenous explanatory variables}
-Four different models:
-\begin{itemize}
+ \section{Fixed Effects estimators} % 2
+ \subsection{Simultaneous equations models with exogenous explanatory variables}
+ Four different models:
+ \begin{itemize}
   \item[M1:] $\alpha\neq,\ \beta\neq.$ Estimation individual by individual (GLS).
   \item[M2:] $\alpha=,\ \beta=.$ Equal constant terms and slopes (presence of homogeneity).
   \item[M3:] $\alpha\neq,\ \beta=.$ Equal slopes, different constant terms.
   \item[M4:] $\alpha=,\ \beta\neq.$ Equal constant terms, different slopes.
-\end{itemize}
-Choosing between them using\par
-\textbf{Test for Homogeneity:}
-\begin{itemize}
+ \end{itemize}
+ Choosing between them using\par
+ \textbf{Test for Homogeneity:}
+ \begin{itemize}
   \item[a.] Estimate the extended/unrestricted model.
   \item[b.] Estimate the restricted model.
   \item[c.] $H_0:$ Homogeneity (the unrestricted is not better than the restricted).\\
-  Reject $H_0$ if the F-value is higher than the critical value of the F-distribution.
-  \begin{align*}
-    F = \frac{(SSR_R-SSR_{UR})/r}{SSR_{UR}/df}
-  \end{align*}
-\end{itemize}
-In ML we maximize the probability.\\
-In OLS we don't care about the variance.
+        Reject $H_0$ if the F-value is higher than the critical value of the F-distribution.
+        \begin{align*}
+         F = \frac{(SSR_R-SSR_{UR})/r}{SSR_{UR}/df}
+        \end{align*}
+ \end{itemize}
+ In ML we maximize the probability.\\
+ In OLS we don't care about the variance.
 
-\subsection{The fixed effects model}
-$\alpha_i$ is a parameter capturing the individual effect (time-invariant!)
-\begin{align*}
-    y_{it}&=i\alpha_i+X_{it}\beta+\varepsilon_{it}\\
-    \Rightarrow y &= [\begin{array}{cc}i & X\end{array}] \left[\begin{array}{c}\alpha \\ \beta\end{array}\right] + \varepsilon
-\end{align*}
-Leasy Squares Dummy Variables (LSDV):
-\begin{itemize}
+ \subsection{The fixed effects model}
+ $\alpha_i$ is a parameter capturing the individual effect (time-invariant!)
+ \begin{align*}
+  y_{it}        & =i\alpha_i+X_{it}\beta+\varepsilon_{it}                                            \\
+  \Rightarrow y & = [\begin{array}{cc}i & X\end{array}] \left[\begin{array}{c}\alpha \\ \beta\end{array}\right] + \varepsilon
+ \end{align*}
+ Leasy Squares Dummy Variables (LSDV):
+ \begin{itemize}
   \item FE model: All variables are within-transformed e.g the deviations from the mean.
-\end{itemize}
-Test the homogeneity analysis:
-\begin{align*}
+ \end{itemize}
+ Test the homogeneity analysis:
+ \begin{align*}
   H_0:\ \alpha_1=\alpha_2=\cdots=\alpha_M
-\end{align*}
+ \end{align*}
 
 
-\subsection{Within and between estimators}
-The overall variance: Weighted variation between the within-variance and between-variance.
+ \subsection{Within and between estimators}
+ The overall variance: Weighted variation between the within-variance and between-variance.
 
 
-\subsection{Effects of group and time}
+ \subsection{Effects of group and time}
 
 
 \end{multicols}
 
- % 3
+% 3
 \section{Random effects estimator} % 3
 \begin{multicols}{2}
-\subsection{The random effects model}
+ \subsection{The random effects model}
 
 
-\subsection{The generalized least squares estimation}
+ \subsection{The generalized least squares estimation}
 
 
-\subsection{Feasible Generalized Lest squares (unkown )}
+ \subsection{Feasible Generalized Lest squares (unkown )}
 
 
 
@@ -79,26 +79,26 @@ The overall variance: Weighted variation between the within-variance and between
 4
 \section{Fixed effects vs. random estimator} % 4
 \begin{itemize}
-  \item \textbf{FE allows for correlation} with $y_{it}$ - and has explanatory power.
-  \item \textbf{RE doesn't allow for correlation} with $y_{it}$ - the effect is random. Nor does is allow for correlation with $\varepsilon_{it}$.
+ \item \textbf{FE allows for correlation} with $y_{it}$ - and has explanatory power.
+ \item \textbf{RE doesn't allow for correlation} with $y_{it}$ - the effect is random. Nor does is allow for correlation with $\varepsilon_{it}$.
 \end{itemize}
 Check if there are individual effects;
 \begin{itemize}
-  \item $H_0:\alpha=0?$ poolability test / homogeneity test.
-  \item $H_0:\sigma_\xi^2=0?$ Breush-Pagan test.
+ \item $H_0:\alpha=0?$ poolability test / homogeneity test.
+ \item $H_0:\sigma_\xi^2=0?$ Breush-Pagan test.
 \end{itemize}
 \begin{table}[h]
-  \centering
-  \footnotesize
-  \begin{tabular}{l|cc}
-    %\toprule
-    {}    & No endogeneity            & Endogeneity   \\
-    \midrule
-    R.E.  & Consist. \& Efficient     & Inconsistent  \\
-    F.E.  & Consist. but inefficient  & Consist. but ineff.
-  \end{tabular}
-\caption{Endogeneity problems}
-\label{tab:endogeneity}
+ \centering
+ \footnotesize
+ \begin{tabular}{l|cc}
+  %\toprule
+  {}   & No endogeneity           & Endogeneity         \\
+  \midrule
+  R.E. & Consist. \& Efficient    & Inconsistent        \\
+  F.E. & Consist. but inefficient & Consist. but ineff.
+ \end{tabular}
+ \caption{Endogeneity problems}
+ \label{tab:endogeneity}
 \end{table}
 
 
@@ -106,63 +106,63 @@ Check if there are individual effects;
 
 
 
-\subsection{The Breush Pagan test}
+ \subsection{The Breush Pagan test}
 
 
-\subsection{The Hausman test}
-\begin{itemize}
+ \subsection{The Hausman test}
+ \begin{itemize}
   \item FE - $\beta^{FE}$
   \item FE - $\beta^{RE}$
   \item $()\beta^{FE}-\beta^{RE})$?
-\end{itemize}
-Problems:
-\begin{itemize}
+ \end{itemize}
+ Problems:
+ \begin{itemize}
   \item Hausman assumptions
   \item We cannot use "fixed" variables (no time variation).
-\end{itemize}
-\textbf{The Mundlak estimation:}
-\begin{itemize}
+ \end{itemize}
+ \textbf{The Mundlak estimation:}
+ \begin{itemize}
   \item[$\rightarrow$] Allows joint estimation F.E. / BE
   \item Diff(FE-BE) $\rightarrow$ estimate 'pseudo' Hausman test.
   \item[$\rightarrow$] Allows for including 'fixed' variables (with no time-variation)
-\end{itemize}
-RE:
-\begin{align*}
+ \end{itemize}
+ RE:
+ \begin{align*}
   y_{it}+x_{it}\beta+\psi_i+\varepsilon_{it}
-\end{align*}
-Mundlak regression:\par
-Including both RE and BE.
-\begin{align*}
+ \end{align*}
+ Mundlak regression:\par
+ Including both RE and BE.
+ \begin{align*}
   y_{it}+(x_{it}-\bar{x_i})\beta^w+\bar{x_i}\beta^b +\psi_i+\varepsilon_{it}
-\end{align*}
-Is just an instrumental regression!\par
-Standard errors are unreliable and $R^2$ is lower.
-\begin{itemize}
+ \end{align*}
+ Is just an instrumental regression!\par
+ Standard errors are unreliable and $R^2$ is lower.
+ \begin{itemize}
   \item FE: We capture anything permanent for any individual in $\alpha_i$
-  \begin{itemize}
-    \item[$\rightarrow$] Get rid of anything permanent.
-    \item[$\rightarrow$] Good for controlling.
-    \item We don't know what the individual effects mean though!
-  \end{itemize}
+        \begin{itemize}
+         \item[$\rightarrow$] Get rid of anything permanent.
+         \item[$\rightarrow$] Good for controlling.
+         \item We don't know what the individual effects mean though!
+        \end{itemize}
   \item Mundlak: We 'only' capture anything permanent considered in $\bar{x_i}$
-\end{itemize}
-Increasing the data set (information)
-\begin{itemize}
+ \end{itemize}
+ Increasing the data set (information)
+ \begin{itemize}
   \item Hausman test: Is likely to find endogeneity though the difference in coefficients is very small.
-\end{itemize}
+ \end{itemize}
 
-\subsection{Long run vs. short run effects} % 5
-Baltagi \& Griffin (1984) "Short and Long Run Effects in Pooled Models".
-\begin{itemize}
+ \subsection{Long run vs. short run effects} % 5
+ Baltagi \& Griffin (1984) "Short and Long Run Effects in Pooled Models".
+ \begin{itemize}
   \item Betweeen est. $\rightarrow$ LR effect.
   \item Within est. $\rightarrow$ SR effect.
   \item OLS and RE $\rightarrow$ average of SR \& LR effect.
-\end{itemize}
-Inequality and growth
-\begin{itemize}
+ \end{itemize}
+ Inequality and growth
+ \begin{itemize}
   \item Positive in the SR
   \item Negative in the LR
-\end{itemize}
+ \end{itemize}
 
 
 \end{multicols}
@@ -171,51 +171,51 @@ Inequality and growth
 % 5
 \section{Heteroskedasticity and autocorrelation in panel data} % 5
 \begin{multicols}{2}
-\begin{itemize}
+ \begin{itemize}
   \item Hausman test
   \item Non-spherical disturbances.
-    \begin{itemize}
-      \item Heteroscedasticity
-      \item Correlation
-      \item Autocorrelation
-    \end{itemize}
-\end{itemize}
-\subsection{Heteroskedasticity in FE model}
+        \begin{itemize}
+         \item Heteroscedasticity
+         \item Correlation
+         \item Autocorrelation
+        \end{itemize}
+ \end{itemize}
+ \subsection{Heteroskedasticity in FE model}
 
-\begin{align}
+ \begin{align}
   y_{it}= \alpha_i + x_{it}\beta+\varepsilon_{it}
   \label{eq:FE}
-\end{align}
-Heteroscedasticity over time: $\sigma^2_\varepsilon$\\
+ \end{align}
+ Heteroscedasticity over time: $\sigma^2_\varepsilon$\\
 
 
 
-\subsection{Heteroskedasticity in RE model}
-\begin{align}
+ \subsection{Heteroskedasticity in RE model}
+ \begin{align}
   y_{it}=x_{it}\beta+\xi_i+\varepsilon_{it}
   \label{eq:RE}
-\end{align}
-Heteroscedasticity over individuals: $\sigma^2_\xi$
-Heteroscedasticity over time: $\sigma^2_\varepsilon$\\
+ \end{align}
+ Heteroscedasticity over individuals: $\sigma^2_\xi$
+ Heteroscedasticity over time: $\sigma^2_\varepsilon$\\
 
 
 
-\subsection{Autocorrelation in the FE model}
-In eq. \ref{eq:FE} it can be that
-\begin{align*}
-  \varepsilon_{it}=V_{it}+\theta V_{it-1}\\
+ \subsection{Autocorrelation in the FE model}
+ In eq. \ref{eq:FE} it can be that
+ \begin{align*}
+  \varepsilon_{it}=V_{it}+\theta V_{it-1} \\
   \rightarrow \textrm{AR(1)} \rightarrow \varepsilon_{it}=\rho_1\varepsilon_{it-1}+v_{it}
-\end{align*}
-Assumption: Everyone is homogenous in their autocorrelation parameter.\par
-Consistency can come from either a high number of N or T.
+ \end{align*}
+ Assumption: Everyone is homogenous in their autocorrelation parameter.\par
+ Consistency can come from either a high number of N or T.
 
 
-\subsection{Autocorrelation in the RE model}
-We need to start with the FE estimation
-\begin{itemize}
+ \subsection{Autocorrelation in the RE model}
+ We need to start with the FE estimation
+ \begin{itemize}
   \item[$\rightarrow$] To get a consistent estimate of $\rho$.
   \item Proceed to estimate either a FE or RE model.
-\end{itemize}
+ \end{itemize}
 
 
 \end{multicols}
@@ -225,11 +225,11 @@ We need to start with the FE estimation
 % 6
 \section{Incomplete/unbalanced panels} % 6
 \begin{multicols}{2}
-Incomplete panels are similar to heteroscedasticity issues.
-\begin{itemize}
+ Incomplete panels are similar to heteroscedasticity issues.
+ \begin{itemize}
   \item Some issues can be fixed with weighting observations.
   \item For some procedures we will need complete panels though.
-\end{itemize}
+ \end{itemize}
 
 \end{multicols}
 
@@ -237,33 +237,74 @@ Incomplete panels are similar to heteroscedasticity issues.
 % 7
 \section{Dynamic panels} % 7
 \begin{multicols}{2}
-Became the standard in the 90s for economic growth. Has some issues, so they're not the state of the art anymore. (Can be a column in the regression table).
+ Became the standard in the 90s for economic growth. Has some issues, so they're not the state of the art anymore. (Can be a column in the regression table).
 
-Autocorrelation in $y_{it}$.
-\begin{align*}
+ Autocorrelation in $y_{it}$.
+ \begin{align*}
   y_{it} = \alpha y_{it-1}+\alpha_{it}\beta+\cdots
-\end{align*}
+ \end{align*}
 
-\subsection{GMM estimation}
-(some have started using ML, but requires the use of strongly nonlinear algorithms)
-\\ \\
-Allows us to impose restrictions\par
-e.g. for $y=x\beta+\varepsilon$:
-\begin{align*}
-  cov(x,\varepsilon)&=0  \\
-  cov(y,\varepsilon)&=0
-\end{align*}
-This is possible as $u$ and thus $\beta$ is restricted to follow a normal distribution.
+ \subsection{GMM estimation}
+ (some have started using ML, but requires the use of strongly nonlinear algorithms)
+ \\ \\
+ Allows us to impose restrictions\par
+ e.g. for $y=x\beta+\varepsilon$:
+ \begin{align*}
+  cov(x,\varepsilon) & =0 \\
+  cov(y,\varepsilon) & =0
+ \end{align*}
+ This is possible as $u$ and thus $\beta$ is restricted to follow a normal distribution.
 
-We can use past realizations of y as instruments for y_{it-1}
+ We can use past realizations of y as instruments for $y_{it-1}$
+ \\ \\
+ \textbf{Limitations to GMM:}
+ \begin{itemize}
+  \item Need at least 150-200 observations (per time period) $\rightarrow$ or
+ \end{itemize}
+
+ \subsection{Validation of instruments}
+ Three ways of \textbf{validation} of the instruments
+ \begin{itemize}
+  \item Hausman Test
+  \item Incremental Sargan: Can be problematic (and booring)
+  \item Looking at the autocorrelation of the modified residuals - in STATA valid if
+        \begin{align*}
+         m_1 & : corr(\varepsilon_{it}',\varepsilon_{it-1}')\Rightarrow \text{p-val}<0.05   \\
+         m_2 & : corr(\varepsilon_{it-1}',\varepsilon_{it-2}')\Rightarrow \text{p-val}>0.10 \\
+             & \text{as }\varepsilon_{it}'=\varepsilon_{it}'-\varepsilon_{it-1}'
+        \end{align*}
+ \end{itemize}
+
+ \subsection{GMM vs. within estimator}
+ \textbf{GMM:} The closer our data is to a normal distribution $\rightarrow$ the faster it converges into normality.
+ \\ \\
+ The F.E. within estimator:
+ \begin{itemize}
+  \item Small T $\rightarrow\Rightarrow$ F.E. biased
+  \item $T\rightarrow\infty\Rightarrow$ F.E. is ok.
+ \end{itemize}
+
+ inference of Z, t is fine, if close to normal and/or observations are high, $N\rightarrow\infty$.
+
+ \subsection{Testing overidentifying restrictions}
+Sargan (1958): The error in his test is "proportional to the number of instrumental variables" (counter-intuitive) as the partial $R^2\rightarrow 0.99$
 \\ \\
-\textbf{Limitations:}
-\begin{itemize}
-  \item Need at least 150-200 observations (per time period).
-\end{itemize}
+“Forward orthogonal transformation” (Arellano and Bover, 1995) introduce "orthogonal deviations"
+ \begin{itemize}
+   \item Subtracts the average of all future available observations of a variable.
+   \item Instead of subtracting the previous observation from the contemporaneous one
+ \end{itemize}
+ The basis for the\\
+ \\
+\textbf{The Blundell Bond (1998) estimator:}\\
+"The system GMM estimator". Uses $y_{t-k}$ as instrument for growth $\Delta y$ AND $\Delta y_{t-k}$ as an instrument for levels $y_t$.
+
 
 
 \end{multicols}
+
+
+
 
 
 %\includegraphics[width = 1.0\textwidth]{CO2.PNG}

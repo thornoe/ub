@@ -251,7 +251,7 @@
 \end{multicols}
 
 
-\subsection{Cointegration Analysis}
+\section{Cointegration Analysis}
 \begin{multicols}{2}\noindent
  \textbf{Spurious regression}
  \begin{itemize}
@@ -267,6 +267,75 @@
   \item[$F^{*}$] $\sim$ F-snedecor
   \item[$\bar{R}^2$] ok.
  \end{itemize}
+
+\subsection{Estimation of cointegration relationships}
+$r=0\Rightarrow$ Spurious regression\\
+$0<r<m\Rightarrow$ Cointegration relationships
+$r=m\Rightarrow y_t\sim I(0)$
+\\ \\
+\textbf{Engle \& Granger} estimates a single equation $\Rightarrow r=0, r=1, (0<r<m)?$\\
+\begin{itemize}
+  \item[\nth{1}] Estimate the LR relationship and obtain the residuals.
+  \item[\nth{2}] Cointegration test. ADF $\rightarrow$ critical values for the standard DF test (79; 81).
+  \begin{itemize}
+    \item $H_0: z_t\sum I(1)\equiv$ No cointegration.
+    \item $H_0: z_t\sum I(0)\equiv$ Cointegration.
+  \end{itemize}
+  \item We only estimate one equation
+  \begin{itemize}
+    \item[$\rightarrow$] We loose information (regressors might not be exogenous)
+    \item[$\rightarrow$] Inefficient estimation, can't do inference.
+  \end{itemize}
+\end{itemize}
+\textbf{Johansen's procedure} allows you to consider all possible equations together.
+\begin{itemize}
+  \item[$\rightarrow$] All variables in system are assumed to be \textbf{\textit{endogenous}}.
+\end{itemize}
+\textbf{Consistent + efficient estimation of $\hat{\alpha}$ in single equation framework}
+\begin{itemize}
+  \item Dynamic Ordinary Least Squares (DOLS) of Saikkonen (1991) and Stock and Watson (1993).
+  \begin{itemize}
+    \item Works best in a finite sample (in the limit they're the same).
+    \item Including $k_2$ lacks and $k_1$ leads.
+    \item[$\rightarrow$] A very simply way to include endogeneity in the sample!
+    \item Using AIC and BIC to choose the model (might be available in R$\rightarrow$URCA)
+  \end{itemize}
+  \item Fully Modified (FM) OLS of Philips and Hansen (1990).
+  \item Canonical Cointegration Regression (CCR) of Park (1992).
+\end{itemize}
+$\Rightarrow$ allows to do inference.
+
+
+\end{multicols}
+
+
+\section{VAR modelling}
+\begin{multicols}{2}\noindent
+Introduced by Sims (1980) as an alternative to structural models.
+\begin{itemize}
+  \item Estimates all possible relations in the system (complete endogeneity).
+  \item Allows to model multivariate time series with a minimum of economic theory.
+\end{itemize}
+Uses
+\begin{itemize}
+  \item[$\rightarrow$] Delivered very good forecasts without being bound by specification of structure.
+  \item[$\rightarrow$] Allows to do 'causality' analysis.
+  \item[$\rightarrow$] Impulse response analysis. How would the variables react to a chock to the system?
+\end{itemize}
+\textbf{VAR(p) model} is a VAR version of the AR(p) model\par
+$y_t$ is a vector of variables that depends upon the lag of the vector.\par
+There are no ACF or PACF for the VAR(p) model.
+\begin{itemize}
+  \item[$\rightarrow$] Use an IC.
+  \item Use hypothesis testing
+  \begin{align*}
+   \left\{ \begin{array}{cc}
+    H_0: & p=p_0 \\
+    H_1: & p=p_1
+   \end{array} \right.
+  \end{align*}
+\end{itemize}
+
 
 
 \end{multicols}

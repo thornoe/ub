@@ -13,4 +13,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Unit root tests}{5}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Cointegration Analysis}{6}{subsection.3.2}
+\contentsline {section}{\numberline {4}Cointegration Analysis}{6}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Estimation of cointegration relationships}{6}{subsection.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}VAR modelling}{7}{section.5}
