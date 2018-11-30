@@ -6,16 +6,6 @@ In the seminal paper of \citet{feldstein1995effect} three income groups (medium,
   \label{eq:DD}
 \end{align}
 While the medium income group is constituted by 3.538 individuals, robustness of the results is weakened by the fact that the high income group only contains 197 individuals and the highest income group only has 57 due to the sample being a non-stratified random draw.
-\\
-\\
-Using Danish montly administrative data \citet{kreiner2016tax} is able to estimate the short-run ETI as $\hat{\beta_3}$ using panel regression:
-\begin{align}
-  \underbrace{w_{y,m,i}}_\text{wage income} = \beta_0 + \underbrace{\beta_1d_{y,i}^{2010}}_\text{2010 dummy} + \underbrace{\beta_2d_i^T}_\text{treatment dummy} + \underbrace{\beta_3\frac{1-\tau_{y,i}}{1-\tau_{2009,i}}}_\text{ETI} + u_{y,m,i}
-  \label{eq:wage}
-\end{align}
-The treatment group of 219,179 individuals is evaluated against a control group of 109,500 individuals with weak or no incentives to shift their income due to the tax reform.
-
-As the marginal tax rate reductions in the Danish 2010 Tax Reform was agreed upon as early as March 1 2009 it allowed for intertemporal tax shifting where self-employed were able to plan and employers to negotiate with there employees. \citet{kreiner2016tax} find a substantial shifting from november and december 2009 to january 2010 such that omitting theese three months from the estimation (\ref{eq:wage}) leads to a short-run ETI estimate of 0.00, showing that the ETI estimate was solely due to shifting and not real responses.
 
 \subsection{IV panel data regression}
 \citet{gruber2002elasticity} set out to use a panel with 60,000 individuals from 1979-1990 to estimate the ETI $\varepsilon$ as occuring in equation (\ref{eq:income}). As opposed to \citet{feldstein1995effect} they do not use simple DD to analyze the absolute change in income relative to the absolute change in MTR between a single set of two years. On the contrary, they take advantage of the different increases and decreases in the MTR durings the 11 year period to calculate the percentage change in deflated income $z_i$ relative to the percentage change in MTR $\tau_i$ for periods of varying length in years $k$ with the regression equation:
@@ -46,3 +36,13 @@ Where $\Delta \log y_{it}$ is the difference in log virtual income (the sum of n
 \\
 \\
 By merging employer and employee data \citet{chetty2011adjustment} are able to extend equation (\ref{eq:IV2}) with controls for occupation fixed effects and region fixed effects while not having accesss to most other controls. Nonetheless, the biggest impact of the paper is to document the friction due to the Danish labour market being highly unionized.
+
+\subsection{Inter-temporal shifting}
+Using Danish montly administrative data \citet{kreiner2016tax} is able to estimate the short-run ETI as $\hat{\varepsilon}$ using panel regression:
+\begin{align}
+  \underbrace{w_{y,m,i}}_\text{wage income} = \beta_0 + \underbrace{\varepsilon\frac{1-\tau_{y,i}}{1-\tau_{2009,i}}}_\text{ETI} + \underbrace{\beta_1d_{y,i}^{2010}}_\text{2010 dummy} + \underbrace{\beta_2d_i^T}_\text{treatment dummy} + u_{y,m,i}
+  \label{eq:wage}
+\end{align}
+The treatment group of 219,179 individuals is evaluated against a control group of 109,500 individuals with weak or no incentives to shift their income due to the tax reform.
+
+As the marginal tax rate reductions in the Danish 2010 Tax Reform was agreed upon as early as March 1 2009 it allowed for intertemporal tax shifting where self-employed were able to plan and employers to negotiate with there employees. \citet{kreiner2016tax} find a substantial shifting from november and december 2009 to january 2010 such that omitting theese three months from the estimation (\ref{eq:wage}) leads to a short-run ETI estimate of 0.00, showing that the ETI estimate was solely due to shifting and not real responses.
