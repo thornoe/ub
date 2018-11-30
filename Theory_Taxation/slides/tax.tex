@@ -1,0 +1,354 @@
+\documentclass[8pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage[style=authoryear, backend=bibtex8, natbib=true, maxcitenames=2]{biblatex}
+
+\usepackage{graphicx}
+\usepackage{import}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\usepackage{amsmath}
+\usepackage{bm} % bold symbol in math mode
+
+\usepackage{ulem} % use the "sout" tag to "strikethrough" text
+\usepackage[super,negative]{nth} % allows writing 1st, 2nd, 3rd with superscript
+
+\usepackage{tikz}
+  \newcommand{\ditto}{
+      \tikz{
+          \draw [line width=0.12ex] (-0.2ex,0) -- +(0,0.8ex)
+              (0.2ex,0) -- +(0,0.8ex);
+          \draw [line width=0.08ex] (-0.6ex,0.4ex) -- +(-1.0em,0)
+              (0.6ex,0.4ex) -- +(1.0em,0);
+      }
+  }
+
+% Select what to do with command \comment:
+   \newcommand{\comment}[1]{}  %comment not showed
+  % \newcommand{\comment}[1]{\par {\bfseries \color{blue} #1 \par}} %comment showed
+
+% Select what to do with todonotes: i.e. \todo{}, \todo[inline]{}
+  % \usepackage[disable]{todonotes} % notes not showed
+  \usepackage[draft]{todonotes}   % notes showed
+
+  %\numberwithin{equation}{section}
+
+\addbibresource{bib_tax}
+
+
+\titlegraphic{\hfill\includegraphics[width= \textwidth]{logo}}
+\title{Discrepancy in the Elasticity of Taxable Income}
+\subtitle{A litterature survey}
+\date{\today}
+\author{Thor Donsby Noe}
+\institute{Public Economics II: Theory of Taxation \\
+          w. Javier Vázquez-Grenno}
+%\institute{Department of Economics, University of Copenhagen}
+
+    % \definecolor{BlueTOL}{HTML}{222255}
+    \definecolor{BrownTOL}{HTML}{666633}
+    \definecolor{GreenTOL}{HTML}{225522}
+    % \setbeamercolor{normal text}{fg=BlueTOL,bg=white}
+    \setbeamercolor{alerted text}{fg=BrownTOL}
+    \setbeamercolor{example text}{fg=GreenTOL}
+
+    \setbeamercolor{block title alerted}{use=alerted text,
+        fg=alerted text.fg,
+        bg=}
+    \setbeamercolor{block body alerted}{use={block title alerted, alerted text},
+        fg=alerted text.fg,
+        bg=}
+    \setbeamercolor{block title example}{use=example text,
+        fg=example text.fg,
+        bg=}
+    \setbeamercolor{block body example}{use={block title example, example text},
+        fg=example text.fg,
+        bg=}
+
+    \setbeamercolor{block title alerted}{use=alerted text,
+        fg=alerted text.fg,
+        bg=alerted text.bg!80!alerted text.fg}
+    \setbeamercolor{block body alerted}{use={block title alerted, alerted text},
+        fg=alerted text.fg,
+        bg=block title alerted.bg!50!alerted text.bg}
+    \setbeamercolor{block title example}{use=example text,
+        fg=example text.fg,
+        bg=example text.bg!80!example text.fg}
+    \setbeamercolor{block body example}{use={block title example, example text},
+        fg=example text.fg,
+        bg=block title example.bg!50!example text.bg}
+
+
+\begin{document}
+\setbeamercolor{background canvas}{bg=white}
+\maketitle
+
+
+% ------------------------------------------------------------------------------
+% ------ FRAME -----------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+
+\section{Motivation}
+
+
+\begin{frame}{Relevance}
+  The elasticity of \textbf{labour supply} with respect to the Marginal Tax Rate (MTR)
+  \begin{itemize}
+    \item Important for growth in the long run and to avoid bottlenecks in the short run
+    \item Prone to misreporting and frictions
+  \end{itemize}
+  The \textbf{Elasticity of Taxable Income (EIT)} wrt. the MTR
+  \begin{itemize}
+    \item Better availability and preciseness in administrative data
+    \item Captures several behavioral responses
+    \begin{itemize}
+      \item Real responses of labour supply
+      \item Tax avoidance, tax evasion
+      \item Collective agreements and career choices
+    \end{itemize}
+    \item[$\rightarrow$] Good measure of overall efficiency
+  \end{itemize}
+  For efficiency analysis \textbf{total revenue} should be taken into account
+  \begin{itemize}
+    \item Tax avoidance can lead to fiscal externalities
+    \begin{itemize}
+      \item[$\rightarrow$] Increase other tax bases due to income shifting towards capital or corporate income
+      \item[$\rightarrow$] Inter-temporal substitution within the personal income base
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{The seminal paper}
+  \begin{itemize}
+    \item Natural experiment: The U.S. Tax Reform Act '86
+    \begin{itemize}
+      \item Reduced the marginal tax rate from 50 pct. to 28 pct. for high-earners
+    \end{itemize}
+    \item \citet{feldstein1995effect} estimate the elasticity of taxable income to be greater than one
+    \begin{itemize}
+      \item[$\rightarrow$] U.S. was on the wrong side of the Laffer curve prior to 1986
+      \item[$\rightarrow$] Reducing the tax rate should have \textit{raised} the collected tax revenue
+    \end{itemize}
+    \item However, \citet{gruber2002elasticity} estimate ETI to 0.6 for high-earners in the 80s
+  \end{itemize}
+    \centering\includegraphics[width=0.8 \textwidth]{laffer}
+\end{frame}
+
+\begin{frame}{Discrepancy in estimates}
+  Surveying 5 studies of the EIT, $\hat{\varepsilon}$
+  \begin{itemize}
+    \item A huge discrepancy is found in the estimates!
+    \item Is a lower estimate due to better data availability and estimation methods?
+    \item Or actual differences between tax reforms, institutional settings, and culture in the U.S. and Denmark respectively?
+  \end{itemize}
+    \begin{table}[h]
+      \centering
+      \footnotesize
+        \input{tab_short}
+      % \caption{Example of table}
+      % \label{tab:elasticities}
+    \end{table}
+\end{frame}
+
+
+\section{Difference in differences}
+
+
+\begin{frame}{\citet{feldstein1995effect}}
+  The ETI is estimated as the treatment effect around the implementation of the TRA86
+    \begin{align}
+      \hat{\varepsilon}=\frac{\Delta \ln(z^H) - \Delta \ln(z^M)}{\Delta \ln(1-\tau^H) - \Delta \ln(1-\tau^M)}
+      \label{eq:DD}
+    \end{align}
+  Evaluating the the relative differences from 1985 to 1988 of
+  \begin{itemize}
+    \item[$z^H:$] Income for high-earners
+    \item[$z^M:$] Income for medium-earners.
+    \item[$\tau^H$] The MTR for high-earners.
+    \item[$\tau^M$] The MTR for medium-earners.
+  \end{itemize}
+  Panel of 3.538 medium-earners and 197 high-earners $\rightarrow$ robust?
+\end{frame}
+
+\begin{frame}{Issues with panel data}
+  Panel are prone to bias from potential non-tax-related changes to income
+  \begin{itemize}
+    \item[1.] Mean reversion
+    \begin{itemize}
+      \item Individuals might only be in the high-income group initially as a results of an income shock - thus, would revert towards the mean
+      \item[$\rightarrow$] Downward bias in the ETI estimate
+    \end{itemize}
+    \item[2.] Divergence in the income distribution
+    \begin{itemize}
+      \item Non-tax-related increases in inequality
+      \item E.g. impacts of skill-biased technological change and globalization as observed in the U.S. in the 80s \citep{gruber2002elasticity}
+      \item[$\rightarrow$] Upward bias in the ETI estimate
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{IV Panel Regresssions}
+
+
+\begin{frame}{\citet{gruber2002elasticity}}
+  \begin{itemize}
+    \item Panel with $\sim$60,000 individuals $\rightarrow$ changes in the MTR throughout 1980s
+  \end{itemize}
+  \begin{equation}
+    \begin{split}
+      \underbrace{\ln\left(\frac{z_{it+k}}{z_{it}}\right)}_\text{\%-change in income} &= \alpha_0 + \underbrace{\varepsilon\cdot \ln\left(\frac{1-\hat{\tau}_{it+k}}{1-\tau_{it}}\right)}_\text{ETI} + \underbrace{\sum_t\alpha_1 x_{it}}_\text{married} + \underbrace{\sum_t \alpha_2YEAR_t}_\text{year dummies} \\
+       &+\underbrace{ \alpha_3\ln(z_{it}) + \sum_{d=1}^{10}\alpha_{4d}SPLINE_d(z_{it}) }_\text{controls for base year income} + u_{it},\ \ \ \ \ k=1,2,\text{ or }3
+      \label{eq:IV}
+    \end{split}
+  \end{equation}
+  Bias from \textbf{non-tax-related changes in inequality and mean reversion } is reduced by controlling for income in base year $t$
+  \begin{itemize}
+    \item[$\alpha_3$] log-income level
+    \item[$\alpha_4$] 10 piece spline for decile of the income distribution
+  \end{itemize}
+  \textbf{Endogeneity problem}: An income shock $u_{it}>0$ $\rightarrow$ a mechanical rise in the MTR $\rightarrow$ corr$(\tau_{it},u_{it})>0$ $\rightarrow$ downward bias of $\varepsilon$
+  \begin{itemize}
+    \item[IV:] Use $\tau^h_{t+k}$ as an instrument for $\tau_{it+k}$
+    \item[$\tau^h_{t+k}:$] MTR that individual $i$ would have paid in period $t+k$ due to changes in the tax system only $\rightarrow$ simulated using the NBER TAXSIM model.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{\citet{kleven2014estimating}}
+  \begin{itemize}
+    \item Panels of all Danish taxpayers in all \textbf{three year periods} from 1984-2005.
+    \item Merge individual level \textbf{administrative data} containing rich information about tax types, labour market, education, and sociodemographics.
+    \item Danish setting: income \textbf{inequality more stable} over the 22-year period than even in other Nordic countries \\
+    $\rightarrow$ Bias from non-tax related changes to inequality and mean reversion is likely to be much less than in prior studies
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{\citet{kleven2014estimating}}
+Baseline specification: differences at time $t$ are the differences between $t$ and $t+3$.
+  \begin{equation}
+    \Delta\ln z_{it} = \varepsilon\cdot\Delta\ln(1-\hat{\tau}_{it}) + \eta\cdot\Delta\ln y_{it} + \Delta\gamma_t^c \bm{x}_i^c + \gamma^v\cdot\Delta\bm{x}_{it}^v + \Delta u_{it}
+    \label{eq:IV2}
+  \end{equation}
+  Similar to equation (\ref{eq:IV}) \citep{gruber2002elasticity} with a few additions
+  \begin{itemize}
+    \item[$x_i^c:$] Time-invariant individual characteristics for which the effect $\gamma_t^c$ is allowed to change over time
+    \item[$\Delta x_it^v:$] Difference in time-variant individual characteristics for which the effect $\gamma^v$ is constant over time
+    \item[$\Delta \log y_{it}:$] Difference in log virtual income (the sum of non-labour incomes)
+    \begin{itemize}
+      \item[$\rightarrow$] controls for \textbf{income shifting} towards capital or corporate income
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{\citet{chetty2011adjustment}}
+  Look at all Danish wage earners during the smaller reforms of 1994-2001.
+
+  Specification similar to equation (\ref{eq:IV2}) \citep{kleven2014estimating} with a few exceptions
+  \begin{itemize}
+    \item Merging employer and employee data $\rightarrow$ Adds occupation fixed effects and region FE
+    \item Fewer controls overall though
+  \end{itemize}
+  Main contribution:
+  \begin{itemize}
+    \item \textbf{Huge frictions} due to the Danish labour market being highly unionized
+  \end{itemize}
+\end{frame}
+
+
+\section{Inter-temporal shifting}
+
+
+\begin{frame}{\citet{kreiner2016tax}}
+  The Danish 2010 Tax Reform
+  \begin{itemize}
+    \item The marginal tax rate was reduced by 7.5 pct. points
+    \item Agreed upon as early as \nth{1} of March 2009 and passed in parlament by late May
+    \item[$\rightarrow$] Self-employed were able to plan and employers to negotiate with there employees
+  \end{itemize}
+  Using Danish montly administrative data the short-run ETI is estimated using the panel regression: \begin{align}
+    \underbrace{w_{y,m,i}}_\text{wage income} = \beta_0 + \underbrace{\varepsilon\cdot\frac{1-\tau_{y,i}}{1-\tau_{2009,i}}}_\text{ETI} + \underbrace{\beta_1\cdot d_{y,i}^{2010}}_\text{2010 dummy} + \underbrace{\beta_2\cdot d_i^T}_\text{treatment dummy} + u_{y,m,i}
+    \label{eq:wage}
+  \end{align}
+  Evaluate the treatment group of 219,179 individuals against a control group of 109,500 individuals with weak or no incentives to shift their income due to the tax reform
+  \begin{itemize}
+    \item \textbf{Substantial shifting}: Estimate $\hat{\varepsilon}$ is 0.80 for D09-J10
+    \item[$\rightarrow$] Omitting N09-J10 to estimate the short-run EIT without inter-temporal shifting
+  \end{itemize}
+\end{frame}
+
+
+\section{Results}
+
+
+\begin{frame}{Overview}
+  \begin{table}
+    \centering
+    \footnotesize
+    \input{tab_elasticities}
+    \caption{Estimated elasticity of taxable income in different studies. *excl. N09, D09 \& J10.}
+    \label{tab:elasticities}
+  \end{table}
+  Most other reliable studies also find the ETI to be in the range 0.12-0.40 for the U.S. \citep{saez2012elasticity}
+\end{frame}
+
+
+\section{Conclusion}
+
+
+\begin{frame}{Concluding remarks}
+  \begin{itemize}
+    \item Dfferences-in-differences estimation is a simple way to analyze effects in the proximity of a substantial tax reform
+    \begin{itemize}
+      \item But it can be difficult to completely exclude effects from non-tax-related changes to inequality and mean reversion
+      \item Availability of controls as well as 2SLS panel regression over a period with a variety of tax system changes can reduce these biases.
+    \end{itemize}
+    \item U.S.: Most newer studies estimate a significant ETI of 0.12-0.40
+    \item Denmark: Find modest effects $\rightarrow 0$ when omitting intertemporal income-shifting or self-employed
+    \item Discrepancy can partly be explained by
+    \begin{itemize}
+      \item By higher frictions and less options for tax avoidance in Denmark
+      \item But estimates have also decreased with richer better data availability allowing for more controls.
+    \end{itemize}
+  \end{itemize}
+  Implications for the U.S.
+  \begin{itemize}
+    \item[$\rightarrow$] Future studies in the U.S. might also find estimates closer to zero come richer data availability
+    \item[$\rightarrow$] There might exist a revenue and efficiency loss from gaps in the U.S. tax law.
+  \end{itemize}
+
+
+
+\end{frame}
+
+
+\section{References}
+\begin{frame}%{References}
+  \printbibliography
+\end{frame}
+
+%   \begin{figure}[!h]
+%   %  \def\svgwidth{0.50\columnwidth}
+%   %  \input{tree.pdf_tex}
+%     \resizebox{3in}{!}{\input{tree.pdf_tex}}
+%   %  \caption{Timeline illustration of event setup}
+%   \end{figure}
+
+\end{document}
