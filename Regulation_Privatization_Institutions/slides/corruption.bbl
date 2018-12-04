@@ -1,0 +1,113 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{amore2013value}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AMD}{%
+         family={Amore},
+         familyi={A\bibinitperiod},
+         given={Mario\bibnamedelima Daniele},
+         giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bennedsen},
+         familyi={B\bibinitperiod},
+         given={Morten},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{AMDBM1}
+    \strng{fullhash}{AMDBM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{year}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{2}
+    \field{pages}{387\bibrangedash 402}
+    \field{title}{The value of local political connections in a low-corruption
+  environment}
+    \field{volume}{110}
+    \field{journaltitle}{Journal of Financial Economics}
+    \field{year}{2013}
+  \endentry
+
+  \entry{faccio2006politically}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FM}{%
+         family={Faccio},
+         familyi={F\bibinitperiod},
+         given={Mara},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FM1}
+    \strng{fullhash}{FM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{year}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{1}
+    \field{pages}{369\bibrangedash 386}
+    \field{title}{Politically connected firms}
+    \field{volume}{96}
+    \field{journaltitle}{American economic review}
+    \field{year}{2006}
+  \endentry
+
+  \entry{pena2018privatization}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PMN}{%
+         family={Pe{\~n}a\bibnamedelima Miguel},
+         familyi={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Noem{\'\i}},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=CBB}{%
+         family={Cuadrado-Ballesteros},
+         familyi={C\bibinitperiod-B\bibinitperiod},
+         given={Beatriz},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor \& Francis}%
+    }
+    \strng{namehash}{PMNCBB1}
+    \strng{fullhash}{PMNCBB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{pages}{1\bibrangedash 27}
+    \field{title}{Is privatization related to corruption? An empirical analysis
+  of European countries}
+    \field{journaltitle}{Public Management Review}
+    \field{year}{2018}
+  \endentry
+\enddatalist
+\endinput
