@@ -1,0 +1,43 @@
+\subsection{Data Generating Process}
+A stochastic progress $x_t$ is given by the DGP
+\begin{equation}
+  \begin{split}
+    x_t &= f(t) + \phi x_{t-1}+\varepsilon_t,\\
+    \text{with }f(t) &= \mu \neq 0,\ \ \ \ \ |\phi|<1\ \text{and}\ \varepsilon_t\sim iid(0,\sigma^2_\varepsilon)
+    \label{eq:xt}
+  \end{split}
+\end{equation}
+$x_t$ is the realization of an ergodic stochastic process if it is stationary and for any point in time $t$ satisfies
+\begin{equation}
+  \displaystyle{\lim_{T\to\infty}}\left(T^{-1}\sum_{s=1}^TCov(x_t,x_{t+s})\right)=0
+\end{equation}
+That is, on average the memory of the process is bounded. Thus, covariances goes towards $0$ for two different point in time so that two parts of the same stochastic process can be independent from each other.
+\\ \\
+By iterative substitution we see that equation \ref{eq:xt} can be rewritten as
+\begin{equation}
+  \begin{split}
+    x_t &= \mu + \phi x_{t-1} +\varepsilon_t \\
+        &= \mu + \phi (\mu + \phi x_{t-2}+\varepsilon_{t-1}) +\varepsilon_t\\
+        &= \mu (1+\phi) + \phi^2 x_{t-2}+ \phi\varepsilon_{t-1} +\varepsilon_t\\
+        &= \mu (1+\phi) + \phi^2 (\mu + \phi x_{t-3}+\varepsilon_{t-2})+ \phi\varepsilon_{t-1}+\varepsilon_t\\
+        &= \mu (1+\phi+\phi^2) + \phi^3(x_{t-3})+ \phi^2\varepsilon_{t-2} + \phi\varepsilon_{t-1} +\varepsilon_t\\
+        &\vdots \\
+        &= \phi^T x_{t-T} + \sum_{s=1}^T \mu\phi^{s-1} + \phi^{s-1}\varepsilon_{t-s+1},\\
+        &\ \text{where $T$ is the number of periods $s$ prior to $t$.}
+        \label{eq:iterative}
+  \end{split}
+\end{equation}
+Equation \ref{eq:iterative} clearly shows that the memory of $x_t$ is bounded as $|\phi|<1\Rightarrow \phi^T\xrightarrow[T\rightarrow\infty]{}0$ such that the memory of the initial value $x_{t-T}$ and chock $\varepsilon_{t-T+1}$ decreases to zero the further away in time it is from period $t$.
+
+However, the constant $\mu\neq0$ also represents a deterministic trend in the process $x_t$ such that the stochastic process will trend upwards or downwards over time. Thus, $x_t$ in equation \ref{eq:xt} does not describe an ergodic stochastic process.
+
+Applying the difference operator with the order of integration $I(1)$ however would be an ergodic stochastic process as the deterministic parts would cancel each other out.
+\begin{equation}
+  \begin{split}
+    \Delta x_t  &= x_{t} - x_{t-1}\\
+                &= [\mu + \phi x_{t-1} +\varepsilon_t] - [\mu + \phi x_{t-2} +\varepsilon_{t-1}]\\
+                &= [\mu + \phi (\mu + \phi x_{t-2}+\varepsilon_{t-1}) +\varepsilon_t] - [\mu + \phi x_{t-2} +\varepsilon_{t-1}]\\
+                &= [\mu + \phi (\mu + \phi x_{t-2}+\varepsilon_{t-1}) +\varepsilon_t] - [\mu + \phi x_{t-2} +\varepsilon_{t-1}]
+        \label{eq:difference}
+  \end{split}
+\end{equation}
