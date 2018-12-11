@@ -276,19 +276,16 @@ predict yDEU_pred1, y 					// in levels
 
 * Germany, D.y AR(1)
 arima yDEU y74 y75 y93 y09, arima(1,1,0)
-foreach var of varlist y74 y75 y93 y09 {
-	replace `var' = 0
-}
 predict DyDEU_pred2, xb 				// in first differences
 replace DyDEU_pred2 = 100*DyDEU_pred2	// in percentage
 predict yDEU_pred2, y 					// in levels 
 
 * Denmark & Spain, y ARIMA(1,1,1)
 foreach y of varlist yDNK-yESP {
-	arima `y', arima(1,1,1)
-	predict D`y'_pred, xb 					// in first differences
-	replace D`y'_pred = 100*D`y'_pred		// in percentage
-	predict `y'_pred, y 					// in levels
+arima `y', arima(1,1,1)
+predict D`y'_pred, xb 					// in first differences
+replace D`y'_pred = 100*D`y'_pred		// in percentage
+predict `y'_pred, y 					// in levels
 }
 
 *** (f) Plot both the actual and predicted time series for each country
