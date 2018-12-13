@@ -1,0 +1,41 @@
+\subsection{Cointegration analysis. Single-equation-based methods}
+\begin{itemize}
+  \item[a)]
+\end{itemize}
+Investigating the long run relationship between the two economies, log real GDP in France is set up as a linear function of log real GDP in Germany.  The ADF test statistic is gained by running the \nth{1} step of the Engle-Granger test for cointegration. Based on the static regression (OLS) of the relationship, the residuals are constructed to test if then show presence of unit root. That would be inconsistent with cointegration, as the null-hypthesis for the Engle-Granger proposed Augmented Dickey-Fuller test for unit root (no-cointegration test) is that the estimated residuals should be non-stationary. A maximum of 5 lags is included in case of serial correlation
+\begin{equation}
+  \left\{ \begin{array}{cccc}
+   H_0: & \epsilon_t=I(1)
+   H_1: & \epsilon_t=I(0)
+  \end{array} \right.
+  \label{eq:engle}
+\end{equation}
+The test statistic in the concrete case is 2.7. Though I'm not able to the reject the $H_0$ of no cointegration at the 5\% confidence level, the 10\% critical value is 2.6, thus, I conclude at a 10\% confidence level that the log of real GDP in Germany and France are cointegrated.
+\begin{itemize}
+  \item[b)]
+\end{itemize}
+With a take-off in the same \nth{1} step used above, the Engle-Granger 2-step Error Correcting Model is estimated. In the \nth{2} sted $\Delta \ln y_{t,FRA}$ is regressed and found negatively correlated with the lag of the \nth{1} step residual. The estimated coefficient $\hat{\gamma}=-.15$ indicates the "speed of correction" of th the ECM. However, the coefficient of $\Delta \ln y_{t-1,DEU}$ is only near borderline significant and the other 4 lags of difference of German log real GDP are highly insignificant.
+\subsection{Cointegration analysis. System-based methods}
+Now analyzing the system defined by $Y_t=(y_{t,FRA}, y_{t,DEU}, y_{t,GBR})$.
+\begin{itemize}
+  \item[a)]
+\end{itemize}
+To decide on the preferred number of lags I perform a preestimation for the VAR model. While the different tests are ambigious I choose two lags for the system, as it is the preferred number of lags according to the final prediction error (FPE) and Hannan and Quinn information criterion (HQIC) lag-order selection statistics, while being the close runner-up behind 4 lags and 1 lag respectively according to the Akaike's information criterion (AIC) and Schwarz's Bayesian information criterion (SBIC).
+\begin{itemize}
+  \item[b)]
+\end{itemize}
+Continuing with two lags in the model the cointegration analysis is performed using Johansen's cointegration test statistics. The Johansen procedure show that we have two cointegrated relationships which can be seen as rank=2 has a trace statistic of 0.26 far below the 5\% critical value, 3.8.
+\begin{itemize}
+  \item[c)]
+\end{itemize}
+Having determined that both lags=2 and rank=2 we are ready to fit the VECM.
+
+The middle part of the output shows the main estimation table with the estimated short-run parameters. The size of the p-values show that in the short-run the economic development in Great Britain is more related to the development in France and Germany while the latter two only are weakly connected (as shown in the prior part).
+
+The the p-values in the bottom estimation indicate that under the Johansen normalization restriction the coefficient in the cointegrating equation that $y_{t,GBR}$ has a significant relationship to both France and Germany (one of them kept constant in each equation).
+
+The Likelihood Ratio test of the overidentifying restriction does not reject the null hypothesis that the restriction is valid.
+
+
+\subsection{}
+As a set of neighbours and being the main political partnership within the European Union it is a curious result that Germany and France are less inter-dependent economically than each of them are with Great Britain. A part of the answer should most likely be found in the history, where Great Britain was the first country to industrialize and establish moden trade-connections to other countries, while Germany and France has been at war with each others twice in the \nth{21} century.

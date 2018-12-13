@@ -1,16 +1,80 @@
-* install sim_arma from
-net from http://www.stata.com/users/jpitblado
+* install egranger from
+net from http://fmwww.bc.edu/RePEc/bocode/e/
+
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////// Clear all and set up folders ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 set scheme s1color
 clear all
-cd            	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\PS1\stata_code"
-global figures	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\PS1\03_figures"
-global tables	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\PS1\04_tables"
+cd            	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\PS2\stata_code"
+global figures	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\PS2\03_figures"
+global tables	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\PS2\04_tables"
 
 
+********************************************************************************
+* Question 3.1a Gaussian stochastic process                                     *
+********************************************************************************
+use pwt90.dta, replace
+keep countrycode year rgdpna
+keep if inlist(countrycode,"DEU","FRA","GBR")
+gen y = log(rgdpna)
+drop rgdpna
+* encode countrycode, gen(id)
+* tsset id year
+reshape wide y, i(year) j(countrycode) string
+tsset year
+
+* a)
+reg yFRA yDEU					// static equation
+predict residuals, resid		// save the residuals
+dfuller residuals, lags(5)		// ADF test
+
+* b)
+egranger yFRA yDEU, lags(5) regress ecm
+
+
+***SECOND***
+
+tsset t
+
+tsline austin dallas houston sa
+**we want to check whether these variables are cointegrated or not.
+**So we define the following vector of variables: Yt=(austin dallas houston sa)
+** we want to estimate if there is a long-relationship between these variables.
+*austin= b0 + b2Dallas +b3 Houston +b4 SA + ut.
+**We have to check whether ut is I(1) or I(0), to see if we have cointegration or not.
+*PROBLEm: If we only estimate one equation, then we are imposing only one long run
+*relationship. To test it we will use Engle and Granger procedure.
+*This test foccus on the disturbance term of the model especification.
+
+*Ho: ut-i(1)
+*H: ut-i()
+*
+
+help egranger
+*help bayerhanck
+egranger austin dallas houston sa, lags(5) regress
+*we check it at the 10 percent level (lags)
+*There is a cointegrating relationship linking the house prices.
+*The cointegration vector is: (1, -b2, -b3, -b4), because we are isolating the disturbance term.
+
+bayerhanck austin, rhs(dallas houston sa) lags(5)
+
+*ECM (Error Correction Model)
+
+egranger austin dallas houston sa, lags(1) regress ecm
+*_egresid is the gamma
+varsoc austin dallas houston sa //To get the optimal lag of a VAR(P)
+vecrank  austin dallas houston sa, lags(2) //Testing the number of independent VEC
+//using the trace statistic we can see that we have 2 cointegrated relationships (johansen procedure)
+//we selcet rank=2 because of the trace test.
+***ESTIMATING***
+
+vec austin dallas houston sa, lags(2) rank(2)
+
+
+* PROBLEM SET 1
 ********************************************************************************
 * Question 2.2a Gaussian stochastic process                                     *
 ********************************************************************************

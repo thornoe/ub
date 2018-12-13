@@ -1,0 +1,238 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{barrios2001explaining}{report}{}
+    \true{moreauthor}
+    \name{author}{3}{}{%
+      {{hash=BCS}{%
+         family={Barrios\bibnamedelima Cobos},
+         familyi={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+         given={Salvador},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GH}{%
+         family={G{\"o}rg},
+         familyi={G\bibinitperiod},
+         given={Holger},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Strobl},
+         familyi={S\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BCS+1}
+    \strng{fullhash}{BCSGHSE+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Explaining firms export behaviour: the role of RD and
+  spillovers}
+    \list{institution}{2}{%
+      {Research paper/Leverhulme Centre for Research on Globalisation}%
+      {Economic~…}%
+    }
+    \field{type}{techreport}
+    \field{year}{2001}
+  \endentry
+
+  \entry{gibbons2012mostly}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GS}{%
+         family={Gibbons},
+         familyi={G\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=OHG}{%
+         family={Overman},
+         familyi={O\bibinitperiod},
+         given={Henry\bibnamedelima G},
+         giveni={H\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{GSOHG1}
+    \strng{fullhash}{GSOHG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{year}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{2}
+    \field{pages}{172\bibrangedash 191}
+    \field{title}{Mostly pointless spatial econometrics?}
+    \field{volume}{52}
+    \field{journaltitle}{Journal of Regional Science}
+    \field{year}{2012}
+  \endentry
+
+  \entry{harrison2014does}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HR}{%
+         family={Harrison},
+         familyi={H\bibinitperiod},
+         given={Rupert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=JJ}{%
+         family={Jaumandreu},
+         familyi={J\bibinitperiod},
+         given={Jordi},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Mairesse},
+         familyi={M\bibinitperiod},
+         given={Jacques},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PB}{%
+         family={Peters},
+         familyi={P\bibinitperiod},
+         given={Bettina},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{HR+1}
+    \strng{fullhash}{HRJJMJPB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{29\bibrangedash 43}
+    \field{title}{Does innovation stimulate employment? A firm-level analysis
+  using comparable micro-data from four European countries}
+    \field{volume}{35}
+    \field{journaltitle}{International Journal of Industrial Organization}
+    \field{year}{2014}
+  \endentry
+
+  \entry{ohUallach2007rethinking}{article}{}
+    \name{author}{2}{}{%
+      {{hash=OhB}{%
+         family={{\'O}\bibnamedelima hUallach{\'a}in},
+         familyi={{\'O}\bibinitperiod\bibinitdelim h\bibinitperiod},
+         given={Breand{\'a}n},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=LTF}{%
+         family={Leslie},
+         familyi={L\bibinitperiod},
+         given={Timothy\bibnamedelima F},
+         giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{OhBLTF1}
+    \strng{fullhash}{OhBLTF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{labeldatesource}{year}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{number}{6}
+    \field{pages}{737\bibrangedash 752}
+    \field{title}{Rethinking the regional knowledge production function}
+    \field{volume}{7}
+    \field{journaltitle}{Journal of Economic Geography}
+    \field{year}{2007}
+  \endentry
+
+  \entry{sternberg2001firm}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SR}{%
+         family={Sternberg},
+         familyi={S\bibinitperiod},
+         given={Rolf},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=AO}{%
+         family={Arndt},
+         familyi={A\bibinitperiod},
+         given={Olaf},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor \& Francis}%
+    }
+    \strng{namehash}{SRAO1}
+    \strng{fullhash}{SRAO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{4}
+    \field{pages}{364\bibrangedash 382}
+    \field{title}{The firm or the region: what determines the innovation
+  behavior of European firms?}
+    \field{volume}{77}
+    \field{journaltitle}{Economic Geography}
+    \field{year}{2001}
+  \endentry
+
+  \entry{vogel2015two}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VJ}{%
+         family={Vogel},
+         familyi={V\bibinitperiod},
+         given={Johanna},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{VJ1}
+    \strng{fullhash}{VJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{year}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{number}{3}
+    \field{pages}{525\bibrangedash 551}
+    \field{title}{The two faces of R \& D and human capital: Evidence from W
+  estern E uropean regions}
+    \field{volume}{94}
+    \field{journaltitle}{Papers in Regional Science}
+    \field{year}{2015}
+  \endentry
+\enddatalist
+\endinput

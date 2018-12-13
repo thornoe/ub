@@ -6,3 +6,7 @@
 \contentsline {section}{\numberline {2}Data}{2}{section.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Questions}{2}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Cointegration analysis. Single-equation-based methods}{2}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Cointegration analysis. System-based methods}{3}{subsection.3.2}

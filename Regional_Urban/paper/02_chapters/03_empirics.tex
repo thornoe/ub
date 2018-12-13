@@ -1,0 +1,14 @@
+\label{sec:empirics}
+% Empirical	Approach
+% • Description	of	the empirical	model:	specification	and variables
+% involved
+% • Strategy	for	the	estimation	of	the	parameters	of	interest	and	test	of
+% the	hypothesis
+The aim is to model the firm level inventions, measured as sales due to new products, as a function of within-firm R\&D spendings as well as R\&D spendings in other firms within the region. That is, for firms within the same sector and in other sectors respectively. I use a panel regression with a Spatial Lag of X (SLX) model \citep{gibbons2012mostly} controlling for firm-level fixed effects (FE)
+
+As a specification test I also try applying the Spatial Lag Model (SAR) were (time lagged) sales due to new products in other firms would directly be an explanatory term for sales due to new products for the firm. Furthermore I test a combination of the SLX and SAR specification. Even more so than R\&D spendings this could be expected to capture effects in two directions: human capital spill-overs (positive) while sales in other firms might take over market shares (negative).
+\\
+\\
+The spacial weight matrix $W$ is constructed such that the cells are $1$ if the two firms are within the same region and $0$ otherwise.
+
+To control for spatial-dependence in spillover effects a weight between $]0;1[$ is assigned to surrounding regions or even continuous weights based on inverse squared distance between regions. If continuous weights based on distance is not easily done this control could alternatively be performed by assigning equal weight to R\&D expenditures for all firms across Spain.
