@@ -10,7 +10,6 @@ cd            	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\P
 global figures	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\PS1\03_figures"
 global tables	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\PS1\04_tables"
 
-
 ********************************************************************************
 * Question 2.2a Gaussian stochastic process                                     *
 ********************************************************************************

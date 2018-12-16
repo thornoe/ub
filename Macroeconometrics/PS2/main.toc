@@ -9,4 +9,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Cointegration analysis. Single-equation-based methods}{2}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Cointegration analysis. System-based methods}{3}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Cointegration analysis. System-based methods}{4}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Discussion of results}{9}{subsection.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline References}{10}{section*.10}

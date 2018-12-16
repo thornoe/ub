@@ -1,7 +1,6 @@
 * install egranger from
 net from http://fmwww.bc.edu/RePEc/bocode/e/
-
-
+help vec
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////// Clear all and set up folders ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -15,6 +14,7 @@ global tables	"C:\Users\thorn\OneDrive\Dokumenter\GitHub\ub\Macroeconometrics\PS
 ********************************************************************************
 * Question 3.1a Gaussian stochastic process                                     *
 ********************************************************************************
+*** 3.1
 use pwt90.dta, replace
 keep countrycode year rgdpna
 keep if inlist(countrycode,"DEU","FRA","GBR")
@@ -26,13 +26,55 @@ reshape wide y, i(year) j(countrycode) string
 tsset year
 
 * a)
-reg yFRA yDEU					// static equation
-predict residuals, resid		// save the residuals
+reg yFRA yDEU					// Static equation
+predict residuals, resid		// Save the residuals
 dfuller residuals, lags(5)		// ADF test
+eststo eg, title("1st step")
+drop residuals
 
 * b)
 egranger yFRA yDEU, lags(5) regress ecm
+eststo ECM
+estout eg ECM using "$tables/tab31b.tex", style(tex) replace ///
+	cells(b(star fmt(3)) se(par fmt(3))) starlevels(* 0.10 ** 0.05 *** 0.01) ///
+	mlabels(,titles numbers) /// 	// manually remove underscore from "L._egresid" & "_cons"
+	/// //stats(aic bic, labels("aic" "bic") fmt(3 0) ) ///
+	prehead("\begin{tabular}{lcc}\toprule") ///	// fit c's to number of columns
+	posthead("\midrule") /// // prefoot("\midrule") ///   
+	postfoot("\bottomrule \end{tabular} \\ \text{Standard errors are in parentheses. * p<0.10, ** p<0.05, *** p<0.01}")
 
+
+*** 3.2
+* a)
+varsoc yFRA yDEU yGBR 			// Optimal lag of a VAR(P)
+help varsoc
+* b)
+vecrank  yFRA yDEU yGBR, lags(2) // Number of cointegrated relationships.
+
+* c)
+vec yFRA yDEU yGBR, lags(2) rank(2) 
+eststo VEC, title("Short run parameters")
+
+estout VEC using "$tables/tab32c1.tex", style(tex) replace ///
+	cells(b(star fmt(3)) se(par fmt(3))) starlevels(* 0.10 ** 0.05 *** 0.01) ///
+	mlabels(,titles ) /// 	// manually remove all of the underscores
+	/// //stats(aic bic, labels("aic" "bic") fmt(3 0) ) ///
+	prehead("\begin{tabular}{lc}\toprule") ///	// fit c's to number of columns
+	posthead("\midrule") /// // prefoot("\midrule") ///   
+	postfoot("\bottomrule \end{tabular} \\ \text{Standard errors are in parentheses. * p<0.10, ** p<0.05, *** p<0.01}")
+
+* Refit the model with the Johansen normalization and the overidentifying constraint
+constraint define 1 [_ce1]yFRA = 1
+constraint define 2 [_ce1]yDEU = 0
+constraint define 3 [_ce2]yFRA = 0
+constraint define 4 [_ce2]yDEU = 1
+
+vec yFRA yDEU yGBR, lags(2) rank(2) noetable bconstraints(1/4) idtest
+
+
+*** 3.3
+tsline yFRA yDEU yGBR
+	
 
 ***SECOND***
 

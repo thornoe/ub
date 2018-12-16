@@ -16,5 +16,39 @@
   {}
 \endgroup
 
-\datalist[entry]{nyt/global//global/global}\enddatalist
+\datalist[entry]{nyt/global//global/global}
+  \entry{bernard1995convergence}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BAB}{%
+         family={Bernard},
+         familyi={B\bibinitperiod},
+         given={Andrew\bibnamedelima B},
+         giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=DSN}{%
+         family={Durlauf},
+         familyi={D\bibinitperiod},
+         given={Steven\bibnamedelima N},
+         giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{BABDSN1}
+    \strng{fullhash}{BABDSN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1995}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{2}
+    \field{pages}{97\bibrangedash 108}
+    \field{title}{Convergence in international output}
+    \field{volume}{10}
+    \field{journaltitle}{Journal of applied econometrics}
+    \field{year}{1995}
+  \endentry
+\enddatalist
 \endinput
