@@ -1,26 +1,31 @@
- find the optimal tax rate to be
+\citet{piketty2013optimal} find the optimal tax rate to be
 \begin{align}
   \tau^{g} = \frac{1-g}{1-g+a\cdot e} \label{eq:social}
 \end{align}
-Assuming that the government is utilitarian and the marginal utility of consumption declines in income $z^{*}$, then in the limit the social preferences of the government would be $g\rightarrow0$ for $z^{*}\rightarrow0$. That is, for the very top income earners the government does not care about their marginal consumption but only wants to optimize the tax rate in order to maximize tax revenue collected from the top bracket subject to their real responses $e$, giving us the simpler tax function
+Assuming that the government is utilitarian and the marginal utility of consumption declines in income $z$, then in the limit the social preferences of the government would be $g\rightarrow0$ for $z\rightarrow0$. That is, for the very top income earners the government does not care about their marginal consumption but only wants to optimize the tax rate in order to maximize tax revenue collected from the top bracket subject to their real responses $e$, giving us the simpler tax function
 \begin{align}
   \tau = \frac{1}{1+a\cdot e} \label{eq:nonlinear}
 \end{align}
-Relaxing the assumption that all responses are real (due to either a change in productive or working hours) the optimal tax rate with rent seeking is
+Where $a$ is a parameter for the shape of the income distribution. Relaxing the assumption that all responses are real (due to either a change in productivity or working hours) the optimal tax rate with rent seeking is
 \begin{align}
-  \tau = \frac{1}{1+a\cdot e} \label{eq:rent}
+  \tau^{*} = \frac{1+a\cdot e_b}{1+a\cdot e},\ \ \ \ \ e_b=s\cdot e \label{eq:rent}
 \end{align}
+Here a fraction $s$ of the behavioral responses to taxes $e$ is due to bargaining where employees are able to get overpaid or underpaid relative to their marginal productivity conditional on their bargaining. $e_b$ is then the bargaining component of the elasticity of taxable income $e$. The reason bargaining should respond to the marginal tax rate is the assumption that one gets disutility from the amount of effort put into bargaining, thus there is a trade-off depending on the net after-tax value of increasing one's wage through bargaining.
 
 \subsection{Benchmark}
 In the benchmark case where the wage equals marginal productivity, i.e. top income owners are not overpaid nor underpaid relative to their productivity
 \begin{align*}
   s=0\Rightarrow e_b=0 \Rightarrow \tau^{*} = \tau
 \end{align*}
-Which should be expected as the difference between %\ref{eq:nonlinear} and \ref{eq:rent}
+Which should be expected as the difference between \ref{eq:nonlinear} and \ref{eq:rent}
 is only rooted in the correction for bargaining effects.
 
 \subsection{Trickle up}
-Assuming that top earners are overpaid relative to their productivity then the optimal taxation of the higher income bracket would be higher than without rent-seeking as $s>0 \Rightarrow e_b>0 \Rightarrow \tau^{*}>\tau$. In the extreme presence of labour market frictions or where the utility cost of increasing productivity or hours tend to infinity while bargaining costs are modest, then the bargaining share $s$ of the total behavioral response $e$ would tend to $1$, thus, $e_b\rightarrow e \Rightarrow \tau^{*} \rightarrow 1$.\par
-Thus, the tax $\tau^{*}$ is increased in order to minimize the source of bottom-up redistribution that is due to the bargaining component. The reasoning being nested in the fundamental assumption that the government is utilitarian.
+Assuming that top earners are overpaid relative to their marginal productivity then the optimal taxation of the higher income bracket (\ref{eq:rent}) would be higher than without rent-seeking (\ref{eq:nonlinear}) as $s>0 \Rightarrow e_b>0 \Rightarrow \tau^{*}>\tau$. In the extreme presence of labour market frictions or where the utility cost of increasing productivity or hours tend to infinity while bargaining costs are modest, then the bargaining share $s$ of the total behavioral response $e$ would tend to $1$, thus, $e_b\rightarrow e \Rightarrow \tau^{*} \rightarrow 1$.\par
+That is, the utility-maximizing tax rate for top income owners $\tau^{*}$ should be increased in order to minimize the source of bottom-up redistribution that is due to the bargaining component. The reasoning being nested in the fundamental assumption that an individual has diminishing returns to consumption $u(z)\xrightarrow[z\rightarrow\infty]{}0$.
 
 \subsection{Trickle down}
+'Trickle down' corresponds to the phenomenon where top earners are underpaid relative to their marginal productivity, thus, the more their income is increased through real responses to taxes, the more income does 'trickle down' to the other employees through increased production. This relies on the assumption of zero profit of the companies, so that underpayment of the top earner would directly translate into overpayment of the remaining employees. This situation would establish a second channel for redistribution where a tax cut on top income owners relative to the optimal tax without rent seeking (\ref{eq:nonlinear}) actually could redistribute economic resources to other employees. Analytically this is evident as equation (\ref{eq:rent}) for the optimal tax rate under rent seeking implies
+\begin{align*}
+  s<0\Rightarrow e_b<0 \Rightarrow \tau^{*}<\tau
+\end{align*}

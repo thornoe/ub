@@ -1,0 +1,112 @@
+For an economy with only two individuals $(h=1,2)$ one's utility from consumption $C$ and leisure $L=16-l$ is given by the utility function
+\begin{align}
+  U^h=\alpha^h\ln C+(1-\alpha^h)\ln L,\ \ \ \ \ \alpha^1=\frac{1}{2},\alpha^2=\frac{1}{3}
+  \label{utility}
+\end{align}
+The linear tax function includes a universal transfer $R$ and the wage $w^h$ per working hour $l^h$ is the same for each individual
+\begin{align}
+  T(y)=-R+ty=-R+tw^hl^h,\ \ \ \ \ w^1=w^2=6 \label{linear}
+\end{align}
+  \textbf{
+  \begin{itemize}
+    \item[a)] Set and solve the maximization problem of each individual, where C and L are the
+  control variables.
+  \end{itemize} } \noindent
+From the tax function (\ref{linear}) we can set the budget constraint of individual $h$ to be:
+\begin{align}
+  C=R+(1-t)w^hl^h=R+(1-t)w^h(16-L) \label{budget}
+\end{align}
+The maximization problem for individual $h$ can be written as
+\begin{align}
+  \max\limits_{C,L} U^h=\alpha^h \ln C + (1-\alpha^h) L\text{ s.t. }C=R+(1-t)w^h(16-L)
+  \label{max_individual}
+\end{align}
+To solve the maximization problem (\ref{max_individual}), we set up the Lagrangian
+\begin{align}
+  \mathcal{L}=\alpha^h \ln C + (1-\alpha^h) L-\lambda[C-R-(1-t)w^h(16-L)]
+  \label{lagrangian}
+\end{align}
+Taking the FOCs
+\begin{align}
+  \frac{\delta\mathcal{L}}{\delta C}&=0\Rightarrow\lambda =\frac{\alpha^h}{C} \label{foc1}\\
+  \frac{\delta\mathcal{L}}{\delta L}&=0\Rightarrow\frac{1-\alpha^h}{L}=\lambda (1-t)w^h \label{foc2}
+\end{align}
+First inserting $\lambda$ from (\ref{foc1}) in (\ref{foc2}) gets us
+\begin{align}
+  \frac{1-\alpha^h}{L}&= \frac{\alpha^h}{C}(1-t)w^h \label{calculations}
+\end{align}
+Next we insert the budget constraint $C$ from (\ref{budget}) and isolate $L$
+\begin{align}
+  \frac{1-\alpha^h}{L}&= \frac{\alpha^h}{R+(1-t)w^(16-L)}(1-t)w^h \nonumber \\
+  \frac{1-\alpha^h}{L}&= \frac{\alpha^h(1-t)w^h}{R+(1-t)w^h(16-L)} \nonumber \\
+  \frac{L}{1-\alpha^h}&= \frac{R+(1-t)w^h(16-L)}{\alpha^h(1-t)w^h} \nonumber \\
+  \frac{L}{1-\alpha^h}&= \frac{R}{\alpha^h(1-t)w^h}+\frac{(1-t)w^h(16-L)}{\alpha^h(1-t)w^h} \nonumber \\
+  \frac{L}{1-\alpha^h}&= \frac{R}{\alpha^h(1-t)w^h}+\frac{16-L}{\alpha^h} \nonumber \\
+  L&= \frac{(1-\alpha^h)R}{\alpha^h(1-t)w^h}+\frac{(1-\alpha^h)(16-L)}{\alpha^h} \nonumber \\
+  L&= \frac{(1-\alpha^h)R}{\alpha^h(1-t)w^h}+\frac{(1-\alpha^h)16}{\alpha^h}-\frac{(1-\alpha^h)L}{\alpha^h} \nonumber \\
+  L\left(1+\frac{1-\alpha^h}{\alpha^h}\right)&= \frac{(1-\alpha^h)R}{\alpha^h(1-t)w^h}+\frac{(1-\alpha^h)16}{\alpha^h} \nonumber \\
+  L\left(\frac{1}{\alpha^h}\right)&= \frac{(1-\alpha^h)R}{\alpha^h(1-t)w^h}+\frac{(1-\alpha^h)16}{\alpha^h} \nonumber \\
+  L&= \alpha^h\left(\frac{(1-\alpha^h)R}{\alpha^h(1-t)w^h}+\frac{(1-\alpha^h)16}{\alpha^h}\right) \nonumber \\
+  L^{*}&= \frac{(1-\alpha^h)R}{(1-t)w^h}+(1-\alpha^h)16 \label{L}
+\end{align}
+Isolationg $L$ in equation (\ref{calculations}) and inserting the expression for the optimal value of leisure (\ref{L}) we are now ready to isolate $C^{*}$
+\begin{align}
+  \frac{1-\alpha^h}{L}&= \frac{\alpha^h(1-t)w^h}{C} \nonumber\\
+  \frac{L}{1-\alpha^h}&= \frac{C}{\alpha^h(1-t)w^h} \nonumber\\
+  L&= \frac{1-\alpha^h}{\alpha^h(1-t)w^h}C \nonumber\\
+  \frac{(1-\alpha^h)R}{(1-t)w^h}+(1-\alpha^h)16 &= \frac{1-\alpha^h}{\alpha^h(1-t)w^h}C \nonumber\\
+  C^{*}&=\alpha^hR+\alpha^h(1-t)w^h16 \label{C}
+\end{align}
+Inserting values of $\alpha^h,wage^h$ for each individual $h$ in (\ref{L}) and (\ref{C}) we have the solution to the individual optimization problem that
+\begin{equation}
+  \begin{split}
+    L^{1*}&=\frac{R}{12(1-t)}+8,\ \ \ \ \ C^{1*}=\frac{R}{2}+48(1-t) \\
+    L^{2*}&=\frac{R}{9(1-t)}+\frac{32}{3},\ \ \ \ \ C^{2*}=\frac{R}{3}+32(1-t)\label{ind_optimization}
+  \end{split}
+\end{equation}
+  \textbf{
+  \begin{itemize}
+    \item[b)] Provide the indirect utility function of each consumer.
+  \end{itemize} } \noindent
+Inserting the optimal values of leisure and consumption (\ref{ind_optimization}) in the utility function (\ref{utility}) we can write out the indirect utility functions of each consumer
+\begin{equation}
+  \begin{split}
+    U^1&=\frac{1}{2}\ln\left(\frac{R}{2}+48(1-t)\right)+\frac{1}{2}\ln\left(\frac{R}{12(1-t)}+8\right) \\
+    U^2&=\frac{1}{3}\ln\left(\frac{R}{3}+32(1-t)\right)+\frac{2}{3}\ln\left(\frac{R}{9(1-t)}+\frac{32}{3}\right) \\
+    \label{indirect}
+  \end{split}
+\end{equation}
+  \textbf{
+  \begin{itemize}
+    \item[c)] Formulate the maximization problem of the social planner, assuming a strict
+  utilitarian objective function
+  \end{itemize} } \noindent
+A strictly utilitarian social planner only seek to maximize overall utility in the society, thus the maximization problem is
+\begin{equation}
+  \begin{split}
+    \max\limits_{C,L} U^s=&\frac{1}{2}\ln C^1 + \frac{1}{3}\ln C^2 + \frac{1}{2} L^1 + \frac{2}{3} L^2 \\
+    &\text{s.t. }C^1+C^2=2R+(1-t)w^1(16-L^1)+(1-t)w^2(16-L^2)
+    \label{max_social}
+  \end{split}
+\end{equation}
+  \textbf{
+  \begin{itemize}
+    \item[d)] Provide the FOC's of the problem set in c)
+  \end{itemize} } \noindent
+To solve the maximization problem (\ref{max_social}) we would first set up the Lagrangian
+\begin{equation}
+  \begin{split}
+    \mathcal{L}=&\frac{1}{2}\ln C^1 + \frac{1}{3}\ln C^2 + \frac{1}{2} L^1 + \frac{2}{3} L^2 \\
+    &-\lambda[C^1-C^2-2R-(1-t)w^2(16-L^2)-(1-t)w^2(16-L^2)],\ \ \ \ \ w^1=w^1=w=6
+    \label{lagrangian_social}
+  \end{split}
+\end{equation}
+And then take the FOCs of (\ref{lagrangian_social})
+\begin{equation}
+  \begin{split}
+    \frac{\delta\mathcal{L}}{\delta C^1}&=0\Rightarrow\lambda =\frac{1}{2C^1} \\
+    \frac{\delta\mathcal{L}}{\delta C^2}&=0\Rightarrow\lambda =\frac{1}{3C^2} \\
+    \frac{\delta\mathcal{L}}{\delta L^1}&=0\Rightarrow\frac{1}{2L^1}=\lambda (1-t)w^1 \\
+    \frac{\delta\mathcal{L}}{\delta L^2}&=0\Rightarrow\frac{2}{3L^2}=\lambda (1-t)w^2
+  \end{split}
+\end{equation}

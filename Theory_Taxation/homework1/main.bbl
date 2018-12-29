@@ -16,5 +16,38 @@
   {}
 \endgroup
 
-\datalist[entry]{nyt/global//global/global}\enddatalist
+\datalist[entry]{nyt/global//global/global}
+  \entry{piketty2013optimal}{incollection}{}
+    \name{author}{2}{}{%
+      {{hash=PT}{%
+         family={Piketty},
+         familyi={P\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Saez},
+         familyi={S\bibinitperiod},
+         given={Emmanuel},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{PTSE1}
+    \strng{fullhash}{PTSE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{year}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{Handbook of public economics}
+    \field{pages}{391\bibrangedash 474}
+    \field{title}{Optimal labor income taxation}
+    \field{volume}{5}
+    \field{year}{2013}
+  \endentry
+\enddatalist
 \endinput

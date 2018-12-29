@@ -1,0 +1,135 @@
+\subsection{Order of integration analysis}
+\textit{Following the Dickey-Pantula strategy, determine the order of integration of the real per capita GDP time series
+that you have selected.
+\\
+In both cases, describe how the order of integration analysis have
+been performed - null and alternative hypothesis of the different
+test statistics and the specification of the deterministic component,
+among other features.}
+\\
+\\
+Following the Dickey-Pantula strategy we should first test the more general situation that the series of log real GDP per capita is integrated of order 2 by testing for more than one unit root.
+\begin{align}
+  \left\{\begin{array}{l}
+  H_0: \log GDPpc_t\sim I(2)\\
+  H_1: \log GDPpc_t\sim I(1)\text{ or }\sim I(0)
+  \end{array}\right.
+  \label{eq:I2}
+\end{align}
+A feasible way of testing this is to apply the \nth{1} order transformation as equation \ref{eq:I2} is equivalent to
+\begin{align}
+  \left\{\begin{array}{l}
+  H_0: \Delta \log GDPpc_t\sim I(1)\\
+  H_1: \Delta \log GDPpc_t\sim I(0)
+  \end{array}\right.
+  \label{eq:I1}
+\end{align}
+Thus, if we cannot reject the $H_0$ hypothesis \ref{eq:I1} that $\Delta\log GDPpc_t$ contains a unit root then equivalently we cannot reject the null-hypothesis \ref{eq:I2} that $\log GDPpc_t$ would have more than one unit root. On the contrary, if we are able to reject that $\Delta\log GDPpc_t$ contains a unit root it should be tested whether $\log GDPpc_t$ has a single unit root or not.
+\textit{\textbf{
+\begin{itemize}
+  \item[a)] Analyze the order of integration of ${\log(GDPpc_t)}$ with a deterministic component defined by a constant term using, at least, the ADF, PP, ADF-GLS and KPSS test statistics.
+\end{itemize}
+}}\noindent
+The Dickey-Fuller (DF) test assumes a first-order autoregressive process
+\begin{align}
+  x_t=f(t)+\phi x_{t-1}+\varepsilon_t
+  \label{eq:df}
+\end{align}
+Here we first define the deterministic component as a constant term $f(t)=\mu$. Taking the first-difference of this would suppress the deterministic term such that $f(t)=0$. The null-hypothesis is that the time series contain a unit-root against the alternative of no unit-root such that
+\begin{align}
+  \left\{\begin{array}{c}
+  H_0:|\phi|=1\equiv x_t\sim I(1)\\
+  H_1:|\phi|<1\equiv x_t\sim I(0)
+  \end{array}\right.
+  \label{eq:H0}
+\end{align}
+Which is decided on by the computation of the normalized bias test (\ref{eq:bias}) and the pseudo t-ratio test statistics (\ref{eq:t-ratio})
+\begin{align}
+  T(\hat{\phi}-1) \label{eq:bias}\\
+  t_{\hat{\phi}}=\frac{\hat{\phi}-1}{std.err.(\hat{\phi})}\label{eq:t-ratio}
+\end{align}
+The DF test relies on the strong assumption of no autocorrelation in the disturbance term. This assumption can be loosened by either a parametric correction, the Augmented Dickey-Fuller (ADF) test, or a non-parametric correction, the Philips-Perron (PP) test. The ADF test tests for unit root in the regression equation
+\begin{align}
+  \Delta x_t=f(t)+\alpha x_{t-1}+\sum_{j=1}^{p-1}\gamma_j\Delta x_{t-j}+\varepsilon_t
+  \label{eq:adf}
+\end{align}
+The Philips-Perron (PP) test builds on the Dickey-Fuller test in equation \ref{eq:df} as well but performs a non-parametric correction of the DF test statistics. However, under the presence of Moving Average components in the disturbance term, the ADF test is less distorted than the PP test in finite samples.
+
+
+To provide better results in finite samples an ADF-GLS test was proposed by Ng and Perron (1998) by modifying the PP test. Finally Kwiatkowski, Philips, Schmidt, and Shin (1992) proposed a Lagrange multiplier test given by
+\begin{align}
+  KPSS=\frac{T^{-1}\sum_{t=1}^T S_t^2}{s^2} \label{eq:KPSS}
+\end{align}
+As opposed to the prior tests, the KPSS test is a test for level stationarity such that the null-hypothesis and the alternative are
+\begin{align}
+  \left\{\begin{array}{l}
+  H_0: x_t\sim I(d-1)\\
+  H_1: x_t\sim I(d)
+  \end{array}\right.
+  \label{eq:H0-KPSS}
+\end{align}
+Here, the order of integration in the alternative hypothesis is $d=2$ for log real GDP per capita, equivalent to $d=1$ for the first-differences. The size of the KPSS test statistics, like for the PP test, is distorted in the presence of MA components.
+\\
+\\
+All four tests are applied to test the order of integration of the \nth{1} order transformed of log real GDP per capita with a deterministic component given by a constant term. Taking the first-differences makes the constant terms cancel out, however, as the ADF-GLS nor the KPSS test implementation in Stata allows for suppressing the deterministic term, these are estimated including a constant term.
+Table \ref{tab:24a1} below show for each country the number of included lagged difference terms $p$ for which the $H_0$ hypothesis of each test is rejected due to the test statistic being above the 5\% critical value. For the ADF-GLS and the KPSS tests the Schwert criterion (1989) is applied by default such that the sample size implies that a maximum of $p=10$ lags are included in the tests. Recalling the ACFs in figure \ref{fig:23b} the autocorrelation of lags $p>10$ approaches zero. To be on the safe side, for the ADF and PP the tests are performed using each number in $p\in1,2,\dots,10$ as maximum lags as well.
+
+
+It is evident that the bandwidth of the spectral window heavily affects the performance of the test, thus in the tables it is denoted which is the optimal number of included lags in the ADF-GLS test according to the Ng-Perron sequential $t$ (seq t), the minimum Schwarz information criterion (SIC), and the Ng-Perron modified Akaike information criterion (MAIC) respectively. Likewise, for the KPSS test the optimal number of included lags is calculated based on the automatic bandwidth selection proposed by Newey and West (1994).
+\begin{table}[H]
+  \centering
+  \caption{Order of integration test results for growth in real GDP per capita}
+    \footnotesize
+    \input{04_tables/tab24a1}
+    \label{tab:24a1}
+\end{table}\noindent
+Table \ref{tab:24a1} indeed emphasizes that one should not rely on a single test or specification of the number of included lagged difference terms. For Germany the $H_0$ that $\Delta\log GDPpc_t$ contains a unit root is not rejected by the ADF-GLS test but is rejected by the ADF and the PP test. The contradicting test results could be due to disturbance from the Moving Average components in the disturbance term that we indeed found to be of significant relevance in section \ref{sec:23} as the ARMA(1,4) model is the better fitting model. After all the ADF-GLS test is generally regarded the best performing of the three in finite samples, thus, we conclude that we cannot reject that $\Delta\log GDPpc_t$ contains a unit root for Germany. Even more so, this is consistent with the KPSS test rejecting that the series is level-stationary.
+
+Similarly, for Spain we found the ARMA(1,1) model to be the best performing which can be the reason that the PP test clearly rejects the $H_0$. As could be expected the MA components affect the ADF test less than the PP test, nonetheless, $H_0$ is still rejected when the ADF test specification includes a total of either 1 or 10 lagged difference terms. Like for Germany, the ADF-GLS and the KPSS test statistics are consistent with the series for growth in real GDP per capita in Spain containing a unit-root.
+
+This is equivalent with the series of log real GDP per capita containing more than one unit root for Germany and Spain. Recalling the parameter estimates in table \ref{tab:23c} and \ref{tab:23d} the AR parameter $\hat{\phi_1}$ is indeed not found to be significantly different from unity in the ARMA(1,1) model for Spain nor any estimation of the ARMA(1,4) model for Germany or in the ARMA(1,1) model for Germany estimated without dummies.
+\\
+\\
+In contrast, For Denmark estimates and tests carried out in section \ref{sec:23} found the AR(1) model to give the better fit of growth in real GDP per capita and with an parameter estimate $\hat{\phi}=0.3$ clearly different from zero. Indeed the ADF-GLS test is able to reject the $H_0$, at least when including only 1 or 2 lagged difference terms. I decide to reject the $H_0$ of a unit root, as it is optimal to include exactly 2 lags in the ADF-GLS test according to both the Ng-Perron sequential $t$ and the minimum Schwarz information criterion. The lesser relevance of the MA components for Denmark increases the credibility of the PP and ADF tests where the former clearly rejects the $H_0$ of a unit root while the latter only rejects it when including a single lagged difference term. The conclusion is less consistent with the KPSS test that rejects stationarity, however, not when including 9 or 10 lagged difference terms in the test specification.
+
+This is equivalent with rejecting that the non-transformed series for log real GDP per capita in Denmark contains two or more unit roots. Following the Dickey-Pantula strategy we should proceed to test whether the series contain 1 or 0 unit roots, that is
+\begin{align}
+  \left\{\begin{array}{l}
+  H_0: \log GDPpc_t\sim I(1)\\
+  H_1: \log GDPpc_t\sim I(0)
+  \end{array}\right.
+  \label{eq:I0}
+\end{align}
+Letting the deterministic component be given by a constant term we apply the same tests in table \ref{tab:24a2}. The ADF-GLS and the KPSS tests are consistent with $\log GDPpc_t$ not being a stationary but a stochastic process containing a unit root when the deterministic component is restricted to be a constant term. Even the PP test does not reject the $H_0$ of a unit root according to the Philips-Perron $\rho$ test statistic, however, it is rejected according to Philips-Perron $\tau$ test statistic and by the ADF test when including 3, 4, 9, or 10 lagged difference terms. The size of the PP and ADF tests statistics can again be disturbed by MA components in the disturbance term.
+\begin{table}[H]
+  \centering
+  \caption{Order of integration test results for log real GDP per capita, with a constant term}
+    \footnotesize
+    \input{04_tables/tab24a2}
+    \label{tab:24a2}
+\end{table}\noindent
+\textit{\textbf{
+\begin{itemize}
+  \item[b)] Analyze the order of integration of $\log(GDPpc_t)$ with a deterministic component defined by a linear time trend using, at least, the ADF, PP, ADF-GLS and PSS test statistics.
+\end{itemize}
+}}\noindent
+In the following I test the order of integration of the series for log real GDP per capita with a deterministic component given by a linear time trend
+\begin{align}
+  f(t)=\mu+\beta t \label{eq:trend}
+\end{align}
+Testing whether the non-transformed time series contains two or more unit roots is equivalent to testing whether the \nth{1} order transformed contains a single unit root. Taking the first-differences implies transforming the deterministic component with a trend term as given by equation \ref{eq:trend} to a constant term, thus, this is exactly the same test specifications for the ADF-GLS and the KPSS tests for which the results are shown in table \ref{tab:24a1}. Moreover, the time series for log real GDP per capita in Germany and Spain contain a unit root both with and without a constant term. Though the ADF and PP tests sizes are likely to be distorted, it is worth considering the test results in table \ref{tab:24a3} where a deterministic constant term is included in their specification. The PP tests are still rejected for all numbers of included lags across the countries. The $H_0$ of the ADF test is now only rejected for Germany when the test specification includes a total of exactly 1, 4, or 9 lagged difference terms and for Spain only for exactly one lagged difference term. For Denmark it is now also rejected for 2 lagged difference terms.
+\begin{table}[H]
+  \centering
+  \caption{Order of integration test results for growth in real GDP per capita, with a constant}
+    \footnotesize
+    \input{04_tables/tab24a3}
+    \label{tab:24a3}
+\end{table}\noindent
+On a close to identical basis I reject that the non-transformed series for Danish log real GDP per capita with a time trend contains two or more unit roots. I follow the Dickey-Pantula strategy and apply the ADF, PP, and ADF-GLS tests of the null-hypothesis that the series contains a unit root, that is, can be described by a random walk. The table \ref{tab:24a4} show that the $H_0$ cannot be rejected by either unit-root test while stationarity around a linear trend is clearly rejected by the KPSS test. The unambiguity of the different tests is in contrast to the results in table \ref{tab:24a2} where the test specifications were constrained to not include a deterministic component with a linear trend term. In conclusion, of the tested specifications the time series of log real GDP per capita in Denmark can best be described by a random walk with a positive drift and is integrated of order $1$, that is, the first-order differentiated is a stationary series with a constant term.
+\begin{table}[H]
+  \centering
+  \caption{Order of integration test results for log real GDP per capita, with a time trend}
+    \footnotesize
+    \input{04_tables/tab24a4}
+    \label{tab:24a4}
+\end{table}\noindent

@@ -1,0 +1,41 @@
+\textit{Proof analytically if the following statement is true: "goods strongly complement with
+leisure should be more heavily taxed".}
+\\
+\\
+The Ramsey rule for optimal taxation of good $i$ with income and substitution (cross-price) effects for consumption of other taxable goods $j\neq i$ as well as redistribution concerns is given by
+\begin{align}
+  \frac{\sum\limits_{j=1}^n t_j\cdot \frac{\delta x_j^C}{\delta q_i}}{x_i}=-(1-b),\ \ \ \ \ i\in 1,2,\cdots,n \label{eq_ramsey}
+\end{align}
+Where for a good $i$ the commodity tax rate for the good is $t_i$, the quantity is given by $x_i$, and the price is $q_i$. On the right-hand-side $b$ is the net social marginal utility of income, i.e. taking into account that transferring money to the private sector also generates a return in increased tax revenues.
+
+Goods $i=1,2$ are two taxable goods and $i=0$ is leisure which is an untaxable 'good'. Multiplying with $x_i$ on both sides of equation (\ref{eq_ramsey}) the FOCs with respect to the price of each of the taxable goods are given by
+\begin{equation}
+  \begin{split}
+    i=1:\ \ \ t_1\frac{\delta x_1^C}{\delta q_1}+t_2\frac{\delta x_2^C}{\delta q_1}&=-(1-b)x_1<0\\
+    i=2:\ \ \ t_1\frac{\delta x_1^C}{\delta q_2}+t_2\frac{\delta x_2^C}{\delta q_2}&=-(1-b)x_2<0
+    \label{eq_focs}
+  \end{split}
+\end{equation}
+Isolating the implicit optimal tax rates of goods $i=1,2$ we have from (\ref{eq_focs})
+\begin{equation}
+  \begin{split}
+    t_1^{*}&=\frac{-(1-b)x_2x_1}{-Dq_2}(\varepsilon_{22}+\varepsilon_{11}+\varepsilon_{10})\\
+    t_2^{*}&=\frac{-(1-b)x_2x_1}{-Dq_1}(\varepsilon_{22}+\varepsilon_{11}+\varepsilon_{20})
+    \label{eq_implicit_tax}
+  \end{split}
+\end{equation}
+Where $D<0$ is the negative semi-definite substitution matrix. Subtracting the optimal tax rate for each of the two goods $i=1,2$ given by (\ref{eq_implicit_tax}) gives
+\begin{equation}
+  \begin{split}
+    t_1^{*}-t_2^{*}&=\frac{-(1-b)x_2x_1}{-Dq_2}(\varepsilon_{22}+\varepsilon_{11}+\varepsilon_{10})-\frac{-(1-b)x_2x_1}{-Dq_1}(\varepsilon_{22}+\varepsilon_{11}+\varepsilon_{20})\\
+    &=\frac{-(1-b)x_2x_1}{-Dq_2q_1}(\varepsilon_{20}-\varepsilon_{10})
+    \label{eq_implicit_tax}
+  \end{split}
+\end{equation}
+For the case where good $i=1$ is more complementary with leisure $(i=0)$ than good $i=2$ then the cross-price elasticity between good $1$ and $0$ is relatively small compared to the cross-price elasticity between good $2$ and $0$, implying that
+\begin{equation}
+  \varepsilon_{20}-\varepsilon_{10}>0\Leftrightarrow t_1-t_2>0\Rightarrow t_1^{*}>t_2^{*}
+\end{equation}
+That is, the Ramsey rule for optimal commodity taxation implies that it is efficient that the good more complementary with leisure is taxed more heavily in order to deter people from enjoying leisure.
+
+As an example that could be increases commodity taxes on alcohol, non-business flight-tickets and other leisure-time activities such as cinemas and fitness-subscriptions. While the former two might help reaching other goals for health and greenhouse gas emissions, the latter two might also cause negative externalities regarding culture and health.

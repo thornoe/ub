@@ -1,0 +1,21 @@
+\begin{tabular}{lccccccc}
+\toprule
+Country &\nth{1} order transformed
+            &Test   &$H_0$ rejected &seq $t$&SIC&MAIC &Newey \& West\\
+\midrule
+Denmark &no &ADF    &w. 3,4,9,10 lags&      &   &     &             \\
+Denmark &no &PP     &(w. 1-10 lags)*&       &   &     &             \\
+Denmark &no &ADF-GLS&-              &3      &2  &3    &             \\
+Denmark &no &KPSS   &w. 1-10 lags   &       &   &     &6            \\
+\bottomrule \end{tabular} \\ \text{Maximum number of included lags $p=10$ in accordance with the Schwert criterion.} \\
+\text{*$H_0$ rejected by the Philips-Perron $\tau$ test statistic, but not by the Philips-Perron $\rho$ test statistic.}
+%
+% \usepackage{float}
+%
+% \begin{table}[H]
+%   \centering
+%   \caption{Example of table}
+%   \footnotesize
+%     \input{04_tables/ex}
+%   \label{tab:ex}
+% \end{table}

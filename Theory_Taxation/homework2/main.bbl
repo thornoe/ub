@@ -1,0 +1,241 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{chetty2011adjustment}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CR}{%
+         family={Chetty},
+         familyi={C\bibinitperiod},
+         given={Raj},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=FJN}{%
+         family={Friedman},
+         familyi={F\bibinitperiod},
+         given={John\bibnamedelima N},
+         giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=OT}{%
+         family={Olsen},
+         familyi={O\bibinitperiod},
+         given={Tore},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=PL}{%
+         family={Pistaferri},
+         familyi={P\bibinitperiod},
+         given={Luigi},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MIT Press}%
+    }
+    \strng{namehash}{CR+1}
+    \strng{fullhash}{CRFJNOTPL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2011}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{2}
+    \field{pages}{749\bibrangedash 804}
+    \field{title}{Adjustment costs, firm responses, and micro vs. macro labor
+  supply elasticities: Evidence from Danish tax records}
+    \field{volume}{126}
+    \field{journaltitle}{The quarterly journal of economics}
+    \field{year}{2011}
+  \endentry
+
+  \entry{feldstein1995effect}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FM}{%
+         family={Feldstein},
+         familyi={F\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The University of Chicago Press}%
+    }
+    \strng{namehash}{FM1}
+    \strng{fullhash}{FM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1995}
+    \field{labeldatesource}{year}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{3}
+    \field{pages}{551\bibrangedash 572}
+    \field{title}{The effect of marginal tax rates on taxable income: a panel
+  study of the 1986 Tax Reform Act}
+    \field{volume}{103}
+    \field{journaltitle}{Journal of Political Economy}
+    \field{year}{1995}
+  \endentry
+
+  \entry{kleven2014estimating}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KHJ}{%
+         family={Kleven},
+         familyi={K\bibinitperiod},
+         given={Henrik\bibnamedelima Jacobsen},
+         giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SEA}{%
+         family={Schultz},
+         familyi={S\bibinitperiod},
+         given={Esben\bibnamedelima Anton},
+         giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KHJSEA1}
+    \strng{fullhash}{KHJSEA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{4}
+    \field{pages}{271\bibrangedash 301}
+    \field{title}{Estimating taxable income responses using Danish tax reforms}
+    \field{volume}{6}
+    \field{journaltitle}{American Economic Journal: Economic Policy}
+    \field{year}{2014}
+  \endentry
+
+  \entry{kreiner2014year}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KCT}{%
+         family={Kreiner},
+         familyi={K\bibinitperiod},
+         given={Claus\bibnamedelima Thustrup},
+         giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=LPS}{%
+         family={Leth-Petersen},
+         familyi={L\bibinitperiod-P\bibinitperiod},
+         given={S{\o}ren},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SPE}{%
+         family={Skov},
+         familyi={S\bibinitperiod},
+         given={Peer\bibnamedelima Ebbesen},
+         giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KCT+1}
+    \strng{fullhash}{KCTLPSSPE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{5}
+    \field{pages}{154\bibrangedash 58}
+    \field{title}{Year-end tax planning of top management: Evidence from
+  high-frequency payroll data}
+    \field{volume}{104}
+    \field{journaltitle}{American Economic Review}
+    \field{year}{2014}
+  \endentry
+
+  \entry{kreiner2016tax}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KCT}{%
+         family={Kreiner},
+         familyi={K\bibinitperiod},
+         given={Claus\bibnamedelima Thustrup},
+         giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=LPS}{%
+         family={Leth-Petersen},
+         familyi={L\bibinitperiod-P\bibinitperiod},
+         given={S{\o}ren},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SPE}{%
+         family={Skov},
+         familyi={S\bibinitperiod},
+         given={Peer\bibnamedelima Ebbesen},
+         giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KCT+1}
+    \strng{fullhash}{KCTLPSSPE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{3}
+    \field{pages}{233\bibrangedash 57}
+    \field{title}{Tax reforms and intertemporal shifting of wage income:
+  Evidence from Danish monthly payroll records}
+    \field{volume}{8}
+    \field{journaltitle}{American Economic Journal: Economic Policy}
+    \field{year}{2016}
+  \endentry
+
+  \entry{saez2012elasticity}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SE}{%
+         family={Saez},
+         familyi={S\bibinitperiod},
+         given={Emmanuel},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Slemrod},
+         familyi={S\bibinitperiod},
+         given={Joel},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GSH}{%
+         family={Giertz},
+         familyi={G\bibinitperiod},
+         given={Seth\bibnamedelima H},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SE+1}
+    \strng{fullhash}{SESJGSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{1}
+    \field{pages}{3\bibrangedash 50}
+    \field{title}{The elasticity of taxable income with respect to marginal tax
+  rates: A critical review}
+    \field{volume}{50}
+    \field{journaltitle}{Journal of economic literature}
+    \field{year}{2012}
+  \endentry
+\enddatalist
+\endinput

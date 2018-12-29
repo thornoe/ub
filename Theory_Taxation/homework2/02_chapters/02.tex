@@ -1,0 +1,32 @@
+When different length of periods have been tried out, a three year period has consistently been found to be the one that is the best at revealing the long-run EIT, both when it comes to studies for the US \citep{saez2012elasticity} and Denmark \citep{kleven2014estimating}. Thus, I will propose to work with a three year period for analyzing the long-run EIT revealed by the Danish 2010 tax reform as well, that is, looking at $t=$2009 as the pre-reform year and then looking at the responses in the years 2010-2012. This is the longest feasible period as well due to another tax reform being passed in parlament in september 2012 which raised the income level of the remaining kink point by January \nth{1} 2013.
+
+In order to compare the long-run estimate with the short-run estimate found by \citet{kreiner2016tax} on an equal footing, the same specification should be adopted. Thus, the baseline would be to use the following panel regression on monthly data (subscript $m$) to estimate the long-run ETI $\varepsilon$:
+ \begin{align}
+  \underbrace{w_{y,m,i}}_\text{wage income} = \beta_0 + \underbrace{\varepsilon\cdot\frac{1-\tau_{y,i}}{1-\tau_{2009,i}}}_\text{ETI} + \underbrace{\beta_1\cdot d_{y,i}^{post}}_\text{2010-2012 dummy} + \underbrace{\beta_2\cdot d_i^T}_\text{treatment dummy} + u_{y,m,i}
+  \label{eq_kreiner}
+\end{align}
+Furthermore a series of controls are included: age-dummies, gender dummy, marriage dummy, 5 regional dummies, 10 sector dummies \citep{kreiner2016tax}. As I aim to cover a longer time-period I would allow for change over time for the parameters related to time-invariant individual characteristics while holding the effect constant over time for time-varying individual characteristics like as suggested by \citep{kleven2014estimating}. This would use a lot more computational power, however.
+
+As endogeneity problems due to effects from non-tax-related changes to inequality and mean reversion might be more of an issue when analyzing a longer time period, I suggest to apply the three different income controls used by \citet{kleven2014estimating} as extensions to the baseline model by \citet{kreiner2016tax}. Namely, including a control for log-income in 2009 and "Splines" of long-income in period 2009 and and 2008 respectively, that is a piecewise linear function for the ten decentiles of the income distribution. Even more so, I would ideally not include actual marginal tax rate $\tau_{y,i}$ for year $y$ due to endogeneity problems, but compute a Danish tax simulation model like \citet{chetty2011adjustment, kleven2014estimating} to simulate the mechanical tax rate $\hat{\tau}$ that individual $i$ would pay in year $y$ based on their behavior in year 2008. 2009 is not chosen as the instrument might then be correlated with the error-term for 2009 and due to income-shifting effects in late 2009.
+\\
+\\
+The treatment dummy $d_i^T$ is applied to individuals $i$ who face strong incentives to shift their income. As a form of robustness check this identification also allows us to estimate a difference-in-differences specification of the differences between 2009-2012 for the treated relative to the un-treated such that
+\begin{align}
+  \hat{\varepsilon}=\frac{\Delta \ln(z^H) - \Delta \ln(z^M)}{\Delta \ln(1-\tau^H) - \Delta \ln(1-\tau^M)}
+  \label{eq_DD}
+\end{align}
+However, as in the seminal paper in the field of EIT studies \citep{feldstein1995effect}, this is likely to be biased as it is purely a graphical interpretation and the more refined controls are lost such as the effect of individual characteristics changing over time or non-tax related shifts in income.
+\\
+\\
+As another robustness check of specification bias I would as well apply the first-difference (FD) regression used by \citet{kleven2014estimating}. Here only for the single period of changes between baseline year 2009 and post-reform year 2012
+\begin{equation}
+  \Delta\ln w_{i} = \varepsilon\cdot\Delta\ln(1-\hat{\tau}_{i}) + \eta\cdot\Delta\ln y_{i} + %\Delta\gamma^c \underbrace{\bm{x}_i^c}_\text{time-invariant} +
+  \gamma^v\cdot\Delta\underbrace{\bm{x}_i^v}_\text{time-varying} + \Delta u_{it}
+  \label{eq_kleven}
+\end{equation}
+Time-invariant individual characteristics are differences out so that the effects of individual characteristics that might explain some of the behavioral response should be captured by $\varepsilon$. With the FD approach it is possible to add $\Delta \ln y_{it}$ as a control for the difference in log virtual income to control for shifting towards non-labour incomes such as capital or corporate income.
+\\
+\\
+As \citet{kreiner2016tax} find most of the response to be explained by intertemporal shifting of income between November and December 2009 to January 2010, I expect the same would be the case for the 2013 Tax Reform and would estimate equation (\ref{eq_kreiner}) both with and without dummies for the months ${N09,D09,J10,N12,N13}$. Likewise I would estimate equation (\ref{eq_DD}) and (\ref{eq_kleven}) first for the full income data for the years 2009 and 2012 and next including only the first 10 months of each year only.
+
+Furthermore, I would estimate all specifications for the subsamples consisting of self-employed and wage-earners respectively, as well as estimating (\ref{eq_kreiner}) for the top quartile only.

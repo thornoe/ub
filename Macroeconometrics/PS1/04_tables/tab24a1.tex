@@ -1,0 +1,30 @@
+\begin{tabular}{lccccccc}
+\toprule
+Country &Deterministic constant
+            &Test   &$H_0$ rejected &seq $t$&SIC&MAIC &Newey \& West\\
+\midrule
+Germany &no &ADF    &w. 1-10 lags  &       &   &     &             \\
+Germany &no &PP     &w. 1-10 lags   &       &   &     &             \\
+Germany &yes&ADF-GLS&-              &3      &3  &3    &             \\
+Germany &yes&KPSS   &w. 1-10 lags   &       &   &     &5            \\
+\midrule
+Denmark &no &ADF    &w. 1 lag       &       &   &     &             \\
+Denmark &no &PP     &w. 1-10 lags   &       &   &     &             \\
+Denmark &yes&ADF-GLS&w. 1-2 lags    &2      &2  &6    &             \\
+Denmark &yes&KPSS   &w. 1-8 lags    &       &   &     &5            \\
+\midrule
+Spain   &no &ADF    &w. 1, 10 lags  &       &   &     &             \\
+Spain   &no &PP     &w. 1-10 lags   &       &   &     &             \\
+Spain   &yes&ADF-GLS&-              &10     &2  &2    &             \\
+Spain   &yes&KPSS   &w. 1-10 lags   &       &   &     &5            \\
+\bottomrule \end{tabular} \\ \text{Maximum number of included lags $p=10$ in accordance with the Schwert criterion.}
+%
+% \usepackage{float}
+%
+% \begin{table}[H]
+%   \centering
+%   \caption{Example of table}
+%   \footnotesize
+%     \input{04_tables/ex}
+%   \label{tab:ex}
+% \end{table}

@@ -1,0 +1,88 @@
+\input{01_preamble/documentclass}
+
+\input{01_preamble/packages}
+
+\input{01_preamble/koma_packages}
+
+\input{01_preamble/commands}
+
+\input{01_preamble/geometry}
+
+\input{01_preamble/colours}
+
+\input{01_preamble/floating_toc_headings}
+
+\input{01_preamble/header_footer}
+
+\input{01_preamble/paragraph_optimization}
+
+\input{01_preamble/hyperlink}
+
+\input{01_preamble/math_operators}
+
+\input{01_preamble/title_page}
+
+%\input{abbreviations}
+
+\input{01_preamble/ref_commands}
+
+\addbibresource{bib_tax}
+
+\numberwithin{equation}{section}
+
+\begin{document}
+\setstretch{1.2}
+
+\maketitle
+
+\thispagestyle{empty}
+
+% \clearpage
+
+\pagestyle{scrheadings}
+
+\small {
+\tableofcontents
+% \listoffigures
+% \listoftables
+% \clearpage
+% \printacronyms[include-classes=abbrev,name=Abbreviations, heading=chapter*]
+}
+\clearpage
+\normalsize
+
+\section{Background}
+\input{02_chapters/01}
+
+\section{Methodology}
+\input{02_chapters/02}
+
+% \section{Theory}
+% \input{02_chapters/03_theory}
+
+\section{Data}
+\input{02_chapters/03}
+
+% \section{Discussion}
+% \input{02_chapters/04_results}
+%
+% \section{Conclusion}
+% \input{02_chapters/05_conclusion}
+
+
+\clearpage
+\printbibliography
+\clearpage
+
+% \appendix
+% \renewcommand\thefigure{\thesection.\arabic{figure}}
+% \setcounter{figure}{0}
+%
+% \setcounter{page}{1}
+% \pagenumbering{roman}
+%
+%
+% \input{02_chapters/10_AppendixA}
+% \clearpage
+
+\end{document}
