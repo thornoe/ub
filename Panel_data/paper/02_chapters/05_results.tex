@@ -1,2 +1,42 @@
 \label{sec:results}
-% o	Consequences and implications for the public policy from different expected results.
+\subsection{Baseline estimation results}
+\label{subsec:baseline}
+The estimated coefficients of the baseline model is shown in table \ref{tab:base}. In the \nth{1} panel Fixed Effects (FE) estimation is used, the \nth{2} panel shows the Between (BE) estimation, and the \nth{3} shows the Random Effects (RE) estimation.
+\begin{table}[H]
+  \centering
+  \caption{Different regression estimates for the base model}
+  \footnotesize
+    \begin{tabular}{lcccc}
+    \toprule
+        \input{04_tables/reg_fe}
+        \input{04_tables/reg_be}
+        \input{04_tables/reg_re}
+    \end{tabular}
+    \text{Standard errors are in parentheses. * p<0.10, ** p<0.05, *** p<0.01}
+    \\ \text{Time dummies are estimated but not shown.}
+  \label{tab:base}
+\end{table}
+The estimated coefficients using the FE model show that the presence of internal R\&D activities $idin_t$ is important and the sales of new products $new_{t+k}$ are effected significantly stronger for $k=1$ periods ahead. The effect of having external R\&D expenses only $exter_t$ as opposed to no R\&D expenses at all has a high effect within the same year on $new_{t+0}$ while the size of the effect drops a little off and falls towards zero for $k=3$ which shows that external R\&D spending only have an immediate effect. On the other hand, the specification with $new_{t+3}$ is the only one for which internal R\&D personnel as a share of total employees has a significant  effects which shows that the effect of internal knowledge production is lasting but might be more neglectable in the short term. However, the estimates of the Between model indicate that a high average presence of either internal or external R\&D is more important in the long-run as well
+while the effects of the average of internal R\&D personnel as a share of total personnel is insignificant. The estimates of the RE model show a pattern similar to that of the FE model.
+
+\subsection{Specification tests}
+\label{subsec:tests}
+First of all the Breusch Pagan LM test for homoscedasticity of random effects is clearly rejected for all lengths of leads $k\in0,1,2,3$. That is, we reject the $H_0$ hypothesis that the variance of the individual time-invariant random component should be zero, $Var(\hat{\psi}_i)=0$. This indicates a heteroscedasticity issue and we should consider using heteroscedasticity robust standard errors.
+
+The Hausman test that the RE and FE estimates is clearly rejected. This means that the baseline model is either misspecified or the endogeneity assumption of $cov(\psi_i,x_{it})$ is violated which means that the RE estimates are inconsistent. In order to reduce the endogeneity the parametrization of the RE model is improved by including a series of time-invariant controls which lowers the value of the $\chi^2$ tests. But even when including all reasonable controls, significant or not, the Hausman is still borderline rejected with 99\% confidence for the model with leads $k=1$ which is the better throughout the specifications.
+
+\subsection{Including time-invariant controls}
+\label{controls}
+Though the Hausmann test points at the RE model being inconsistent, the estimates should nonetheless be more consistent. The RE approach also allows us to estimate the effects of several time-invariant variables of interest, including a surprising negative effects of being located in Madrid as opposed to any other part of Spain. The significance of the coefficients of these estimates are determined using heteroscedasticity-robust standard errors that take the clustering on firm ID over time into account. The estimated model is shown in table \ref{tab:controls}. Though all the model specifications are relevant for different time frames, the one with a one period lead $k=1$ is the stronger model judged by the Hausman test statistic.
+\begin{table}[H]
+  \centering
+  \caption{Estimates with time invariant-controls}
+  \footnotesize
+    \begin{tabular}{lcccc}
+    \toprule
+        \input{04_tables/reg_rec}
+    \end{tabular}
+    \text{Cluster robust standard errors are in parentheses. * p<0.10, ** p<0.05, *** p<0.01}
+    \\ \text{Time dummies are estimated but not shown.}
+  \label{tab:controls}
+\end{table}

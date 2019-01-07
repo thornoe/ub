@@ -157,21 +157,21 @@ gen ind = inrange(acti2005,2,3) // 2 <= acti2005 <= 4
 	replace ind = 14 if inrange(acti2005, 52, 55)
 
 label define ind_lab ///
-	0  "Agriculture & resource extraction" ///
+	0  "Agriculture \& resource extraction" ///
 	1  "Foods, beverages & tobacco" ///
-	2  "Textiles, footwear, lumber, cardboard, paper & graphic arts" ///
-	3  "Chemicals, pharmaceuticals, plastics, ceramics & petrol" ///
-	4  "Metallurgy & metal manufacturing" ///
-	5  "Electronics & machinery" ///
-	6  "Furniture, games, toys & other manufacturing" ///
-	7  "Recycling, energy, water & sanitation" ///
+	2  "Textiles, footwear, lumber, cardboard, paper \& graphic arts" ///
+	3  "Chemicals, pharmaceuticals, plastics, ceramics \& petrol" ///
+	4  "Metallurgy \& metal manufacturing" ///
+	5  "Electronics \& machinery" ///
+	6  "Furniture, games, toys \& other manufacturing" ///
+	7  "Recycling, energy, water \& sanitation" ///
 	8  "Construction" ///
-	9  "Trade & hospitality" ///
-	10 "Transport, travel, post & tele services" ///
-	11 "Finance, real estate & leasing" ///
-	12 "IT & communications" ///
-	13 "Research & other business services" ///
-	14 "Education, radio, TV, health & social services" ///
+	9  "Trade \& hospitality" ///
+	10 "Transport, travel, post \& tele services" ///
+	11 "Finance, real estate \& leasing" ///
+	12 "IT \& communications" ///
+	13 "Research \& other business services" ///
+	14 "Education, radio, TV, health \& social services" ///
 	, replace
 label values ind ind_lab
 
