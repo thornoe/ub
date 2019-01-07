@@ -4,43 +4,28 @@
 % • Description	of	variables	used	for	the	analysis	and	correspondence
 % with	the	(ideal)	magnitudes	in	the	empirical	specification
 % • Descriptive	statistics	of	the	main	variables	in	the	analysis
-The Spanish region of the firm is identified using the firm's location based on information on the region in which they have their R\&D department.\footnote{This novel identification strategy for regions is developed by Enrique López-Bazo.} This implies that the modified dataset will be limited to single-unit firms.
+Using the PITEC database\footnote{Description of the methodology, the full questionnaires etc. in PITEC is available by the Spanish Foundation of Science \& Technology at \href{https://icono.fecyt.es/pitec}{icono.fecyt.es/pitec}} the Spanish region of the firm is identified using the firm's location based on information on the region in which they have at least 75\% of their R\&D department.\footnote{This novel identification strategy for regions is developed by Enrique López-Bazo.} This implies that the modified dataset will be limited to single-unit firms that have some internal R\&D personnel employed for at least one of the years.
 \\
 \\
 Dependent variables
 \begin{itemize}
   \item Sales of new products (share of total sales constituted by products, invented within the past two years).
-  \item Robustness check: Absolute number of patent applications.
+  \begin{itemize}
+    \item Due to including products invented within the year as well as in the past two years, this variable is included as a lead one year ahead.
+  \end{itemize}
 \end{itemize}
 Main explanatory variables
 \begin{itemize}
-  \item Innovations in products within the past two years (possibly interacted with one of the follownig).
-  \item Variables on R\&D’s share of total personnel and total payments.
-  \begin{itemize}
-    \item Possibly disaggregated into researchers, technicians and clerks.
-  \end{itemize}
-  \item Spacially weighted R\&D expenditures (as share of total sales) for all firms within the same sector.
-  \item Spacially weighted R\&D expenditures (as share of total sales) for all firms.
+  \item Regional level as well as firm level variables on R\&D’s share of total expenditure. For the regional level the average share is calculated for each firm after deducting the R\&D expenses and total revenue for the firm.
+  \item Whether there is continuity in R\&D activity or not. Disaggregated into basic and applied research as well as investments in technological development.
 \end{itemize}
 Controls
 \begin{itemize}
-  \item	Statistical Classification of Economic Activities (NACE2/CNAE2009 \& CNAE93).
+  \item Regional dummies.
+  \item Year dummies, not shown in the regression table.:
+  \item	Statistical Classification of Economic Activities (CNAE93), not shown in the regression table.
   \begin{itemize}
-    \item E.g. dummies of one digit sector number (possibly with a few corrections)
-    \item More irrelevant sectors should probably be dropped from the dataset.
-  \end{itemize}
-  \item Sectoral reliance on innovation, inspired by \citet{barrios2001explaining}:
-  \begin{align*}
-    \frac{\text{New products as share of total sales in sector }j}{\text{New products as share of total sales in all sectors}}
-  \end{align*}
-  \item Sectoral level of R\&D spendings:
-  \begin{align*}
-    \frac{\text{R\&D spendings in sector }j}{\text{R\&D spendings in all sectors}}
-  \end{align*}
-  \item Innovations in process within the past two years.
-  \item	Investments in physical stock.
-  \item	Exports.
-  \item	Belonging to a business group.
-  \item	Type of business (1=Pública; 2=Privada nacional; 3=Privada multinacional; 4=Asociación de investigación y otras instituciones de investigación).
-  \item	Firm size (number of employees).
+    \item The manufacturing sector and service sector respectively is split into six industries for each.
+    \item Other sectors are dropped.
+\end{itemize}
 \end{itemize}
