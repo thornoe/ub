@@ -20,7 +20,7 @@ global x "acti clase grupo cifra tamano tam200 bio innprod newemp innproc idin g
 
 */
 
-*** OBS: SKIP LINE 113-115 OR REPLACE `c' WITH AN ACTUAL NUMBER TO RUN LOCALLY.
+*** Create data but without imputing region from other years when missing, line 270-275
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -28,7 +28,7 @@ global x "acti clase grupo cifra tamano tam200 bio innprod newemp innproc idin g
 ////////////////////////////////////////////////////////////////////////////////
 
 **** The different cutoffs for pct. of R&D expenses relative to total sales ****
-foreach c of numlist 50 100 200 400 100000000 {
+foreach cc of numlist 50 75 90 100 {
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -111,7 +111,7 @@ foreach n of numlist 50 100 150 200 300 400 500 1000 100000000 {
 */
 
 foreach z in cifra gtinn gtinnp gintidp gextidp recip reotp {
-	replace `z' = . if gtinnp > `c'	// SKIP OR REPLACE `c' WITH E.G. 400 TO RUN LOCALLY!
+	replace `z' = . if gtinnp > 400	// SKIP OR REPLACE `c' WITH E.G. 400 TO RUN LOCALLY!
 }
 
 /*
@@ -268,21 +268,23 @@ tab1 inter_cont infun_cont inapl_cont destec_cont exter_cont
 **** Regional variables														****
 ********************************************************************************
 foreach t of numlist 2005/2016 {
-	gen region`t' = 1 if pidejc1`t' > 50
+	gen region`t' = 1 if pidejc1`t' >= `cc'
 	foreach j of numlist 2/19 {
-		replace region`t' = `j' if pidejc`j'`t' > 50
+		replace region`t' = `j' if pidejc`j'`t' >= `cc'
 	}
 }
 
-drop pidejc* 
+drop pidejc*
+
 
 *** Overwrite missing ***
+/*
 foreach t of numlist 2005/2016 {
 	foreach tt of numlist 2005/2016 {
 		replace region`t' = region`tt' if region`t'==. & region`tt'!=.
 	}
 }
-
+*/
 
 /*
 foreach t of numlist 2005/2016 {
@@ -292,7 +294,7 @@ ta region2005
 */
 
 
-*** Drop Maroccan province and missing ***
+*** Drop autonomous city of Ceuta and missing region ***
 foreach t of numlist 2005/2016 {
 	drop if region`t' == 18
 	drop if region`t' == .
@@ -459,7 +461,7 @@ keep ident year clase grupo tamano tam200 bio innprod new_0 innproc idin sede //
 
 	
 *** save for different cutoff points of regional R&D ratio ***
-save regional_`c', replace
+save regional_r3_`cc', replace
 }
 
 ********************************************************************************

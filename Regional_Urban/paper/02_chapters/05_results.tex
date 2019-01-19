@@ -1,16 +1,36 @@
 \label{sec:results}
 % o	Consequences and implications for the public policy from different expected results.
-The estimation results are shown in table \ref{tab:estimates} below for the split samples of manufacturing and services respectively.
+The baseline model for the longitudinal panel is estimated using Random Effects estimation for the subsamples of manufacturing and services respectively. The estimated coefficients for the main variables are shown in table \ref{tab:estimates} and for the regional dummies in table \ref{tab:regional}.
+
+No spillover-effects are found from the region-level R\&D expenses. Altering the identifications strategy does not provide significant estimates either as shown in appendix \ref{app:thresholds}, \ref{app:rob2}, and \ref{app:rob3}. The effect is however found to be positive for the service sector in table \ref{tab:rob3.50} and \ref{tab:rob3.75} but all of the estimates are insignificant as the sample size decreases largely by only including firms for which the region is identified uniquely for each year.
+
+At the firm-level internal R\&D expenses are highly significant. Taking the robustness checks in appendix \ref{app:thresholds} into account the effect of doubling the share of internal R\&D expenses is about a 2 percentage point increase in the share of new products in total sales. Continuity of applied research is highly significant for manufacturing firms. Occasional basic research and frequent technological development has a significant effect within services. However there is a causality issue as the continuity variable is calculated for all of the time period.
+
+For a few regions there are significant negative regional effects relative to Andalusia.
 \begin{table}[H]
-  \vspace{-0.8cm}
+  \vspace{-0.3cm}
   \centering
-  \caption{Estimates of sales of new products as share of total revenue}
+  \caption{Estimated sales of new products as share of total sales}
   \footnotesize
-    \begin{tabular}{lcccc}
+    \begin{tabular}{lcc}
     \toprule
         \input{04_tables/estimates}
     \end{tabular}
     \text{Cluster robust standard errors are in parentheses. * p<0.10, ** p<0.05, *** p<0.01}
-    \\ \text{Time dummies and industry dummies are estimated but not shown.}
   \label{tab:estimates}
+  \vspace{-0.3cm}
 \end{table}
+\begin{table}[H]
+  \vspace{-.5cm}
+  \centering
+  \caption{Estimated sales of new products as share of total sales}
+  \footnotesize
+    \begin{tabular}{lcc}
+    \toprule
+        \input{04_tables/reg_dummies}
+    \end{tabular}
+    \text{Cluster robust standard errors are in parentheses. * p<0.10, ** p<0.05, *** p<0.01}
+  \label{tab:regional}
+\end{table}
+
+\clearpage

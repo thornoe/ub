@@ -13,6 +13,7 @@
 % Font Encoding is 'T1' -- important for special characters such as Umlaute ü or ä and special characters like ñ (enje)
 % CTAN: http://www.ctan.org/pkg/fontenc
 \usepackage[T1]{fontenc}
+%\usepackage[osf, sc]{mathpazo} % Use the Palatino font
 
 % Language support for 'english' (alternative 'ngerman' or 'french' for example)
 % CTAN: http://www.ctan.org/pkg/babel
@@ -63,16 +64,17 @@
 \usepackage{float}
 \usepackage{tabularx}
 \usepackage{threeparttable}
+\usepackage{siunitx}
 \usepackage[figuresright]{rotating}
 \usepackage{subcaption}
 \usepackage{caption}
 \newcommand{\source}[1]{\vspace{-18pt} \caption*{\textit{Source: } { #1} \hspace*{\fill}} }
-\usepackage{epigraph}
-\usepackage{listings}
+
 \usepackage{kbordermatrix}% http://www.hss.caltech.edu/~kcb/TeX/kbordermatrix.sty
 
-\usepackage[osf, sc]{mathpazo} % Use the Palatino font
+\usepackage{listings}
 \usepackage{placeins}
+\usepackage{epigraph}
 \usepackage{marginnote}
 
 %Add affiliations to authors name, allowing to mix affiliations

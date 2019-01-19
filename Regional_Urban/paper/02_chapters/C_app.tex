@@ -1,0 +1,47 @@
+\section{No imputation when region is missing}
+\label{app:rob3}
+\noindent
+Same model specification as for the baseline model in table \ref{tab:estimates} but without imputing region from other years when it is missing. Run for different criteria for regional identification where regions have a share of the firm's R\&D personnel $\geq S\in50,75,100$ percent.
+\begin{table}[H]
+  \vspace{-.cm}
+  \centering
+  \caption{Estimated sales of new products as share of total sales, $S\geq50$}
+  \footnotesize
+    \begin{tabular}{lcc}
+    \toprule
+        \input{04_tables/rob3_50}
+    \end{tabular}
+    \text{Cluster robust standard errors are in parentheses. * p<0.10, ** p<0.05, *** p<0.01}
+  \label{tab:rob3.50}
+  \vspace{-.5cm}
+\end{table}
+
+\begin{table}[H]
+  \vspace{-.cm}
+  \centering
+  \caption{Estimated sales of new products as share of total sales, $S\geq75$}
+  \footnotesize
+    \begin{tabular}{lcc}
+    \toprule
+        \input{04_tables/rob3_75}
+    \end{tabular}
+    \text{Cluster robust standard errors are in parentheses. * p<0.10, ** p<0.05, *** p<0.01}
+  \label{tab:rob3.75}
+  \vspace{-.5cm}
+\end{table}
+
+\begin{table}[H]
+  \vspace{-.cm}
+  \centering
+  \caption{Estimated sales of new products as share of total sales, $S=100$}
+  \footnotesize
+    \begin{tabular}{lcc}
+    \toprule
+        \input{04_tables/rob3_100}
+    \end{tabular}
+    \text{Cluster robust standard errors are in parentheses. * p<0.10, ** p<0.05, *** p<0.01}
+  \label{tab:rob3.100}
+  \vspace{-.5cm}
+\end{table}
+
+\clearpage

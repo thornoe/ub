@@ -4,28 +4,72 @@
 % • Description	of	variables	used	for	the	analysis	and	correspondence
 % with	the	(ideal)	magnitudes	in	the	empirical	specification
 % • Descriptive	statistics	of	the	main	variables	in	the	analysis
-Using the PITEC database\footnote{Description of the methodology, the full questionnaires etc. in PITEC is available by the Spanish Foundation of Science \& Technology at \href{https://icono.fecyt.es/pitec}{icono.fecyt.es/pitec}} the Spanish region of the firm is identified using the firm's location based on information on the region in which they have at least 75\% of their R\&D department.\footnote{This novel identification strategy for regions is developed by Enrique López-Bazo.} This implies that the modified dataset will be limited to single-unit firms that have some internal R\&D personnel employed for at least one of the years.
+The PITEC database is used which unfortunately is not exhaustive nor representative.\footnote{Description of the methodology, the full questionnaires etc. in PITEC is available by the Spanish Foundation of Science \& Technology at \href{https://icono.fecyt.es/pitec}{icono.fecyt.es/pitec}} The Spanish region of the firm is identified using the firm's location based on information on the region in which they have more than 50\% of their R\&D department.\footnote{This novel identification strategy for regions is an idea by Enrique López-Bazo.} Other criteria are tried out as well in appendix \ref{app:rob2} and \ref{app:rob3}.
+
+The baseline identification strategy for regions implies that the modified dataset will be limited to firms that have some internal R\&D personnel employed for at least one of the years and do not have their internal R\&D activities spread out to a degree where no region holds more than half of them.
 \\
 \\
-Dependent variables
+The dependent variables includes products invented within the same year $t$ as well as in the past two years. In the regression specification I include this variable as a lead one year ahead in period $t+1$. Thus, effectively the regressions is done for the period $t\in 2005,\dots,2015$ where all of the explanatory variables are either for year $t$ or time-invariant.
+\\
+\\
+Dependent variable at time $t+1$
 \begin{itemize}
-  \item Sales of new products (share of total sales constituted by products, invented within the past two years).
+  \item \textit{Sales of new products in year t+1:} Share of total sales constituted by products, invented within the year or the past two years $(t+1,t,t-1)$.
+\end{itemize}
+\noindent
+Region-level variable of R\&D expenses at time $t$
+\begin{itemize}
+  \item \textit{log R\&D expenses at region-level:} Regional-level aggregate of R\&D expenses as the percentage share of total sales.
   \begin{itemize}
-    \item Due to including products invented within the year as well as in the past two years, this variable is included as a lead one year ahead.
+    \item The aggregate region-level share is calculated for each firm after deducting the R\&D expenses and total sales for the firm.
+    \item Calculated each year for all firms in the PITEC database despite sector or missing information in other years.
+    \item If firm-level share is above the threshold $C$ for one year, the firm's R\&D expenses as well as total sales is left out of the sum for that year only.
   \end{itemize}
 \end{itemize}
-Main explanatory variables
+\noindent
+Firm-level variables of R\&D expenses at time $t$
 \begin{itemize}
-  \item Regional level as well as firm level variables on R\&D’s share of total expenditure. For the regional level the average share is calculated for each firm after deducting the R\&D expenses and total revenue for the firm.
-  \item Whether there is continuity in R\&D activity or not. Disaggregated into basic and applied research as well as investments in technological development.
-\end{itemize}
-Controls
-\begin{itemize}
-  \item Regional dummies.
-  \item Year dummies, not shown in the regression table.:
-  \item	Statistical Classification of Economic Activities (CNAE93), not shown in the regression table.
+  \item \textit{log R\&D expenses}: Firm-level R\&D expenses as the percentage share of total sales. An intermediate variable created only for calculating the other variables and truncating the sample.
   \begin{itemize}
-    \item The manufacturing sector and service sector respectively is split into six industries for each.
+    \item Constructed from dividing two simulated variables in PITEC which are imputed from the remaining Survey information. The extreme observations are as high as several million percent, especially within the service sector. While start-ups can run with higher expenses than sales for some years the more extreme values are more probably due to either poor imputation or measurement errors in the Survey data.
+    \item To contain a balanced panel, firms are dropped from the regression sample if having a value above the threshold point $C$ for one or more year.
+    \item In the baseline specification $C$ is set to 400 to maintain a high sample size.
+  \end{itemize}
+  \item \textit{log internal R\&D expenses:} Internal R\&D expenses as the percentage share of total sales.
+  \item \textit{log external R\&D expenses:} External R\&D expenses as the percentage share of total sales.
+\end{itemize}
+\noindent
+Firm-level variables of continuity of R\&D expenses, time-invariant
+\begin{itemize}
+  \item \textit{Continuity of basic research; Continuity of applied research; Continuity of technological development}
+  \begin{itemize}
+    \item[0] \textit{Never:} expenses on the R\&D activity in 0 out of 12 years.
+    \item[1] \textit{Occasional:} expenses on the R\&D activity in 1-6 out of 12 years.
+    \item[2] \textit{Frequent:} expenses on the R\&D activity in 6-11 out of 12 years.
+    \item[3] \textit{Permanent:} expenses on the R\&D activity in all 12 years.
+  \end{itemize}
+  \item \textit{Continuity of external R\&D only}: Same criteria but only counting years with none of the internal R\&D activities above.
+\end{itemize}
+\noindent
+Control dummies
+\begin{itemize}
+  \item \textit{Region dummies:} Dummies for each of the 17 autonomous communities of Spain.
+  \begin{itemize}
+    \item In the baseline regression the region is assigned if more than 50\% of the R\&D personnel of the firm is located within that region. If for one year no region can be identified for the firm, the region is imputed from potential former or secondarily latter years such that the firm is not left out from the panel.
+    \item Modifications to this identification strategies are used for estimation in appendix \ref{app:rob2} and \ref{app:rob3}.
+  \end{itemize}
+  \item \textit{Year dummies:} For all years. Controlling for general time trends.
+  \item \textit{Industry dummies:}	Based on the Statistical Classification of Economic Activities (CNAE93).
+  \begin{itemize}
+    \item The manufacturing sector and service sector are each split into six industries.
     \item Other sectors are dropped.
+  \end{itemize}
 \end{itemize}
-\end{itemize}
+Descriptive statistics for the main variables are shown for the period 2005-2015 in table \ref{tab:descriptive}, split by whether firm belongs to the manufacturing or the service sector as well as jointly. The last row show a weak positive correlation between the sales of new products in year $t+1$ and log R\&D expenses at region-level.
+\begin{table}[H]
+  \centering
+  \caption{Descriptive statistics}
+  \footnotesize
+    \input{04_tables/descriptive}
+  \label{tab:descriptive}
+\end{table}
