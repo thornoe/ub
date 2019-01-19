@@ -1,4 +1,4 @@
-*Projects, presentations, and notes for master's courses at Universitat de Barcelona, School of Economics.*
+***Projects, presentations, and notes for master's courses at Universitat de Barcelona, School of Economics.***
 
 ### Projects and Stata-code
 * In **Analysis & Evaluation of Public Policies** w. Daniel Albalate del Sol:
