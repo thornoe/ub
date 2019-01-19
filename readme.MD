@@ -1,9 +1,11 @@
 ## Projects in economics
 *Projects, presentations, and notes for Master's courses at Universitat de Barcelona, School of Economics.*
 
-### Projects, research notes, and Stata-code
+### Projects and Stata-code
 * In **Analysis & Evaluation of Public Policies** w. Daniel Albalate del Sol:
     - [*Prolonged job training programs: A research note*](https://github.com/thornoe/ub/blob/master/Analysis_Evaluation/note/main.pdf). Proposing a research design for evaluating the effect of prolonged job training programs to those in risk of long-term unemployment. A policy tested by two Danish municipalities in 2014-2015.
+* In **Ecological Economics** w. Mònica Serrano:
+    - *Food Related Drivers of the Growth in Greenhouse Gas Emissions. A structural decomposition analysis*. Pending.
 * In **Public Economics II: Theory of Taxation** w. Javier Vázquez-Grenno:
     - [*Discrepancy in the Elasticity of Taxable Income: A litterature review*](https://github.com/thornoe/ub/blob/master/Theory_Taxation/survey/main.pdf). Analysing differences in the estimated size of the ETI between studies using different estimation methods and carried out on data from the US and Denmark respectively.
 
@@ -16,6 +18,6 @@
     - [*Discrepancy in the Elasticity of Taxable Income: A litterature review*](https://github.com/thornoe/ub/blob/master/Analysis_Evaluation/rdd/rdd_tracking.pdf).
 
 ### Complementary course notes for
-* **Ecological Economics** w. Monica Serrano Gutierrez.
-* **Macroeconometrics** w. Josep Lluís Carrion-i-Silvestre.
-* **Panel Data** w. Vicente Royuela Mora.
+* [**Ecological Economics**](https://github.com/thornoe/ub/blob/master/Ecological_Economics/notes/main.pdf) w. Monica Serrano Gutierrez.
+* [**Macroeconometrics**](https://github.com/thornoe/ub/blob/master/Macroeconometrics/notes/main.pdf) w. Josep Lluís Carrion-i-Silvestre.
+* [**Panel Data**](https://github.com/thornoe/ub/blob/master/Panel_data/notes/main.pdf) w. Vicente Royuela Mora.
