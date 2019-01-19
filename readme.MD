@@ -20,11 +20,11 @@
 
 ### Presentations
 * In **Analysis & Evaluation of Public Policies** w. Daniel Albalate del Sol:
-    - [*Application of Regression Discontinuity Design: The impact of tracking in Kenyan primary schools*](https://github.com/thornoe/ub/blob/master/Analysis_Evaluation/rdd/rdd_tracking.pdf). Application of Regresssion Discontinuity Design (RDD) in the study by Duflo, Dupas & Kremer (2011) "Peer Effects, Teacher Incentives, and the Impact of Tracking: Evidence from a Randomized Evaluation in Kenya". In: *American Economic Review* 101.5, pp. 1739-74.
+    - [Presentation](https://github.com/thornoe/ub/blob/master/Analysis_Evaluation/rdd/rdd_tracking.pdf) on the Regression Discontinuity Design in the study by Duflo, Dupas & Kremer (2011) "Peer Effects, Teacher Incentives, and the Impact of Tracking: Evidence from a Randomized Evaluation in Kenya". In: *American Economic Review* 101.5, pp. 1739-74.
 * In **Regional & Urban Economics** w. Enrique López-Bazo:
-    - [*Regional wage disparities: The urban wage premium*](https://github.com/thornoe/ub/blob/master/Regional_Urban/wages/wages_Victor_Thor.pptx).
+    - [Presentation](https://github.com/thornoe/ub/blob/master/Regional_Urban/wages/wages_Victor_Thor.pptx) on different studies on regional wage disparities, especially regarding the urban wage premium.
 * In **Regulation, Privatization & Institutions** w. Germà Bel:
-    - [Presentation](https://github.com/thornoe/ub/blob/master/Regulation_Privatization_Institutions/slides/corruption.pdf) on Amore, Mario Daniele and Morten Bennedsen (2013) “The value of local political connections in a low-corruption environment”. In: *Journal of Financial Economics* 110.2, pp. 387–402. Using the 2005 merge of municipalities in Denmark.
+    - [Presentation](https://github.com/thornoe/ub/blob/master/Regulation_Privatization_Institutions/slides/corruption.pdf) on the study of the 2005 merge of municipalities in Denmark by Amore, Mario Daniele and Morten Bennedsen (2013) “The value of local political connections in a low-corruption environment”. In: *Journal of Financial Economics* 110.2, pp. 387–402.
 * In **Public Economics II: Theory of Taxation** w. Javier Vázquez-Grenno:
     - [*Discrepancy in the Elasticity of Taxable Income: A litterature review*](https://github.com/thornoe/ub/blob/master/Analysis_Evaluation/rdd/rdd_tracking.pdf).
 
