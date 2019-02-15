@@ -25,7 +25,7 @@
 * In **Regulation, Privatization & Institutions** w. Germà Bel:
     - [Presentation](https://github.com/thornoe/ub/blob/master/Regulation_Privatization_Institutions/slides/corruption.pdf) on the study of the 2005 merge of municipalities in Denmark by Amore, Mario Daniele and Morten Bennedsen (2013) “The value of local political connections in a low-corruption environment”. In: *Journal of Financial Economics* 110.2, pp. 387–402.
 * In **Public Economics II: Theory of Taxation** w. Javier Vázquez-Grenno:
-    - [Presentation](https://github.com/thornoe/ub/blob/master/Theory_Taxation/slides/tax.pdf) on the project mentioned above, [*Discrepancy in the Elasticity of Taxable Income: A literature review*](https://github.com/thornoe/ub/blob/master/Theory_Taxation/survey/main.pdf).
+    - [Presentation](https://github.com/thornoe/ub/blob/master/Theory_Taxation/slides/tax.pdf) on the project described above, [*Discrepancy in the Elasticity of Taxable Income: A literature review*](https://github.com/thornoe/ub/blob/master/Theory_Taxation/survey/main.pdf).
 
 ### Complementary course notes for
 * [**Ecological Economics**](https://github.com/thornoe/ub/blob/master/Ecological_Economics/notes/main.pdf) w. Monica Serrano Gutierrez.
