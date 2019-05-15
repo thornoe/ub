@@ -1,6 +1,6 @@
 *Projects, presentations, and notes for master's courses at Universitat de Barcelona, School of Economics.*
 
-### Projects and Stata-code
+## Projects and Stata-code
 * In **Analysis & Evaluation of Public Policies** w. Daniel Albalate del Sol:
     - [*Prolonged job training programs: A research note*](https://github.com/thornoe/ub/blob/master/Analysis_Evaluation/note/main.pdf). Proposing a research design for evaluating the effect of prolonged job training programs for those in risk of long-term unemployment. A policy tested by two Danish municipalities.
 * In **Ecological Economics** w. Mònica Serrano:
@@ -17,7 +17,7 @@
 * In **Public Economics II: Theory of Taxation** w. Javier Vázquez-Grenno:
     - [*Discrepancy in the Elasticity of Taxable Income: A literature review*](https://github.com/thornoe/ub/blob/master/Theory_Taxation/survey/main.pdf). Analyzing differences in the estimated size of the Elasticity of Taxable Income between studies using different estimation methods and carried out on data covering different tax reforms in the US and Denmark respectively.
 
-### Presentations
+## Presentations
 * In **Analysis & Evaluation of Public Policies** w. Daniel Albalate del Sol:
     - [Presentation](https://github.com/thornoe/ub/blob/master/Analysis_Evaluation/rdd/rdd_tracking.pdf) on the Regression Discontinuity Design in the study by Duflo, Dupas & Kremer (2011) "Peer Effects, Teacher Incentives, and the Impact of Tracking: Evidence from a Randomized Evaluation in Kenya". In: *American Economic Review* 101.5, pp. 1739-74.
 * In **Regional & Urban Economics** w. Enrique López-Bazo:
@@ -27,7 +27,7 @@
 * In **Public Economics II: Theory of Taxation** w. Javier Vázquez-Grenno:
     - [Presentation](https://github.com/thornoe/ub/blob/master/Theory_Taxation/slides/tax.pdf) on the project described above, [*Discrepancy in the Elasticity of Taxable Income: A literature review*](https://github.com/thornoe/ub/blob/master/Theory_Taxation/survey/main.pdf).
 
-### Complementary course notes for
+## Complementary course notes for
 * [**Ecological Economics**](https://github.com/thornoe/ub/blob/master/Ecological_Economics/notes/main.pdf) w. Monica Serrano Gutierrez.
 * [**Macroeconometrics**](https://github.com/thornoe/ub/blob/master/Macroeconometrics/notes/main.pdf) w. Josep Lluís Carrion-i-Silvestre.
 * [**Panel Data**](https://github.com/thornoe/ub/blob/master/Panel_data/notes/main.pdf) w. Vicente Royuela Mora.
