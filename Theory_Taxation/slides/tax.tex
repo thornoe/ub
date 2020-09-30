@@ -112,7 +112,7 @@
     \item Important for growth in the long run and to avoid bottlenecks in the short run
     \item Prone to misreporting and frictions
   \end{itemize}
-  The \textbf{Elasticity of Taxable Income (EIT)} wrt. the MTR
+  The \textbf{Elasticity of Taxable Income (ETI)} wrt. the MTR
   \begin{itemize}
     \item Better availability and preciseness in administrative data
     \item Captures several behavioral responses
@@ -150,7 +150,7 @@
 \end{frame}
 
 \begin{frame}{Discrepancy in estimates}
-  Surveying 5 studies of the EIT, $\hat{\varepsilon}$
+  Surveying 5 studies of the ETI, $\hat{\varepsilon}$
   \begin{itemize}
     \item A huge discrepancy is found in the estimates!
     \item Is a lower estimate due to better data availability and estimation methods?
@@ -210,7 +210,7 @@
   Panel with $\sim$60,000 individuals $\rightarrow$ changes in the MTR throughout 1980s
   \begin{equation}
     \begin{split}
-      \underbrace{\ln\left(\frac{z_{it+k}}{z_{it}}\right)}_\text{\%-change in income} &= \alpha_0 + \underbrace{\varepsilon\cdot \ln\left(\frac{1-\hat{\tau}_{it+k}}{1-\tau_{it}}\right)}_\text{ETI} + \underbrace{\sum_t\alpha_1 x_{it}}_\text{married} + \underbrace{\sum_t \alpha_2YEAR_t}_\text{year dummies} \\
+      \underbrace{\ln\left(\frac{z_{it+k}}{z_{it}}\right)}_\text{\%-change in income} &= \alpha_0 + \underbrace{\varepsilon\cdot \ln\left(\frac{1-\hat{\tau}_{it+k}}{1-\tau_{it}}\right)}_\text{ETI wrt. MTR} + \underbrace{\sum_t\alpha_1 x_{it}}_\text{married} + \underbrace{\sum_t \alpha_2YEAR_t}_\text{year dummies} \\
        &+\underbrace{ \alpha_3\ln(z_{it}) + \sum_{d=1}^{10}\alpha_{4d}SPLINE_d(z_{it}) }_\text{controls for base year income} + u_{it},\ \ \ \ \ k=1,2,\text{ or }3
       \label{eq:IV}
     \end{split}
@@ -241,7 +241,7 @@
 \begin{frame}{\citet{kleven2014estimating}}
   Baseline specification: differences at time $t$ are the differences between $t$ and $t+3$.
   \begin{equation}
-    \underbrace{\Delta\ln z_{it}}_\text{\%-change in income} = \underbrace{\varepsilon\cdot\Delta\ln(1-\hat{\tau}_{it})}_\text{ETI} + \eta\cdot\Delta\ln y_{it} + \Delta\gamma_t^c \bm{x}_i^c + \gamma^v\cdot\Delta\bm{x}_{it}^v + \Delta u_{it}
+    \underbrace{\Delta\ln z_{it}}_\text{\%-change in income} = \underbrace{\varepsilon\cdot\Delta\ln(1-\hat{\tau}_{it})}_\text{ETI wrt. MTR} + \eta\cdot\Delta\ln y_{it} + \Delta\gamma_t^c \bm{x}_i^c + \gamma^v\cdot\Delta\bm{x}_{it}^v + \Delta u_{it}
     \label{eq:IV2}
   \end{equation}
   Similar to specification (\ref{eq:IV}) in \citep{gruber2002elasticity} with a few additions:
@@ -288,7 +288,7 @@
   Evaluate the treatment group of 219,179 individuals against a control group of 109,500 individuals with weak or no incentives to shift their income due to the tax reform
   \begin{itemize}
     \item \textbf{Substantial shifting}: Estimate $\hat{\varepsilon}$ is 0.80 for D09-J10
-    \item[$\rightarrow$] Omitting N09-J10 to estimate the short-run EIT without inter-temporal shifting
+    \item[$\rightarrow$] Omitting N09-J10 to estimate the short-run ETI without inter-temporal shifting
   \end{itemize}
 \end{frame}
 
