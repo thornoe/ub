@@ -241,14 +241,9 @@
 \begin{frame}{\citet{kleven2014estimating}}
   Baseline specification: differences at time $t$ are the differences between $t$ and $t+3$.
   \begin{equation}
-    \Delta\ln z_{it} = \varepsilon\cdot\Delta\ln(1-\hat{\tau}_{it}) + \eta\cdot\Delta\ln y_{it} + \Delta\gamma_t^c \bm{x}_i^c + \gamma^v\cdot\Delta\bm{x}_{it}^v + \Delta u_{it}
+    \underbrace{\Delta\ln z_{it}}_\text{\%-change in income} = \underbrace{\varepsilon\cdot\Delta\ln(1-\hat{\tau}_{it})}_\text{ETI} + \eta\cdot\Delta\ln y_{it} + \Delta\gamma_t^c \bm{x}_i^c + \gamma^v\cdot\Delta\bm{x}_{it}^v + \Delta u_{it}
     \label{eq:IV2}
   \end{equation}
-  Where
-  \begin{itemize}
-    \item[$\Delta \ln z_{it}:$] Difference in log taxable income (labour income).
-    \item[$\varepsilon:$] Elasticity of taxable income.
-  \end{itemize}
   Similar to specification (\ref{eq:IV}) in \citep{gruber2002elasticity} with a few additions:
   \begin{itemize}
     \item[$\Delta \ln y_{it}:$] Difference in log virtual income (the sum of non-labour incomes)
