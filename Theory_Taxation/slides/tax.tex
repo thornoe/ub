@@ -239,19 +239,24 @@
 
 
 \begin{frame}{\citet{kleven2014estimating}}
-Baseline specification: differences at time $t$ are the differences between $t$ and $t+3$.
+  Baseline specification: differences at time $t$ are the differences between $t$ and $t+3$.
   \begin{equation}
     \Delta\ln z_{it} = \varepsilon\cdot\Delta\ln(1-\hat{\tau}_{it}) + \eta\cdot\Delta\ln y_{it} + \Delta\gamma_t^c \bm{x}_i^c + \gamma^v\cdot\Delta\bm{x}_{it}^v + \Delta u_{it}
     \label{eq:IV2}
   \end{equation}
-  Similar to equation (\ref{eq:IV}) \citep{gruber2002elasticity} with a few additions
+  Where
   \begin{itemize}
-    \item[$x_i^c:$] Time-invariant individual characteristics for which the effect $\gamma_t^c$ is allowed to change over time
-    \item[$\Delta x_it^v:$] Difference in time-variant individual characteristics for which the effect $\gamma^v$ is constant over time
-    \item[$\Delta \log y_{it}:$] Difference in log virtual income (the sum of non-labour incomes)
+    \item[$\Delta \ln z_{it}:$] Difference in log taxable income (labour income).
+    \item[$\varepsilon:$] Elasticity of taxable income.
+  \end{itemize}
+  Similar to specification (\ref{eq:IV}) in \citep{gruber2002elasticity} with a few additions:
+  \begin{itemize}
+    \item[$\Delta \ln y_{it}:$] Difference in log virtual income (the sum of non-labour incomes)
     \begin{itemize}
       \item[$\rightarrow$] controls for \textbf{income shifting} towards capital or corporate income
     \end{itemize}
+    \item[$\bm{x}_i^c:$] Time-invariant individual characteristics for which the effect $\gamma_t^c$ is allowed to change over time
+    \item[$\Delta \bm{x}_it^v:$] Difference in time-variant individual characteristics for which the effect $\gamma^v$ is constant over time
   \end{itemize}
 \end{frame}
 
