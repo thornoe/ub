@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.9 $
+% $ biblatex bbl format version 3.0 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -168,7 +168,7 @@
       }}%
       {{hash=LPS}{%
          family={Leth-Petersen},
-         familyi={L\bibinitperiod-P\bibinitperiod},
+         familyi={L\bibinithyphendelim P\bibinitperiod},
          given={S{\o}ren},
          giveni={S\bibinitperiod},
       }}%

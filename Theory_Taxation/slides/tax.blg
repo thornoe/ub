@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2019/W32TeX)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: tax.aux
 The style file: biblatex.bst
@@ -18,47 +18,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: tax-blx.bib
 Database file #2: bib_tax.bib
-Biblatex version: 3.8
+Biblatex version: 3.11
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 7 entries,
-            6268 wiz_defined-function locations,
-            1221 strings with 9749 characters,
-and the built_in function-call counts, 37409 in all, are:
-= -- 2571
-> -- 689
+            6304 wiz_defined-function locations,
+            1228 strings with 9922 characters,
+and the built_in function-call counts, 42086 in all, are:
+= -- 3068
+> -- 695
 < -- 197
-+ -- 851
-- -- 239
-* -- 2879
-:= -- 3766
++ -- 915
+- -- 241
+* -- 3253
+:= -- 4534
 add.period$ -- 0
 call.type$ -- 7
 change.case$ -- 6
-chr.to.int$ -- 30
+chr.to.int$ -- 34
 cite$ -- 12
-duplicate$ -- 3840
-empty$ -- 3563
+duplicate$ -- 4080
+empty$ -- 3968
 format.name$ -- 402
-if$ -- 7785
+if$ -- 8688
 int.to.chr$ -- 0
 int.to.str$ -- 15
 missing$ -- 0
 newline$ -- 233
 num.names$ -- 303
-pop$ -- 2099
+pop$ -- 2156
 preamble$ -- 1
 purify$ -- 149
 quote$ -- 0
-skip$ -- 1255
+skip$ -- 1233
 stack$ -- 0
-substring$ -- 4381
+substring$ -- 5631
 swap$ -- 1049
-text.length$ -- 171
+text.length$ -- 173
 text.prefix$ -- 6
 top$ -- 1
 type$ -- 226
 warning$ -- 0
-while$ -- 456
+while$ -- 583
 width$ -- 0
 write$ -- 227
